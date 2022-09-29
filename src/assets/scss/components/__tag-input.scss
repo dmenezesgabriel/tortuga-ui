@@ -1,0 +1,33 @@
+.tag-input {
+  font-size: 0.9em;
+  height: 50px;
+  box-sizing: border-box;
+
+  &__tag {
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 10px;
+    line-height: 30px;
+    padding: 0 5px;
+
+    &--icon {
+      cursor: pointer;
+    }
+  }
+
+  &__entry {
+    outline: none;
+    font-size: 0.9em;
+    line-height: 50px;
+    background: none;
+  }
+}
+
+// Dark mode
+[data-mode="dark"] .darker {
+  .tag-input {
+    &__entry {
+      color: var(--bs-white);
+    }
+  }
+}

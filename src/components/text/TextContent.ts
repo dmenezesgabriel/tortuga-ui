@@ -1,0 +1,27 @@
+import { h, type SetupContext } from "vue";
+
+interface Props {
+  type: string;
+  content: string;
+}
+
+const TextContent = (props: Props, context: SetupContext) => {
+  return h(
+    props.type,
+    {
+      class: "text-content",
+      onClick(event: Event) {
+        context.emit("click", event);
+      },
+    },
+    props.content
+  );
+};
+
+TextContent.emits = ["click"];
+
+TextContent.props = {
+  type: { type: String, required: true },
+  content: { type: String, required: true },
+};
+export default TextContent;

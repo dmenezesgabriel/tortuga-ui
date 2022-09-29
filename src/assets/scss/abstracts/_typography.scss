@@ -1,0 +1,106 @@
+@use "../custom";
+
+/**************************************************************************** /
+* Text
+******************************************************************************/
+
+.display-2 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+
+  &--intro {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    color: custom.$white;
+  }
+
+  &--description {
+    font-size: 1rem;
+    display: block;
+    color: custom.$white;
+    margin-top: 1.2rem;
+    text-transform: none;
+
+    @include custom.media-breakpoint-up(lg) {
+      font-size: 1.5rem;
+      display: inline-block;
+    }
+  }
+}
+
+.display-3 {
+  font-family: "Poppins", sans-serif;
+
+  &--title {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      custom.$primary,
+      custom.$dark-alt
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include custom.media-breakpoint-up(lg) {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/**************************************************************************** /
+* Ornaments
+******************************************************************************/
+
+.heading-line::before {
+  content: "";
+  margin: 0 auto;
+  width: 10rem;
+  height: 0.1rem;
+  display: block;
+  background-color: custom.$primary;
+}
+
+.heading-line::after {
+  content: "";
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  width: 2rem;
+  height: 0.2rem;
+  padding-top: 0.5rem;
+  display: block;
+  background-color: custom.$primary;
+}
+
+.border-right {
+  border-right: 0.1rem solid custom.$gray-300;
+  height: 100%;
+}
+
+.gradient {
+  background: linear-gradient(
+    to right,
+    rgba(custom.$primary, 0.95),
+    rgba(custom.$secondary, 0.95)
+  );
+}
+
+/**************************************************************************** /
+* Dark mode
+******************************************************************************/
+[data-mode="dark"] .darker {
+  .display-3 {
+    &--title {
+      background-image: linear-gradient(
+        to right,
+        custom.$primary,
+        custom.$white
+      );
+    }
+  }
+}

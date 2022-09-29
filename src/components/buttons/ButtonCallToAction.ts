@@ -1,0 +1,38 @@
+import { h } from "vue";
+import { RouterLink } from "vue-router";
+
+interface Props {
+  text: string;
+  to: string;
+}
+
+const ButtonCallToAction = (props: Props) => {
+  const buttonIcon = h("i", { class: "bi bi-arrow-right" });
+  const buttonIconWrapper = h(
+    "span",
+    {
+      class: "btn-call-to-action__icon text-center",
+    },
+    buttonIcon
+  );
+  const buttonText = h(
+    "span",
+    { class: "btn-call-to-action__text" },
+    props.text
+  );
+  return h(
+    RouterLink,
+    {
+      class: "rounded-pill btn-call-to-action border border-secondary",
+      type: "button",
+      to: props.to,
+    },
+    [buttonText, buttonIconWrapper]
+  );
+};
+
+ButtonCallToAction.props = {
+  text: { type: String, required: true },
+  to: { type: String, required: true },
+};
+export default ButtonCallToAction;

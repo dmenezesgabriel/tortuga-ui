@@ -1,0 +1,73 @@
+/**************************************************************************** /
+* Dark mode
+******************************************************************************/
+@use "../scss/custom";
+
+[data-mode="dark"] .darker {
+  @import "bootstrap/scss/functions";
+  $primary: custom.$primary;
+  // Card
+  $card-bg: custom.$dark;
+  $card-border-color: custom.$gray-600;
+  $card-color: custom.$gray-300;
+  // Card Header
+  $card-cap-bg: custom.$dark;
+  $card-cap-color: custom.$gray-300;
+  // Table
+  $table-striped-color: custom.$gray-400;
+  $table-striped-bg-factor: 0.05;
+  $table-striped-bg: custom.$dark-alt;
+  // Offcanvas
+  $offcanvas-bg-color: custom.$dark;
+
+  // Pagination
+  $pagination-color: custom.$secondary;
+  $pagination-bg: custom.$dark-alt;
+  $pagination-border-color: custom.$secondary;
+
+  $pagination-focus-color: custom.$white;
+  $pagination-focus-bg: custom.$secondary;
+  $pagination-focus-outline: custom.$secondary;
+
+  $pagination-hover-color: custom.$white;
+  $pagination-hover-bg: custom.$secondary;
+  $pagination-hover-border-color: custom.$secondary;
+
+  $pagination-active-color: custom.$white;
+  $pagination-active-bg: custom.$secondary;
+  $pagination-active-border-color: custom.$secondary;
+
+  $pagination-disabled-color: custom.$secondary;
+  $pagination-disabled-bg: custom.$gray-200;
+  $pagination-disabled-border-color: custom.$secondary;
+
+  // Accordion
+  $accordion-color: custom.$white;
+  $accordion-bg: custom.$dark-alt;
+  $accordion-button-color: custom.$white;
+  $accordion-button-bg: custom.$dark;
+  $accordion-button-active-bg: custom.$primary;
+  $accordion-button-active-color: custom.$white;
+
+  $accordion-padding-x: 1.5rem;
+  $accordion-padding-y: 1.5rem;
+  $accordion-icon-color: $primary;
+  $accordion-icon-active-color: custom.$dark-alt;
+  $accordion-icon-width: 1.875rem;
+
+  // Select
+  $form-select-color: custom.$white;
+  $form-select-bg: custom.$dark;
+  $form-select-indicator-color: custom.$white;
+
+  @import "bootstrap/scss/variables";
+  @import "bootstrap/scss/mixins";
+  @import "bootstrap/scss/variables";
+  @import "bootstrap/scss/mixins";
+  @import "bootstrap/scss/card";
+  @import "bootstrap/scss/offcanvas";
+  @import "bootstrap/scss/tables";
+  @import "bootstrap/scss/pagination";
+  @import "bootstrap/scss/accordion";
+  @import "bootstrap/scss/forms/form-select";
+}

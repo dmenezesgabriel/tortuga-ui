@@ -1,0 +1,120 @@
+/**************************************************************************** /
+* Custom bootstrap scss
+******************************************************************************/
+@import "bootstrap/scss/functions";
+
+/**************************************************************************** /
+* Custom variables definition
+***************************************************************************** /
+* - Must be always after bootstrap functions import and before it's variables
+* import
+******************************************************************************/
+
+// White and gray
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+// Main colors
+// Color pallet https://getbootstrap.com/docs/5.1/customize/color/
+$primary: #0d6efd;
+$secondary: #fd7e14;
+$gray: #64748b;
+$dark: #1e293b;
+$dark-alt: #334155;
+
+// Accordion overrides
+$accordion-padding-x: 1.5rem;
+$accordion-padding-y: 1.5rem;
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $dark-alt;
+$accordion-icon-width: 1.875rem;
+
+// Pagination
+$pagination-border-color: $secondary;
+$pagination-color: $secondary;
+
+$pagination-focus-color: $white;
+$pagination-focus-bg: $secondary;
+$pagination-focus-outline: $secondary;
+
+$pagination-hover-color: $white;
+$pagination-hover-bg: $secondary;
+$pagination-hover-border-color: $secondary;
+
+$pagination-active-color: $white;
+$pagination-active-bg: $secondary;
+$pagination-active-border-color: $secondary;
+
+$pagination-disabled-color: $secondary;
+$pagination-disabled-bg: $gray-200;
+$pagination-disabled-border-color: $secondary;
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+/**************************************************************************** /
+* Custom maps definition
+******************************************************************************/
+
+// Custom map
+$custom-colors: (
+  "neutral": $gray-500,
+  "dark-alt": $dark-alt,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors: map-remove($theme-colors, "info");
+
+/**************************************************************************** /
+* Bootstrap imports
+******************************************************************************/
+
+//  Configuration
+@import "bootstrap/scss/utilities";
+
+// Layout & Components
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/badge";
+// @import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+// @import "bootstrap/scss/carousel";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/offcanvas"; // sidebar, depends on modal
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/placeholders";
+// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/root";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/bootstrap-reboot";
+@import "bootstrap/scss/bootstrap-utilities";

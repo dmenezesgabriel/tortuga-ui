@@ -1,0 +1,18 @@
+svg.wave {
+  path {
+    stroke: var(--bs-white);
+    stroke-width: 5;
+    fill: var(--bs-white);
+    fill-opacity: 1;
+  }
+}
+
+[data-mode="dark"] .darker {
+  svg.wave {
+    path {
+      stroke: var(--bs-dark-alt);
+      stroke-width: 5;
+      fill: var(--bs-dark-alt);
+    }
+  }
+}

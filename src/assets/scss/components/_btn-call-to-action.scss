@@ -1,0 +1,54 @@
+@use "@/assets/scss/abstracts/mixins";
+@use "@/assets/scss/custom";
+
+.btn-call-to-action {
+  position: relative;
+  text-decoration: none;
+  padding: 0.9rem 4.5rem 0.9rem 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  background-color: var(--bs-white);
+
+  &__text {
+    color: custom.$dark;
+  }
+
+  &__icon {
+    position: absolute;
+    background-color: var(--bs-secondary);
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+    i {
+      color: var(--bs-white);
+      font-size: 1rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  &:hover {
+    @include mixins.gradient;
+
+    .btn-call-to-action__text {
+      color: var(--bs-white);
+    }
+
+    .btn-call-to-action__icon {
+      background-color: rgba(var(--bs-black-rgb), 0.6);
+    }
+  }
+}
+
+// Dark mode
+[data-mode="dark"] .darker {
+  .btn-call-to-action {
+    background-color: var(--bs-dark-alt);
+    &__text {
+      color: var(--bs-white);
+    }
+  }
+}
