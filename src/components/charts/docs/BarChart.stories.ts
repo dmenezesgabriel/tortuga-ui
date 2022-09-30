@@ -1,12 +1,12 @@
 import BarChart from "@/components/charts/BarChart.vue";
-import type { Meta, StoryFn } from "@storybook/vue3";
+import type { Meta, Story } from "@storybook/vue3";
 
 export default {
   title: "Charts/BarChart",
   component: BarChart,
 } as Meta<typeof BarChart>;
 
-const Template = (args: any) => {
+const Template: Story = (args: any) => {
   return {
     components: { BarChart },
     setup() {

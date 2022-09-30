@@ -2,7 +2,6 @@
 * Custom bootstrap scss
 ******************************************************************************/
 @import "bootstrap/scss/functions";
-
 /**************************************************************************** /
 * Custom variables definition
 ***************************************************************************** /
@@ -59,6 +58,7 @@ $pagination-disabled-bg: $gray-200;
 $pagination-disabled-border-color: $secondary;
 
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 
 /**************************************************************************** /
