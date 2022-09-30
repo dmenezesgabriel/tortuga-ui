@@ -19,3 +19,4 @@ export { default as BarChart } from "@/components/charts/BarChart.vue";
 export { default as DoughnutChart } from "@/components/charts/DoughnutChart.vue";
 export { default as LineChart } from "@/components/charts/LineChart.vue";
 export { default as PieChart } from "@/components/charts/PieChart.vue";
+export { default as TypeWritter } from "@/components/text/TypeWritter.vue";
