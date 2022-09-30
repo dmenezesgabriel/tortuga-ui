@@ -7,9 +7,9 @@
  * TODO
  * Remove repeated logic on calculation methods.
  */
-import type { IDatum } from "@/interfaces/IData";
-import type { IOption } from "@/interfaces/IFilter";
-import type IFilter from "@/interfaces/IFilter";
+import type { IDatum } from "@/types/IData";
+import type { IOption } from "@/types/IFilter";
+import type IFilter from "@/types/IFilter";
 import { msToTime } from "@/utils/time";
 
 export const getAttributeValues = (data: any, columnName: string): any[] => {

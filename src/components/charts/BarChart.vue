@@ -5,7 +5,9 @@ import type { ChartData, ChartOptions } from "chart.js";
 import type { PropType } from "vue";
 
 const props = defineProps({
-  data: { type: Object as PropType<ChartData> },
+  data: {
+    type: Object as PropType<ChartData>,
+  },
   options: { type: Object as PropType<ChartOptions<any>> },
   type: { default: "bar" },
 });

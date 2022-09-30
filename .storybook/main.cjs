@@ -1,3 +1,7 @@
+const path = require("path");
+
+const SRC_PATH = path.resolve(__dirname, "../src");
+
 module.exports = {
   stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -12,8 +16,8 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
-  viteFinal: (config) => {
-    config.plugins = [...config.plugins];
+  viteFinal: async (config) => {
+    config.resolve.alias["@"] = SRC_PATH;
     return config;
   },
 };

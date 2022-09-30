@@ -46,6 +46,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@storybook/vue3": "^6.5.12",
     "@types/bootstrap": "^5.2.4",
+    "@types/chart.js": "^2.9.37",
     "@types/jsdom": "^16.2.15",
     "@types/node": "^16.11.62",
     "@vitejs/plugin-vue": "^2.3.3",

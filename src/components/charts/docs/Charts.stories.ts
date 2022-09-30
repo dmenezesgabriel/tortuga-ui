@@ -1,7 +1,8 @@
-import BarChart from "../components/charts/BarChart.vue";
+import BarChart from "@/components/charts/BarChart.vue";
 import type { Meta, StoryFn } from "@storybook/vue3";
 
 export default {
+  title: "Charts/BarChart",
   component: BarChart,
 } as Meta<typeof BarChart>;
 
@@ -15,8 +16,8 @@ const Template = (args: any) => {
   };
 };
 
-export const Primary: StoryFn<typeof BarChart> = Template.bind({});
-Primary.args = {
+export const Default: any = Template.bind({});
+Default.args = {
   data: {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -51,5 +52,13 @@ Primary.args = {
         beginAtZero: true,
       },
     },
+  },
+};
+
+export const Horizontal: any = Template.bind({});
+Horizontal.args = {
+  ...Default.args,
+  options: {
+    indexAxis: "y",
   },
 };
