@@ -4,4 +4,12 @@ import { HstVue } from "@histoire/plugin-vue";
 export default defineConfig({
   setupFile: "./histoire.setup.ts",
   plugins: [HstVue()],
+  tree: {
+    groups: [
+      {
+        title: "Text",
+        include: (file) => true,
+      },
+    ],
+  },
 });

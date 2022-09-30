@@ -1,7 +1,5 @@
-<!-- Meow.story.vue -->
 <script setup lang="ts">
-import TypeWritter from '../TypeWritter.vue';
-
+import TextContent from '../TextContent';
 </script>
 <template>
     <Story>
@@ -9,7 +7,10 @@ import TypeWritter from '../TypeWritter.vue';
             title="Default"
             group="Text"
         >
-            <TypeWritter :phrases="['Hello']" />
+            <TextContent
+                type="h1"
+                content="Hello!"
+            />
         </Variant>
     </Story>
 </template>
