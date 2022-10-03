@@ -9,8 +9,8 @@ const state = reactive({
 </script>
 <template>
     <Story
-        group="text"
-        title="TypeWritter"
+        group="components"
+        title="Text/TypeWritter"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->

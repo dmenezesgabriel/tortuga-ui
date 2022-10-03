@@ -10,7 +10,8 @@ function initState() {
 
 <template>
     <Story
-        group="animations"
+        title="Animations/ScrollCue"
+        group="components"
         :init-state="initState"
     >
         <!-- Controls -->

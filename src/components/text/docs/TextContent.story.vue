@@ -11,8 +11,8 @@ function initState() {
 </script>
 <template>
     <Story
-        group="text"
-        title="TextContent"
+        group="components"
+        title="Text/TextContent"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->
