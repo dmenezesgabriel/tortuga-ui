@@ -11,6 +11,7 @@ function initState() {
 </script>
 <template>
     <Story
+        icon="carbon:string-text"
         group="components"
         title="Text/TextContent"
         :layout="{type: 'single', iframe: true}"

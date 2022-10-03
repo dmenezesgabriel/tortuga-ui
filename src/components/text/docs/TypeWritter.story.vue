@@ -9,6 +9,7 @@ const state = reactive({
 </script>
 <template>
     <Story
+        icon="carbon:string-text"
         group="components"
         title="Text/TypeWritter"
         :layout="{type: 'single', iframe: true}"

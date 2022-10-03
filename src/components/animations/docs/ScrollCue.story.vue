@@ -10,6 +10,7 @@ function initState() {
 
 <template>
     <Story
+        icon="carbon:wind-stream"
         title="Animations/ScrollCue"
         group="components"
         :init-state="initState"

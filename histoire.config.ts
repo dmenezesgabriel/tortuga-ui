@@ -7,6 +7,11 @@ export default defineConfig({
   tree: {
     groups: [
       {
+        id: "top",
+        title: "", // No Toggle
+        include: (file) => true,
+      },
+      {
         id: "components",
         title: "Components",
         include: (file) => true,
