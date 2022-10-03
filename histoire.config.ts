@@ -7,6 +7,12 @@ export default defineConfig({
   tree: {
     groups: [
       {
+        id: "animations",
+        title: "Animations",
+        include: (file) => true,
+      },
+      {
+        id: "text",
         title: "Text",
         include: (file) => true,
       },

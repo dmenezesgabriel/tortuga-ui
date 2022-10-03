@@ -11,7 +11,8 @@ function initState() {
 </script>
 <template>
     <Story
-        title="Text Content"
+        group="text"
+        title="TextContent"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->
@@ -31,7 +32,6 @@ function initState() {
         <!-- Default variant -->
         <Variant
             title="Default"
-            group="Text"
             :init-state="initState"
         >
             <template #default="{state}">
@@ -40,7 +40,7 @@ function initState() {
                     {{state.content}}
                 </TextContent>
             </template>
-            <!-- Default variant end -->
         </Variant>
+        <!-- Default variant end -->
     </Story>
 </template>
