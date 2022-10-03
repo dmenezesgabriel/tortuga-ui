@@ -13,6 +13,15 @@ function initState() {
         group="animations"
         :init-state="initState"
     >
+        <!-- Controls -->
+        <template #controls="{state}">
+            <HstText
+                type="text"
+                v-model="state.color"
+                title="Color"
+            />
+        </template>
+        <!-- Controls end -->
         <template #default="{state}">
             <div class="absolute-center">
                 <ScrollCue :color="state.color" />
