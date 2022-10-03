@@ -2,7 +2,6 @@ import { h } from "vue";
 
 interface Props {
   text: string;
-  to: string;
 }
 
 const ButtonCallToAction = (props: Props) => {
@@ -24,7 +23,6 @@ const ButtonCallToAction = (props: Props) => {
     {
       class: "rounded-pill btn-call-to-action border border-secondary",
       type: "button",
-      to: props.to,
     },
     [buttonText, buttonIconWrapper]
   );
