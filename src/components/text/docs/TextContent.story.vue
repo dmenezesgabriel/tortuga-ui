@@ -13,6 +13,20 @@ const state = reactive({
         title="Text Content"
         :layout="{type: 'single', iframe: true}"
     >
+
+        <template #controls>
+            <HstText
+                type="text"
+                v-model="state.type"
+                title="Type"
+            />
+            <HstText
+                type="text"
+                v-model="state.content"
+                title="Content"
+            />
+        </template>
+
         <Variant
             title="Default"
             group="Text"
@@ -20,6 +34,8 @@ const state = reactive({
             <TextContent :type="state.type">
                 {{state.content}}
             </TextContent>
+
+
         </Variant>
     </Story>
 </template>
