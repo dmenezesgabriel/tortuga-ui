@@ -2,7 +2,6 @@ import { h, type SetupContext } from "vue";
 
 interface Props {
   type: string;
-  content: string;
 }
 
 const TextContent = (props: Props, context: SetupContext) => {
@@ -14,7 +13,7 @@ const TextContent = (props: Props, context: SetupContext) => {
         context.emit("click", event);
       },
     },
-    props.content
+    context.slots.default()
   );
 };
 
