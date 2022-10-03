@@ -1,5 +1,4 @@
 import { h } from "vue";
-import { RouterLink } from "vue-router";
 
 interface Props {
   text: string;
@@ -21,7 +20,7 @@ const ButtonCallToAction = (props: Props) => {
     props.text
   );
   return h(
-    RouterLink,
+    "button",
     {
       class: "rounded-pill btn-call-to-action border border-secondary",
       type: "button",

@@ -12,6 +12,16 @@ export default defineConfig({
         include: (file) => true,
       },
       {
+        id: "buttons",
+        title: "Buttons",
+        include: (file) => true,
+      },
+      {
+        id: "charts",
+        title: "Charts",
+        include: (file) => true,
+      },
+      {
         id: "text",
         title: "Text",
         include: (file) => true,
