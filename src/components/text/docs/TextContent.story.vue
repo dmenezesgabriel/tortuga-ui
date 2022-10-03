@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import TextContent from '../TextContent';
-import { reactive } from 'vue';
 
-const state = reactive({
-    type: "h1",
-    content: "Hello, World!"
-})
+function initState() {
+    return {
+        type: "h1",
+        content: "Hello, World!"
+    }
+}
 
 </script>
 <template>
@@ -14,7 +15,7 @@ const state = reactive({
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->
-        <template #controls>
+        <template #controls="{state}">
             <HstText
                 type="text"
                 v-model="state.type"
@@ -31,11 +32,15 @@ const state = reactive({
         <Variant
             title="Default"
             group="Text"
+            :init-state="initState"
         >
-            <TextContent :type="state.type">
-                {{state.content}}
-            </TextContent>
+            <template #default="{state}">
+
+                <TextContent :type="state.type">
+                    {{state.content}}
+                </TextContent>
+            </template>
+            <!-- Default variant end -->
         </Variant>
-        <!-- Default variant end -->
     </Story>
 </template>

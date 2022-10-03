@@ -21,6 +21,5 @@ TextContent.emits = ["click"];
 
 TextContent.props = {
   type: { type: String, required: true },
-  content: { type: String, required: true },
 };
 export default TextContent;
