@@ -22,8 +22,8 @@ export default defineConfig(() => {
     build: {
       lib: {
         entry: resolve(__dirname, "src/index.ts"),
-        name: "ParetoUI",
-        fileName: (format) => `pareto-ui.${format}.js`,
+        name: "TortugaUI",
+        fileName: (format) => `tortuga-ui.${format}.js`,
       },
       rollupOptions: {
         external: ["vue"],

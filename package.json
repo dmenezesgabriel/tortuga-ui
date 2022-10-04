@@ -1,17 +1,17 @@
 {
-  "name": "pareto-vue",
+  "name": "tortuga-ui",
   "type": "module",
   "version": "0.0.0",
   "files": [
     "dist"
   ],
   "types": "./dist/types/index.d.ts",
-  "main": "./dist/pareto-ui.umd.cjs",
-  "module": "./dist/pareto-ui.es.js",
+  "main": "./dist/tortuga-ui.umd.cjs",
+  "module": "./dist/tortuga-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/pareto-ui.es.js",
-      "require": "./dist/pareto-ui.umd.cjs"
+      "import": "./dist/tortuga-ui.es.js",
+      "require": "./dist/tortuga-ui.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
