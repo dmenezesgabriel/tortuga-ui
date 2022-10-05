@@ -6,6 +6,12 @@ function initState() {
         color: "black",
     }
 }
+
+const source = `
+<div class="absolute-center">
+    <ScrollCue :color="${initState().color}" />
+</div>
+`
 </script>
 
 <template>
@@ -14,6 +20,7 @@ function initState() {
         title="Animations/ScrollCue"
         group="components"
         :init-state="initState"
+        :source="source"
     >
         <!-- Controls -->
         <template #controls="{state}">
@@ -31,3 +38,12 @@ function initState() {
         </template>
     </Story>
 </template>
+
+<docs lang="md">
+
+# ScrollCue
+
+As the name says a cue for the user to scroll down the page.
+
+</docs>
+
