@@ -17,7 +17,7 @@ const source = `
 
 <template>
     <Story
-        icon="carbon:wind-stream"
+        icon="carbon:information"
         title="Bootstrap/BsTooltip"
         group="components"
         :source="source"
