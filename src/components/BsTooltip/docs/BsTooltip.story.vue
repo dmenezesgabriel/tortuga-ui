@@ -1,15 +1,16 @@
+
 <script setup lang="ts">
-import ScrollCue from '@/components/ScrollCue/ScrollCue';
+import BsTooltip from '@/components/BsTooltip/BsTooltip.vue';
 
 function initState() {
     return {
-        color: "black",
+        options: { title: "This is a Tooltip" }
     }
 }
 
 const source = `
 <div class="absolute-center">
-    <ScrollCue :color="${initState().color}" />
+    <BsTooltip :options="${initState().options}" />
 </div>
 `
 </script>
@@ -17,23 +18,16 @@ const source = `
 <template>
     <Story
         icon="carbon:wind-stream"
-        title="Animations/ScrollCue"
+        title="Bootstrap/BsTooltip"
         group="components"
         :init-state="initState"
         :source="source"
     >
-        <!-- Controls -->
-        <template #controls="{state}">
-            <HstText
-                type="text"
-                v-model="state.color"
-                title="Color"
-            />
-        </template>
-        <!-- Controls end -->
         <template #default="{state}">
             <div class="absolute-center">
-                <ScrollCue :color="state.color" />
+                <BsTooltip :options="state.options">
+                    <button class="btn btn-primary">Hover Me!</button>
+                </BsTooltip>
             </div>
         </template>
     </Story>
@@ -41,7 +35,7 @@ const source = `
 
 <docs lang="md">
 
-# ScrollCue
+# BsTooltip
 
 As the name says a cue for the user to scroll down the page.
 
