@@ -6,10 +6,9 @@ import type { PropType } from "vue";
 const props = defineProps({
   data: { type: Object as PropType<ChartData> },
   options: { type: Object as PropType<ChartOptions<any>> },
-  type: { default: "doughnut" },
 });
 
-const { canvasElement } = useChart(props);
+const { canvasElement } = useChart(props, "doughnut");
 </script>
 
 <template>

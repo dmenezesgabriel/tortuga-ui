@@ -9,10 +9,9 @@ const props = defineProps({
     type: Object as PropType<ChartData>,
   },
   options: { type: Object as PropType<ChartOptions<any>> },
-  type: { default: "bar" },
 });
 
-const { canvasElement, _chart } = useChart(props);
+const { canvasElement, _chart } = useChart(props, "bar");
 
 // a composable can also hook into its owner component's
 // lifecycle to setup and teardown side effects.

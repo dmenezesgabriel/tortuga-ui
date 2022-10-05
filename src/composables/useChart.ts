@@ -12,7 +12,7 @@ import { computed } from "vue";
 Chart.register(ChartDataLabels);
 // by convention, composable function names start with "use"
 // TODO correct typing
-export function useChart(props: any) {
+export function useChart(props: any, type: any) {
   // state encapsulated and managed by the composable
   const canvasElement = ref<HTMLCanvasElement | null>(null);
   const _chart = shallowRef<any>(null);
@@ -32,7 +32,7 @@ export function useChart(props: any) {
     if (ctx !== null && ctx !== undefined) {
       // Instance a chart
       _chart.value = new Chart(ctx, {
-        type: props.type,
+        type: type,
         data: props.data,
         options: props.options,
       });

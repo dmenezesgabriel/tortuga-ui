@@ -42,7 +42,7 @@ const state = reactive({
 </script>
 <template>
     <Story
-        icon="carbon:string-text"
+        icon="carbon:chart-column"
         group="components"
         title="Charts/BarChart"
         :layout="{type: 'single', iframe: true}"
