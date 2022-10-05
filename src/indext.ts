@@ -13,10 +13,10 @@ import "bootstrap/js/dist/popover";
 import "bootstrap/js/dist/toast";
 import "bootstrap/js/dist/tooltip";
 
-export { default as ScrollCue } from "@/components/animations/ScrollCue";
-export { default as ButtonCallToAction } from "@/components/buttons/ButtonCallToAction";
-export { default as BarChart } from "@/components/charts/BarChart.vue";
-export { default as DoughnutChart } from "@/components/charts/DoughnutChart.vue";
-export { default as LineChart } from "@/components/charts/LineChart.vue";
-export { default as PieChart } from "@/components/charts/PieChart.vue";
-export { default as TypeWritter } from "@/components/text/TypeWritter.vue";
+export { default as ScrollCue } from "@/components/ScrollCue/ScrollCue";
+export { default as ButtonCallToAction } from "@/components/ButtonCallToAction/ButtonCallToAction";
+export { default as BarChart } from "@/components/BarChart/BarChart.vue";
+export { default as DoughnutChart } from "@/components/DoughnutChart/DoughnutChart.vue";
+export { default as LineChart } from "@/components/LineChart/LineChart.vue";
+export { default as PieChart } from "@/components/PieChart/PieChart.vue";
+export { default as TypeWritter } from "@/components/TypeWritter/TypeWritter.vue";
