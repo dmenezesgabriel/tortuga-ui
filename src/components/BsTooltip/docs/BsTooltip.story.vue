@@ -21,19 +21,34 @@ const source = `
         title="Bootstrap/BsTooltip"
         group="components"
         :source="source"
+        :layout="{type: 'grid'}"
     >
+        <!-- Default -->
         <Variant
+            title="Default"
             auto-props-disabled
             :init-state="initState"
         >
             <template #default="{state}">
-                <div class="absolute-center">
-                    <BsTooltip :options="state.options">
-                        <button class="btn btn-primary">Hover Me!</button>
-                    </BsTooltip>
-                </div>
+                <BsTooltip :options="state.options">
+                    <button class="btn btn-primary">Hover Me!</button>
+                </BsTooltip>
             </template>
         </Variant>
+        <!-- Default end -->
+        <!-- Left -->
+        <Variant
+            title="Left"
+            auto-props-disabled
+            :init-state="initState"
+        >
+            <template #default="{state}">
+                <BsTooltip :options="state.options">
+                    <button class="btn btn-primary">Hover Me!</button>
+                </BsTooltip>
+            </template>
+        </Variant>
+        <!-- Left end -->
     </Story>
 </template>
 

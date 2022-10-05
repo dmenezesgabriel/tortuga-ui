@@ -1,5 +1,6 @@
 import { defineConfig } from "histoire";
 import { HstVue } from "@histoire/plugin-vue";
+import { defaultColors } from "histoire";
 
 export default defineConfig({
   setupFile: "./histoire.setup.ts",
@@ -17,5 +18,11 @@ export default defineConfig({
         include: (file) => true,
       },
     ],
+  },
+  theme: {
+    colors: {
+      gray: defaultColors.zinc,
+      primary: defaultColors.cyan,
+    },
   },
 });
