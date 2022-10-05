@@ -2,6 +2,11 @@
 import { Tooltip } from "bootstrap";
 import { onMounted, ref } from "vue";
 
+// TODO
+// Open the object property
+// How To:
+// https://getbootstrap.com/docs/5.2/components/tooltips/#options
+// export const props = makePropsConfigurable(
 
 const props = defineProps({
   options: { type: Object, required: true },
