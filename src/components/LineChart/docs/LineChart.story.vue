@@ -44,7 +44,7 @@ const state = reactive({
     <Story
         icon="carbon:chart-line"
         group="components"
-        title="Charts/LineChart"
+        title="ChartJS/LineChart"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->

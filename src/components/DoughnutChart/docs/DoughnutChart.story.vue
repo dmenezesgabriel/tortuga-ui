@@ -44,7 +44,7 @@ const state = reactive({
     <Story
         icon="carbon:chart-ring"
         group="components"
-        title="Charts/DoughnutChart"
+        title="ChartJS/DoughnutChart"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->

@@ -44,7 +44,7 @@ const state = reactive({
     <Story
         icon="carbon:chart-pie"
         group="components"
-        title="Charts/PieChart"
+        title="ChartJS/PieChart"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->
