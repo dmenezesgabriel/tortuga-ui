@@ -2,15 +2,21 @@
 <script setup lang="ts">
 import BsTooltip from '@/components/BsTooltip/BsTooltip.vue';
 
-function initState() {
+function initDefaultState() {
     return {
         options: { title: "This is a Tooltip" }
     }
 }
 
+function initLeftState() {
+    return {
+        options: { title: "This is a Tooltip", placement: "left" }
+    }
+}
+
 const source = `
 <div class="absolute-center">
-    <BsTooltip :options="${initState().options}" />
+    <BsTooltip :options="${JSON.stringify(initDefaultState().options)}" />
 </div>
 `
 </script>
@@ -27,11 +33,11 @@ const source = `
         <Variant
             title="Default"
             auto-props-disabled
-            :init-state="initState"
+            :init-state="initDefaultState"
         >
             <template #default="{state}">
                 <BsTooltip :options="state.options">
-                    <button class="btn btn-primary">Hover Me!</button>
+                    <button class="btn btn-primary">Tooltip Top</button>
                 </BsTooltip>
             </template>
         </Variant>
@@ -40,11 +46,11 @@ const source = `
         <Variant
             title="Left"
             auto-props-disabled
-            :init-state="initState"
+            :init-state="initLeftState"
         >
             <template #default="{state}">
                 <BsTooltip :options="state.options">
-                    <button class="btn btn-primary">Hover Me!</button>
+                    <button class="btn btn-primary">Tooltip Left</button>
                 </BsTooltip>
             </template>
         </Variant>

@@ -7,19 +7,21 @@ const props = defineProps({
   options: { type: Object, required: true },
 });
 
-const tooltip = ref<HTMLElement | null>(null);
+const tooltipElement = ref<HTMLElement | null>(null);
+const tooltip = ref<any>(null)
 
 onMounted(() => {
-  if (tooltip.value) new Tooltip(tooltip.value, props.options);
+  if (tooltipElement.value) {
+    tooltip.value = new Tooltip(tooltipElement.value, props.options);
+  }
+
 });
 </script>
+
 <template>
   <span
-    ref="tooltip"
+    ref="tooltipElement"
     tabindex="0"
-    data-bs-toggle="tooltip"
-    data-bs-delay="0"
-    data-bs-trigger="focus hover"
     aria-label="tooltip"
   >
     <slot></slot>
