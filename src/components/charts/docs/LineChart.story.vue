@@ -1,7 +1,7 @@
 
 <!-- Meow.story.vue -->
 <script setup lang="ts">
-import BarChart from '@/components/charts/BarChart.vue';
+import LineChart from '@/components/charts/LineChart.vue';
 import { reactive } from '@vue/reactivity';
 
 const state = reactive({
@@ -42,9 +42,9 @@ const state = reactive({
 </script>
 <template>
     <Story
-        icon="carbon:chart-column"
+        icon="carbon:chart-line"
         group="components"
-        title="Charts/BarChart"
+        title="Charts/LineChart"
         :layout="{type: 'single', iframe: true}"
     >
         <!-- Controls -->
@@ -54,7 +54,7 @@ const state = reactive({
             title="Default"
             group="Text"
         >
-            <BarChart
+            <LineChart
                 :data="state.data"
                 :options="state.options"
             />

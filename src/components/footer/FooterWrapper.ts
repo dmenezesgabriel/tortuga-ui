@@ -1,4 +1,4 @@
-import { h, SetupContext } from "vue";
+import { h, type SetupContext } from "vue";
 
 const FooterWrapper = (context: SetupContext) => {
   const slotDefault = h("div", context.slots.default());
