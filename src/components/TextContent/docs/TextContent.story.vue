@@ -32,6 +32,7 @@ function initState() {
         <!-- Controls end -->
         <!-- Default variant -->
         <Variant
+            auto-props-disabled
             title="Default"
             :init-state="initState"
         >

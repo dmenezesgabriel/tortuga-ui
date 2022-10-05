@@ -20,16 +20,20 @@ const source = `
         icon="carbon:wind-stream"
         title="Bootstrap/BsTooltip"
         group="components"
-        :init-state="initState"
         :source="source"
     >
-        <template #default="{state}">
-            <div class="absolute-center">
-                <BsTooltip :options="state.options">
-                    <button class="btn btn-primary">Hover Me!</button>
-                </BsTooltip>
-            </div>
-        </template>
+        <Variant
+            auto-props-disabled
+            :init-state="initState"
+        >
+            <template #default="{state}">
+                <div class="absolute-center">
+                    <BsTooltip :options="state.options">
+                        <button class="btn btn-primary">Hover Me!</button>
+                    </BsTooltip>
+                </div>
+            </template>
+        </Variant>
     </Story>
 </template>
 

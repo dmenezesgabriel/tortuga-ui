@@ -51,6 +51,7 @@ const state = reactive({
         <!-- Controls end -->
 
         <Variant
+            auto-props-disabled
             title="Default"
             group="Text"
         >
