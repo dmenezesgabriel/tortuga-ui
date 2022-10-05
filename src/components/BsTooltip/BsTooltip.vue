@@ -2,8 +2,9 @@
 import { Tooltip } from "bootstrap";
 import { onMounted, ref } from "vue";
 
+
 const props = defineProps({
-  options: { required: true },
+  options: { type: Object, required: true },
 });
 
 const tooltip = ref<HTMLElement | null>(null);
