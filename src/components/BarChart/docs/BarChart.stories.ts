@@ -6,7 +6,13 @@ export default {
   title: "ChartJS/BarChart",
   parameters: {
     docs: {},
+    backgrounds: {
+      values: [{ name: "dark", value: "#1e293b" }],
+    },
   },
+  decorators: [
+    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+  ],
   component: BarChart,
 } as Meta<typeof BarChart>;
 
