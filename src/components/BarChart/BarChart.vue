@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useChart } from "../../composables/useChart";
+import { useChart } from "@/composables/useChart";
 import { onMounted } from "vue";
 import type { ChartData, ChartOptions } from "chart.js";
 import type { PropType } from "vue";
