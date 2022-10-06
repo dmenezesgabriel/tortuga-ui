@@ -8,6 +8,7 @@ const config: StorybookViteConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/preset-scss",
   ],
   framework: "@storybook/vue3",
   core: {

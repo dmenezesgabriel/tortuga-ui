@@ -4,7 +4,7 @@ interface Props {
   color: string;
 }
 
-const ScrollCue = (props: Props) => {
+const ScrollCue = (props: any) => {
   const arrow = h(
     "div",
     { class: "arrow" },
