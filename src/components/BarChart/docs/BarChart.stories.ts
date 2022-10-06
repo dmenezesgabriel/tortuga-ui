@@ -1,9 +1,14 @@
 import BarChart from "../BarChart.vue";
-import type { Story } from "@storybook/vue3";
+import type { Story, Meta } from "@storybook/vue3";
+
+// Metadata default export
 export default {
   title: "ChartJS/BarChart",
+  parameters: {
+    docs: {},
+  },
   component: BarChart,
-};
+} as Meta<typeof BarChart>;
 
 const Template = (args: any) => ({
   components: { BarChart },
@@ -13,8 +18,10 @@ const Template = (args: any) => ({
   template: "<BarChart v-bind='args' />",
 });
 
-export const Default: Story = Template.bind({});
-Default.args = {
+// TODO
+// Change to StoryFn<typeof BarChart>
+export const Primary: Story = Template.bind({});
+Primary.args = {
   data: {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -51,3 +58,28 @@ Default.args = {
     },
   },
 };
+Primary.storyName = "Vertical Bar Chart";
+
+export const Secondary: Story = Template.bind({});
+Secondary.args = {
+  ...Primary.args,
+  options: {
+    indexAxis: "y",
+    elements: {
+      bar: {
+        borderWidth: 2,
+      },
+    },
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "right",
+      },
+      title: {
+        display: true,
+        text: "Chart.js Horizontal Bar Chart",
+      },
+    },
+  },
+};
+Secondary.storyName = "Horizontal Bar Chart";
