@@ -4,7 +4,7 @@ interface Props {
   text: string;
 }
 
-const ButtonCallToAction = (props: Props, context: SetupContext) => {
+const ButtonCallToAction = (props: any, context: SetupContext) => {
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(
     "span",
