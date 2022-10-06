@@ -26,6 +26,8 @@ const Template = (args: any) => ({
 
 // TODO
 // Change to StoryFn<typeof BarChart>
+
+// Vertical Bar Chart
 export const Primary: Story = Template.bind({});
 Primary.args = {
   data: {
@@ -66,6 +68,7 @@ Primary.args = {
 };
 Primary.storyName = "Vertical Bar Chart";
 
+// Horizontal Bar Chart
 export const Secondary: Story = Template.bind({});
 Secondary.args = {
   ...Primary.args,
