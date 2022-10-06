@@ -1,10 +1,10 @@
-import { h } from "vue";
+import { h, type SetupContext } from "vue";
 
 interface Props {
   text: string;
 }
 
-const ButtonCallToAction = (props: Props) => {
+const ButtonCallToAction = (props: Props, context: SetupContext) => {
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(
     "span",
@@ -23,6 +23,9 @@ const ButtonCallToAction = (props: Props) => {
     {
       class: "rounded-pill btn-call-to-action border border-secondary",
       type: "button",
+      onClick(event: Event) {
+        context.emit("click", event);
+      },
     },
     [buttonText, buttonIconWrapper]
   );
@@ -30,6 +33,8 @@ const ButtonCallToAction = (props: Props) => {
 
 ButtonCallToAction.props = {
   text: { type: String, required: true },
-  to: { type: String, required: true },
 };
+
+ButtonCallToAction.emits = ["click"];
+
 export default ButtonCallToAction;

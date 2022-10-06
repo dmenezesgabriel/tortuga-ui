@@ -1,6 +1,8 @@
 
 <script setup lang="ts">
 import ButtonCallToAction from '@/components/ButtonCallToAction/ButtonCallToAction';
+import { hstEvent } from "histoire/client";
+
 
 function initState() {
     return {
@@ -27,7 +29,10 @@ function initState() {
         <!-- Controls end -->
         <template #default="{state}">
             <div class="absolute-center">
-                <ButtonCallToAction :text="state.text" />
+                <ButtonCallToAction
+                    :text="state.text"
+                    @click="hstEvent('Click', $event)"
+                />
             </div>
         </template>
     </Story>
