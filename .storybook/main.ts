@@ -19,6 +19,7 @@ const config: StorybookViteConfig = {
   },
   features: {
     storyStoreV7: true,
+    interactionsDebugger: true,
   },
   async viteFinal(config, options) {
     if (config.resolve && config.resolve.alias)
