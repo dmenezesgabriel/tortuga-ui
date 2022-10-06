@@ -9,6 +9,7 @@ const config: StorybookViteConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@storybook/addon-storysource",
     "@storybook/preset-scss",
     "@storybook/preset-typescript",
   ],
