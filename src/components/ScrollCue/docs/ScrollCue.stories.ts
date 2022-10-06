@@ -2,7 +2,7 @@ import ScrollCue from "@/components/ScrollCue/ScrollCue";
 import type { Story } from "@storybook/vue3";
 
 export default {
-  title: "Animations/ScrollCue",
+  title: "Components/Animations/ScrollCue",
   component: ScrollCue,
   decorators: [
     () => ({ template: "<div style='margin: 3em'><story /></div>" }),

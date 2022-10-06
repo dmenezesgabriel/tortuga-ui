@@ -3,7 +3,7 @@ import type { Story, Meta } from "@storybook/vue3";
 
 // Metadata default export
 export default {
-  title: "ChartJS/BarChart",
+  title: "Components/ChartJS/BarChart",
   parameters: {
     docs: {},
     backgrounds: {
