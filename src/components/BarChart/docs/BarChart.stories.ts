@@ -1,11 +1,9 @@
 import BarChart from "../BarChart.vue";
 import type { Story, Meta } from "@storybook/vue3";
-
 // Metadata default export
 export default {
   title: "Components/ChartJS/BarChart",
   parameters: {
-    docs: {},
     backgrounds: {
       values: [{ name: "dark", value: "#1e293b" }],
     },
