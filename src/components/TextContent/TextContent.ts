@@ -4,6 +4,7 @@ type Props = {
   type: string;
 };
 
+// @vue/component
 const TextContent = (
   props: Props,
   { emit, slots }: { emit: any; slots: any }

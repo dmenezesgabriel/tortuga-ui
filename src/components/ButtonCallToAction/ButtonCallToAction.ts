@@ -5,6 +5,7 @@ type Props = {
   disabled: boolean;
 };
 
+// @vue/component
 const ButtonCallToAction = (props: Props, { emit }: { emit: any }) => {
   const style = () =>
     import("@/components/ButtonCallToAction/btn-call-to-action.scss");

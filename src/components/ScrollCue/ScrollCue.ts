@@ -4,6 +4,7 @@ interface Props {
   color: string;
 }
 
+// @vue/component
 const ScrollCue = (props: any) => {
   const style = () => import("@/components/ScrollCue/scroll-cue.scss");
   const arrow = h(
