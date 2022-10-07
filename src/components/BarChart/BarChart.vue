@@ -11,6 +11,8 @@ const props = defineProps({
   options: { type: Object as PropType<ChartOptions<any>> },
 });
 
+const emit = defineEmits(["click"])
+
 const { canvasElement, _chart } = useChart(props, "bar");
 
 // a composable can also hook into its owner component's
@@ -22,12 +24,18 @@ const clickHandler = (event: Event) => {
    */
   const points = _chart.value.getElementsAtEventForMode(event, "nearest", {
     intersect: true,
+
   });
   // TODO correct typing
   points.map((point: any) => {
-    console.log(point.element.$context.raw);
-    if (props.data?.labels) console.log(props.data.labels[point.index]);
-    console.log(props.data?.datasets[point.datasetIndex].data[point.index]);
+    emit("click",
+      {
+        data: props.data?.datasets[point.datasetIndex].data[point.index],
+        // TODO
+        // if not labels, search for x, y or complete raw data for rect.
+        label: props.data?.labels ? props.data.labels[point.index] : ""
+      }
+    );
   });
 };
 

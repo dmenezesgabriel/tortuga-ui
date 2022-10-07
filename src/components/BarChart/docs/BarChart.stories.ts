@@ -1,5 +1,7 @@
 import BarChart from "../BarChart.vue";
 import type { Story, Meta } from "@storybook/vue3";
+import { action } from "@storybook/addon-actions";
+
 // Metadata default export
 export default {
   title: "Components/ChartJS/BarChart",
@@ -11,8 +13,15 @@ export default {
   decorators: [
     () => ({ template: "<div style='margin: 3em'><story /></div>" }),
   ],
+  argTypes: {
+    onClick: {},
+  },
   component: BarChart,
 } as Meta<typeof BarChart>;
+
+const actionsData = {
+  onClick: action("click"),
+};
 
 const Template = (args: any) => ({
   components: { BarChart },
