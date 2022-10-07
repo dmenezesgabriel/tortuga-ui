@@ -4,16 +4,19 @@ interface Props {
   type: string;
 }
 
-const TextContent = (props: Props, context: SetupContext) => {
+const TextContent = (
+  props: any,
+  { emit, slots }: { emit: any; slots: any }
+) => {
   return h(
     props.type,
     {
       class: "text-content",
       onClick(event: Event) {
-        context.emit("click", event);
+        emit("click", event);
       },
     },
-    context.slots.default()
+    slots.default()
   );
 };
 

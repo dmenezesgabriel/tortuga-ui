@@ -1,5 +1,3 @@
-/// <reference types="histoire" />
-
 import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";

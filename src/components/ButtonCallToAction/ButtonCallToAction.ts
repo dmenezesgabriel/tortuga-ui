@@ -4,7 +4,7 @@ interface Props {
   text: string;
 }
 
-const ButtonCallToAction = (props: Props, context: SetupContext) => {
+const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(
     "span",
@@ -24,7 +24,7 @@ const ButtonCallToAction = (props: Props, context: SetupContext) => {
       class: "rounded-pill btn-call-to-action border border-secondary",
       type: "button",
       onClick(event: Event) {
-        context.emit("click", event);
+        emit("click", event);
       },
     },
     [buttonText, buttonIconWrapper]
