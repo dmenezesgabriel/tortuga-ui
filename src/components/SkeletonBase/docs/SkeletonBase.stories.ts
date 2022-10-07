@@ -18,4 +18,15 @@ const Template = (args: any) => ({
 });
 
 export const Default: Story = Template.bind({});
-Default.args = {};
+Default.args = {
+  height: "30px",
+  width: "100%",
+  borderRadius: "5px",
+};
+
+export const Rounded: Story = Template.bind({});
+Rounded.args = {
+  height: "200px",
+  width: "200px",
+  borderRadius: "50%",
+};

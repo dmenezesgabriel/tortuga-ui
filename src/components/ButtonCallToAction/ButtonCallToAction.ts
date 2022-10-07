@@ -5,6 +5,8 @@ interface Props {
 }
 
 const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
+  const style = () =>
+    import("@/components/ButtonCallToAction/btn-call-to-action.scss");
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(
     "span",
@@ -22,6 +24,7 @@ const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
     "button",
     {
       class: "rounded-pill btn-call-to-action border border-secondary",
+      style: style(),
       type: "button",
       onClick(event: Event) {
         emit("click", event);
