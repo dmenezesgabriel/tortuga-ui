@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, type PropType } from "vue";
 
 const props = defineProps({
-  phrases: { type: Array<string>, required: true },
+  phrases: { type: Array as PropType<Array<string>>, required: true },
 });
 
 const phrasesCount = ref<number>(0);
@@ -35,12 +35,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <span ref="textDisplay" class="typing">Hello</span>
+  <span
+    ref="textDisplay"
+    class="typing"
+  ></span>
 </template>
 
 <style lang="scss" scoped>
 .typing {
   position: relative;
+
   &::after {
     content: "";
     width: 1px;
@@ -54,6 +58,7 @@ onMounted(() => {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
