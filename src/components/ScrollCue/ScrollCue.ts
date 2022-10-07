@@ -5,6 +5,7 @@ interface Props {
 }
 
 const ScrollCue = (props: any) => {
+  const style = () => import("@/assets/scss/components/_scroll-cue.scss");
   const arrow = h(
     "div",
     { class: "arrow" },
@@ -18,7 +19,7 @@ const ScrollCue = (props: any) => {
     )
   );
 
-  return h("div", { class: "arrow-wrapper" }, [arrow]);
+  return h("div", { class: "arrow-wrapper", style: style() }, [arrow]);
 };
 
 ScrollCue.props = {
