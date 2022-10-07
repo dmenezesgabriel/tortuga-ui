@@ -13,7 +13,7 @@ export default {
   ],
 };
 
-export const actionsData = {
+const actionsData = {
   onClick: action("click"),
 };
 
