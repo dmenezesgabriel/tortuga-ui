@@ -2,6 +2,7 @@
 @use "@/assets/scss/custom";
 
 .btn-call-to-action {
+  border: 1px solid var(--bs-secondary);
   position: relative;
   text-decoration: none;
   padding: 0.9rem 4.5rem 0.9rem 1.5rem;
@@ -40,6 +41,16 @@
     .btn-call-to-action__icon {
       background-color: rgba(var(--bs-black-rgb), 0.6);
     }
+  }
+
+  &.disabled {
+    border: 1px solid var(--bs-gray-400);
+    pointer-events: none;
+  }
+
+  &.disabled &__icon {
+    background: var(--bs-gray-600);
+    pointer-events: none;
   }
 }
 

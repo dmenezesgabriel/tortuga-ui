@@ -1,12 +1,14 @@
-import { h, type SetupContext } from "vue";
+import { h } from "vue";
 
-interface Props {
+type Props = {
   text: string;
-}
+  disabled: boolean;
+};
 
-const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
+const ButtonCallToAction = (props: Props, { emit }: { emit: any }) => {
   const style = () =>
     import("@/components/ButtonCallToAction/btn-call-to-action.scss");
+
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(
     "span",
@@ -20,10 +22,14 @@ const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
     { class: "btn-call-to-action__text" },
     props.text
   );
+
   return h(
     "button",
     {
-      class: "rounded-pill btn-call-to-action border border-secondary",
+      class: `
+        rounded-pill btn-call-to-action
+        ${props.disabled ? "disabled" : ""}
+      `,
       style: style(),
       type: "button",
       onClick(event: Event) {
@@ -36,6 +42,7 @@ const ButtonCallToAction = (props: any, { emit }: { emit: any }) => {
 
 ButtonCallToAction.props = {
   text: { type: String, required: true },
+  disabled: { type: Boolean, required: false, default: false },
 };
 
 ButtonCallToAction.emits = ["click"];

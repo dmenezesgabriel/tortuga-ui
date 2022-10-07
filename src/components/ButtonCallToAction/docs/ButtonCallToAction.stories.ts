@@ -29,3 +29,9 @@ export const Default: Story = Template.bind({});
 Default.args = {
   text: "Learn More",
 };
+
+export const Disabled: Story = Template.bind({});
+Disabled.args = {
+  ...Default.args,
+  disabled: true,
+};

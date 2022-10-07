@@ -1,12 +1,12 @@
 import { h } from "vue";
 
-interface Props {
+type Props = {
   height?: string;
   width?: string;
   borderRadius?: string;
-}
+};
 
-const SkeletonBase = (props: any) => {
+const SkeletonBase = (props: Props) => {
   const style = () => import("@/components/SkeletonBase/skeleton-base.scss");
   return h("span", {
     class: "skeleton-loader-base",

@@ -1,11 +1,11 @@
-import { h, type SetupContext } from "vue";
+import { h } from "vue";
 
-interface Props {
+type Props = {
   type: string;
-}
+};
 
 const TextContent = (
-  props: any,
+  props: Props,
   { emit, slots }: { emit: any; slots: any }
 ) => {
   return h(
