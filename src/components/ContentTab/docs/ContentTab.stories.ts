@@ -3,7 +3,7 @@ import TabContent from "@/components/ContentTab/TabContent.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {
-  title: "Components/Layout/ContentTab",
+  title: "Components/Tab/ContentTab",
   component: { TabsWrapper },
   subcomponents: { TabContent },
 };
