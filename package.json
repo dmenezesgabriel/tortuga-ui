@@ -1,17 +1,17 @@
 {
-  "name": "tortuga-ui",
+  "name": "vbc-ui",
   "type": "module",
   "version": "0.0.0",
   "files": [
     "dist"
   ],
   "types": "./dist/types/index.d.ts",
-  "main": "./dist/tortuga-ui.umd.cjs",
-  "module": "./dist/tortuga-ui.es.js",
+  "main": "./dist/vbc-ui.umd.cjs",
+  "module": "./dist/vbc-ui.es.js",
   "exports": {
     ".": {
-      "import": "./dist/tortuga-ui.es.js",
-      "require": "./dist/tortuga-ui.umd.cjs"
+      "import": "./dist/vbc-ui.es.js",
+      "require": "./dist/vbc-ui.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },
