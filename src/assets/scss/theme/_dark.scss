@@ -1,64 +1,64 @@
 /**************************************************************************** /
 * Dark mode
 ******************************************************************************/
-@use "../variables" as variables;
+@use "../variables" as custom;
 
 [data-mode="dark"] .darker {
   @import "bootstrap/scss/functions";
-  $primary: variables.$primary;
+  $primary: custom.$primary;
   // Card
-  $card-bg: variables.$dark;
-  $card-border-color: variables.$gray-600;
-  $card-color: variables.$gray-300;
+  $card-bg: custom.$dark;
+  $card-border-color: custom.$gray-600;
+  $card-color: custom.$gray-300;
   // Card Header
-  $card-cap-bg: variables.$dark;
-  $card-cap-color: variables.$gray-300;
+  $card-cap-bg: custom.$dark;
+  $card-cap-color: custom.$gray-300;
   // Table
-  $table-striped-color: variables.$gray-400;
+  $table-striped-color: custom.$gray-400;
   $table-striped-bg-factor: 0.05;
-  $table-striped-bg: variables.$dark-alt;
+  $table-striped-bg: custom.$dark-alt;
   // Offcanvas
-  $offcanvas-bg-color: variables.$dark;
+  $offcanvas-bg-color: custom.$dark;
 
   // Pagination
-  $pagination-color: variables.$secondary;
-  $pagination-bg: variables.$dark-alt;
-  $pagination-border-color: variables.$secondary;
+  $pagination-color: custom.$secondary;
+  $pagination-bg: custom.$dark-alt;
+  $pagination-border-color: custom.$secondary;
 
-  $pagination-focus-color: variables.$white;
-  $pagination-focus-bg: variables.$secondary;
-  $pagination-focus-outline: variables.$secondary;
+  $pagination-focus-color: custom.$white;
+  $pagination-focus-bg: custom.$secondary;
+  $pagination-focus-outline: custom.$secondary;
 
-  $pagination-hover-color: variables.$white;
-  $pagination-hover-bg: variables.$secondary;
-  $pagination-hover-border-color: variables.$secondary;
+  $pagination-hover-color: custom.$white;
+  $pagination-hover-bg: custom.$secondary;
+  $pagination-hover-border-color: custom.$secondary;
 
-  $pagination-active-color: variables.$white;
-  $pagination-active-bg: variables.$secondary;
-  $pagination-active-border-color: variables.$secondary;
+  $pagination-active-color: custom.$white;
+  $pagination-active-bg: custom.$secondary;
+  $pagination-active-border-color: custom.$secondary;
 
-  $pagination-disabled-color: variables.$secondary;
-  $pagination-disabled-bg: variables.$gray-200;
-  $pagination-disabled-border-color: variables.$secondary;
+  $pagination-disabled-color: custom.$secondary;
+  $pagination-disabled-bg: custom.$gray-200;
+  $pagination-disabled-border-color: custom.$secondary;
 
   // Accordion
-  $accordion-color: variables.$white;
-  $accordion-bg: variables.$dark-alt;
-  $accordion-button-color: variables.$white;
-  $accordion-button-bg: variables.$dark;
-  $accordion-button-active-bg: variables.$primary;
-  $accordion-button-active-color: variables.$white;
+  $accordion-color: custom.$white;
+  $accordion-bg: custom.$dark-alt;
+  $accordion-button-color: custom.$white;
+  $accordion-button-bg: custom.$dark;
+  $accordion-button-active-bg: custom.$primary;
+  $accordion-button-active-color: custom.$white;
 
-  $accordion-padding-x: variables.$accordion-padding-x;
-  $accordion-padding-y: variables.$accordion-padding-y;
-  $accordion-icon-color: variables.$primary;
-  $accordion-icon-active-color: variables.$dark-alt;
-  $accordion-icon-width: variables.$accordion-icon-width;
+  $accordion-padding-x: custom.$accordion-padding-x;
+  $accordion-padding-y: custom.$accordion-padding-y;
+  $accordion-icon-color: custom.$primary;
+  $accordion-icon-active-color: custom.$dark-alt;
+  $accordion-icon-width: custom.$accordion-icon-width;
 
   // Select
-  $form-select-color: variables.$white;
-  $form-select-bg: variables.$dark;
-  $form-select-indicator-color: variables.$white;
+  $form-select-color: custom.$white;
+  $form-select-bg: custom.$dark;
+  $form-select-indicator-color: custom.$white;
 
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/mixins";
