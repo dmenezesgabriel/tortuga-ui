@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed } from "@vue/reactivity";
 import { Tooltip } from "bootstrap";
-import { onMounted, ref, toRaw } from "vue";
+import { onMounted, ref } from "vue";
 
 // TODO
 // Open the object property

@@ -1,6 +1,7 @@
 /**************************************************************************** /
 * Custom bootstrap scss
 ******************************************************************************/
+@use "../variables" as variables;
 @import "bootstrap/scss/functions";
 /**************************************************************************** /
 * Custom variables definition
@@ -9,53 +10,32 @@
 * import
 ******************************************************************************/
 
-// White and gray
-$white: #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black: #000;
-
-// Main colors
-// Color pallet https://getbootstrap.com/docs/5.1/customize/color/
-$primary: #0d6efd;
-$secondary: #fd7e14;
-$gray: #64748b;
-$dark: #1e293b;
-$dark-alt: #334155;
-
 // Accordion overrides
-$accordion-padding-x: 1.5rem;
-$accordion-padding-y: 1.5rem;
-$accordion-icon-color: $primary;
-$accordion-icon-active-color: $dark-alt;
-$accordion-icon-width: 1.875rem;
+$accordion-padding-x: variables.$accordion-padding-x;
+$accordion-padding-y: variables.$accordion-padding-y;
+$accordion-icon-color: variables.$primary;
+$accordion-icon-active-color: variables.$dark-alt;
+$accordion-icon-width: variables.$accordion-icon-width;
 
 // Pagination
-$pagination-border-color: $secondary;
-$pagination-color: $secondary;
+$pagination-border-color: variables.$secondary;
+$pagination-color: variables.$secondary;
 
-$pagination-focus-color: $white;
-$pagination-focus-bg: $secondary;
-$pagination-focus-outline: $secondary;
+$pagination-focus-color: variables.$white;
+$pagination-focus-bg: variables.$secondary;
+$pagination-focus-outline: variables.$secondary;
 
-$pagination-hover-color: $white;
-$pagination-hover-bg: $secondary;
-$pagination-hover-border-color: $secondary;
+$pagination-hover-color: variables.$white;
+$pagination-hover-bg: variables.$secondary;
+$pagination-hover-border-color: variables.$secondary;
 
-$pagination-active-color: $white;
-$pagination-active-bg: $secondary;
-$pagination-active-border-color: $secondary;
+$pagination-active-color: variables.$white;
+$pagination-active-bg: variables.$secondary;
+$pagination-active-border-color: variables.$secondary;
 
-$pagination-disabled-color: $secondary;
-$pagination-disabled-bg: $gray-200;
-$pagination-disabled-border-color: $secondary;
+$pagination-disabled-color: variables.$secondary;
+$pagination-disabled-bg: variables.$gray-200;
+$pagination-disabled-border-color: variables.$secondary;
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/maps";
@@ -67,8 +47,8 @@ $pagination-disabled-border-color: $secondary;
 
 // Custom map
 $custom-colors: (
-  "neutral": $gray-500,
-  "dark-alt": $dark-alt,
+  "neutral": variables.$gray-500,
+  "dark-alt": variables.$dark-alt,
 );
 
 // Merge the maps

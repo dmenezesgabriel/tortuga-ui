@@ -1,9 +1,11 @@
-@use "../theme/default";
-
+@use "../variables";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
 /**************************************************************************** /
 * Text
 ******************************************************************************/
-
 .display-2 {
   font-family: "Poppins", sans-serif;
   margin-bottom: 1rem;
@@ -13,17 +15,17 @@
     font-family: "Poppins", sans-serif;
     display: inline-block;
     font-weight: 700;
-    color: default.$white;
+    color: variables.$white;
   }
 
   &--description {
     font-size: 1rem;
     display: block;
-    color: default.$white;
+    color: variables.$white;
     margin-top: 1.2rem;
     text-transform: none;
 
-    @include default.media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 1.5rem;
       display: inline-block;
     }
@@ -41,13 +43,13 @@
     display: inline-block;
     background-image: linear-gradient(
       to right,
-      default.$primary,
-      default.$dark-alt
+      variables.$primary,
+      variables.$dark-alt
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @include default.media-breakpoint-up(lg) {
+    @include media-breakpoint-up(lg) {
       font-size: 1.8rem;
     }
   }
@@ -63,7 +65,7 @@
   width: 10rem;
   height: 0.1rem;
   display: block;
-  background-color: default.$primary;
+  background-color: variables.$primary;
 }
 
 .heading-line::after {
@@ -74,19 +76,19 @@
   height: 0.2rem;
   padding-top: 0.5rem;
   display: block;
-  background-color: default.$primary;
+  background-color: variables.$primary;
 }
 
 .border-right {
-  border-right: 0.1rem solid default.$gray-300;
+  border-right: 0.1rem solid variables.$gray-300;
   height: 100%;
 }
 
 .gradient {
   background: linear-gradient(
     to right,
-    rgba(default.$primary, 0.95),
-    rgba(default.$secondary, 0.95)
+    rgba(variables.$primary, 0.95),
+    rgba(variables.$secondary, 0.95)
   );
 }
 
@@ -98,8 +100,8 @@
     &--title {
       background-image: linear-gradient(
         to right,
-        default.$primary,
-        default.$white
+        variables.$primary,
+        variables.$white
       );
     }
   }

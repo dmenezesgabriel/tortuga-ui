@@ -1,4 +1,4 @@
-@use "../theme/default" as default;
+@use "../variables" as variables;
 @use "../tokens" as tokens;
 
 /**************************************************************************** /
@@ -8,8 +8,8 @@
 @mixin gradient {
   background: linear-gradient(
     to right,
-    rgba(default.$dark-alt, 0.95),
-    rgba(default.$primary, 0.95)
+    rgba(variables.$dark-alt, 0.95),
+    rgba(variables.$primary, 0.95)
   );
 }
 
@@ -37,21 +37,21 @@
 }
 
 // Padding
-@mixin padding($size) {
+@mixin padding-mixin($size) {
   padding: getSpacing($size);
 }
 
-@mixin padding-top($size) {
+@mixin padding-top-mixin($size) {
   padding-top: getSpacing($size);
 }
 
-@mixin padding-vertical($size) {
+@mixin padding-vertical-mixin($size) {
   padding-top: getSpacing($size);
   padding-bottom: getSpacing($size);
 }
 
 // Margin
-@mixin margin($size) {
+@mixin margin-mixin($size) {
   margin: getSpacing($size);
 }
 
@@ -65,12 +65,12 @@
 }
 
 // Color
-@mixin color($color, $size: "base") {
+@mixin color-mixin($color, $size: "base") {
   color: getColor($color, $size);
 }
 
 // Background Color
-@mixin background-color($color, $size: "base") {
+@mixin background-color-mixin($color, $size: "base") {
   background-color: getColor($color, $size);
 }
 
@@ -80,7 +80,7 @@
 $textSizeTokens: map-get(tokens.$tokens, "textSize");
 $textWeightTokens: map-get(tokens.$tokens, "textWeight");
 
-@mixin font($size, $type: "body") {
+@mixin font-mixin($size, $type: "body") {
   @if ($type == "body") {
     font-size: map-get($textSizeTokens, $size);
     font-weight: map-get($textWeightTokens, "light");
