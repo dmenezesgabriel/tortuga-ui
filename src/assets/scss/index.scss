@@ -1,6 +1,6 @@
 // Custom contains bootstrap components plus it's customizations
-@use "custom";
-@use "custom-dark";
+@use "./theme/default";
+@use "./theme/dark";
 @use "./abstracts";
 
 // external libs

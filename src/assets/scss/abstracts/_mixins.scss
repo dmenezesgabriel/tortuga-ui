@@ -1,4 +1,4 @@
-@use "../custom" as custom;
+@use "../theme/default" as default;
 @use "../tokens" as tokens;
 
 /**************************************************************************** /
@@ -8,8 +8,8 @@
 @mixin gradient {
   background: linear-gradient(
     to right,
-    rgba(custom.$dark-alt, 0.95),
-    rgba(custom.$primary, 0.95)
+    rgba(default.$dark-alt, 0.95),
+    rgba(default.$primary, 0.95)
   );
 }
 

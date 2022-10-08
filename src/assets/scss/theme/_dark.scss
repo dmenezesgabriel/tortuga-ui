@@ -1,0 +1,73 @@
+/**************************************************************************** /
+* Dark mode
+******************************************************************************/
+@use "./default";
+
+[data-mode="dark"] .darker {
+  @import "bootstrap/scss/functions";
+  $primary: default.$primary;
+  // Card
+  $card-bg: default.$dark;
+  $card-border-color: default.$gray-600;
+  $card-color: default.$gray-300;
+  // Card Header
+  $card-cap-bg: default.$dark;
+  $card-cap-color: default.$gray-300;
+  // Table
+  $table-striped-color: default.$gray-400;
+  $table-striped-bg-factor: 0.05;
+  $table-striped-bg: default.$dark-alt;
+  // Offcanvas
+  $offcanvas-bg-color: default.$dark;
+
+  // Pagination
+  $pagination-color: default.$secondary;
+  $pagination-bg: default.$dark-alt;
+  $pagination-border-color: default.$secondary;
+
+  $pagination-focus-color: default.$white;
+  $pagination-focus-bg: default.$secondary;
+  $pagination-focus-outline: default.$secondary;
+
+  $pagination-hover-color: default.$white;
+  $pagination-hover-bg: default.$secondary;
+  $pagination-hover-border-color: default.$secondary;
+
+  $pagination-active-color: default.$white;
+  $pagination-active-bg: default.$secondary;
+  $pagination-active-border-color: default.$secondary;
+
+  $pagination-disabled-color: default.$secondary;
+  $pagination-disabled-bg: default.$gray-200;
+  $pagination-disabled-border-color: default.$secondary;
+
+  // Accordion
+  $accordion-color: default.$white;
+  $accordion-bg: default.$dark-alt;
+  $accordion-button-color: default.$white;
+  $accordion-button-bg: default.$dark;
+  $accordion-button-active-bg: default.$primary;
+  $accordion-button-active-color: default.$white;
+
+  $accordion-padding-x: 1.5rem;
+  $accordion-padding-y: 1.5rem;
+  $accordion-icon-color: $primary;
+  $accordion-icon-active-color: default.$dark-alt;
+  $accordion-icon-width: 1.875rem;
+
+  // Select
+  $form-select-color: default.$white;
+  $form-select-bg: default.$dark;
+  $form-select-indicator-color: default.$white;
+
+  @import "bootstrap/scss/variables";
+  @import "bootstrap/scss/mixins";
+  @import "bootstrap/scss/variables";
+  @import "bootstrap/scss/mixins";
+  @import "bootstrap/scss/card";
+  @import "bootstrap/scss/offcanvas";
+  @import "bootstrap/scss/tables";
+  @import "bootstrap/scss/pagination";
+  @import "bootstrap/scss/accordion";
+  @import "bootstrap/scss/forms/form-select";
+}
