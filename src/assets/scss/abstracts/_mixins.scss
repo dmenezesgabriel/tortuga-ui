@@ -58,20 +58,20 @@
 /**************************************************************************** /
 * Color
 ******************************************************************************/
-@function getColor($color, $size: "base") {
+@function getColor($color, $variant: "500") {
   $colorTokens: map-get(tokens.$tokens, "color");
   $selected: map-get($colorTokens, $color);
-  @return map-get($selected, $size);
+  @return map-get($selected, $variant);
 }
 
 // Color
-@mixin color-mixin($color, $size: "base") {
-  color: getColor($color, $size);
+@mixin color-mixin($color, $variant: "500") {
+  color: getColor($color, $variant);
 }
 
 // Background Color
-@mixin background-color-mixin($color, $size: "base") {
-  background-color: getColor($color, $size);
+@mixin background-color-mixin($color, $variant: "500") {
+  background-color: getColor($color, $variant);
 }
 
 /**************************************************************************** /
