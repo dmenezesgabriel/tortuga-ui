@@ -23,4 +23,4 @@ const Template: Story = (args: any, { argTypes }) => ({
         `,
 });
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});

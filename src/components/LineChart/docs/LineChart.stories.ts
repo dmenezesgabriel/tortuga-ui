@@ -26,8 +26,8 @@ const Template = (args: any) => ({
 // Change to StoryFn<typeof LineChart>
 
 // Vertical Line Chart
-export const Primary: Story = Template.bind({});
-Primary.args = {
+export const Default: Story = Template.bind({});
+Default.args = {
   data: {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -64,4 +64,4 @@ Primary.args = {
     },
   },
 };
-Primary.storyName = "Line Chart";
+Default.storyName = "Line Chart";

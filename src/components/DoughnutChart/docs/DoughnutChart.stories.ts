@@ -26,8 +26,8 @@ const Template = (args: any) => ({
 // Change to StoryFn<typeof DoughnutChart>
 
 // Vertical Doughnut Chart
-export const Primary: Story = Template.bind({});
-Primary.args = {
+export const Default: Story = Template.bind({});
+Default.args = {
   data: {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -64,4 +64,4 @@ Primary.args = {
     },
   },
 };
-Primary.storyName = "Doughnut Chart";
+Default.storyName = "Doughnut Chart";

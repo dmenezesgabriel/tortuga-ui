@@ -35,8 +35,8 @@ const Template = (args: any) => ({
 // Change to StoryFn<typeof BarChart>
 
 // Vertical Bar Chart
-export const Primary: Story = Template.bind({});
-Primary.args = {
+export const Default: Story = Template.bind({});
+Default.args = {
   data: {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -73,12 +73,12 @@ Primary.args = {
     },
   },
 };
-Primary.storyName = "Vertical Bar Chart";
+Default.storyName = "Vertical Bar Chart";
 
 // Horizontal Bar Chart
 export const Secondary: Story = Template.bind({});
 Secondary.args = {
-  ...Primary.args,
+  ...Default.args,
   options: {
     indexAxis: "y",
     elements: {
