@@ -1,17 +1,4 @@
-@use "../variables" as variables;
 @use "../tokens" as tokens;
-
-/**************************************************************************** /
-* Colors
-******************************************************************************/
-
-@mixin gradient {
-  background: linear-gradient(
-    to right,
-    rgba(variables.$dark-alt, 0.95),
-    rgba(variables.$primary, 0.95)
-  );
-}
 
 /**************************************************************************** /
 * Position
@@ -58,19 +45,19 @@
 /**************************************************************************** /
 * Color
 ******************************************************************************/
-@function getColor($color, $variant: "500") {
+@function getColor($color, $variant: 500) {
   $colorTokens: map-get(tokens.$tokens, "color");
   $selected: map-get($colorTokens, $color);
   @return map-get($selected, $variant);
 }
 
 // Color
-@mixin color-mixin($color, $variant: "500") {
+@mixin color-mixin($color, $variant: 500) {
   color: getColor($color, $variant);
 }
 
 // Background Color
-@mixin background-color-mixin($color, $variant: "500") {
+@mixin background-color-mixin($color, $variant: 500) {
   background-color: getColor($color, $variant);
 }
 

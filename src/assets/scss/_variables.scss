@@ -1,3 +1,5 @@
+@import "./abstracts/mixins";
+
 // White and gray
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -13,7 +15,7 @@ $black: #000;
 
 // Main colors
 // Color pallet https://getbootstrap.com/docs/5.1/customize/color/
-$primary: #0d6efd;
+$primary: getColor("slate");
 $secondary: #fd7e14;
 $gray: #64748b;
 $dark: #1e293b;
