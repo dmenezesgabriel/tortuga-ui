@@ -1,0 +1,50 @@
+/**************************************************************************** /
+* Design Tokens
+* Manage and store User Interface (UI) decisions such as spacing, color,
+* typography and motion.
+* These decisions are stored in a config like format to support the needs of a
+* platform.
+******************************************************************************/
+$spaceMap: (
+  xxxs: 4px,
+  xxs: 8px,
+  xs: 12px,
+  s: 16px,
+  m: 24px,
+  l: 32px,
+  xl: 48px,
+  xxl: 72px,
+  xxxl: 96px,
+  xxxxl: 120px,
+);
+
+$textSizeMap: (
+  xxs: 8px,
+  xxl: 72px,
+);
+
+$textWeightsMap: (
+  x-light: 100,
+  light: 400,
+  bold: 700,
+  x-bold: 900,
+);
+
+$colorMap: (
+  red: (
+    base: #cc3656,
+    xx-light: #f597ac,
+    x-light: #e06a84,
+    light: #d84f6d,
+    dark: #9b344a,
+    x-dark: #702031,
+    xx-dark: #571120,
+  ),
+);
+
+$tokens: (
+  color: $colorMap,
+  space: $spaceMap,
+  textSize: $textSizeMap,
+  textWeight: $textWeightsMap,
+);
