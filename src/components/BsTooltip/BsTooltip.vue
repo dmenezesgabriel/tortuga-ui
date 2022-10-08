@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
-import { onMounted, ref } from "vue";
-
+import { onMounted, ref, type PropType } from "vue";
 // TODO
 // Open the object property
 // How To:
@@ -9,7 +8,7 @@ import { onMounted, ref } from "vue";
 // export const props = makePropsConfigurable(
 
 const props = defineProps({
-  options: { type: Object, required: true },
+  options: { type: Object as PropType<Tooltip.Options>, required: true },
 });
 
 const tooltipElement = ref<HTMLElement | null>(null);
