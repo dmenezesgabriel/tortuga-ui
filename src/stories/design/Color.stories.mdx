@@ -1,5 +1,6 @@
 <!-- Colors.stories.mdx -->
 
+import variables from "@/assets/scss/variables.module.scss";
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
 
 <Meta title="Design System/Colors" />
@@ -12,13 +13,13 @@ import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
   />
   <ColorItem
     title="theme.color.primary"
-    subtitle="Coral"
-    colors={{ WildWatermelon: "#FF4785" }}
+    subtitle="Blue"
+    colors={{ SomeBlue: variables.primaryColor }}
   />
   <ColorItem
     title="theme.color.secondary"
-    subtitle="Ocean"
-    colors={{ DodgerBlue: "#1EA7FD" }}
+    subtitle="Orange"
+    colors={{ SomeOrange: variables.secondaryColor }}
   />
   <ColorItem
     title="theme.color.positive"
