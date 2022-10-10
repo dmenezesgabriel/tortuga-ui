@@ -32,3 +32,5 @@ db.json
 
 # Pack
 *.tgz
+
+storybook-static/
