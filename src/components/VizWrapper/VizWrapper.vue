@@ -1,7 +1,7 @@
 <!-- TODO
 Move to functional component -->
 <script setup lang="ts">
-import Tooltip from "@/components/tooltip/TooltipComponent.vue";
+import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 
 const props = defineProps({
   title: { type: String, required: true },
@@ -19,13 +19,26 @@ const props = defineProps({
   >
     <div class="card-header d-flex flex-row justify-content-between">
       <div class="card-title text-capitalize">{{ props.title }}</div>
-      <Tooltip :text="props.tooltip" v-if="props.tooltip">
-        <i class="bi bi-info-circle" role="img" aria-label="info icon"></i>
-      </Tooltip>
+      <BsTooltip
+        :options="{title: props.tooltip}"
+        v-if="props.tooltip"
+      >
+        <i
+          class="bi bi-info-circle"
+          role="img"
+          aria-label="info icon"
+        ></i>
+      </BsTooltip>
     </div>
     <div class="card-body">
-      <slot v-if="isLoaded" name="content"></slot>
-      <slot v-else-if="!isLoaded" name="fallback"></slot>
+      <slot
+        v-if="isLoaded"
+        name="content"
+      ></slot>
+      <slot
+        v-else-if="!isLoaded"
+        name="fallback"
+      ></slot>
     </div>
   </div>
 </template>
