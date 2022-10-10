@@ -15,8 +15,8 @@ $black: #000;
 
 // Main colors
 // Color pallet https://getbootstrap.com/docs/5.1/customize/color/
-$primary: getColor("slate");
-$secondary: getColor("amber");
+$primary: getColor("blue");
+$secondary: getColor("orange", 400);
 $gray: #64748b;
 $dark: #1e293b;
 $dark-alt: #334155;
