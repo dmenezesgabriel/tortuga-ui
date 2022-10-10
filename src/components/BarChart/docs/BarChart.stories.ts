@@ -71,13 +71,19 @@ Default.args = {
         beginAtZero: true,
       },
     },
+    plugins: {
+      datalabels: {
+        anchor: "end",
+        align: "end",
+      },
+    },
   },
 };
 Default.storyName = "Vertical Bar Chart";
 
 // Horizontal Bar Chart
-export const Secondary: Story = Template.bind({});
-Secondary.args = {
+export const Horizontal: Story = Template.bind({});
+Horizontal.args = {
   ...Default.args,
   options: {
     indexAxis: "y",
@@ -91,6 +97,10 @@ Secondary.args = {
       legend: {
         position: "right",
       },
+      datalabels: {
+        anchor: "end",
+        align: "end",
+      },
       title: {
         display: true,
         text: "Chart.js Horizontal Bar Chart",
@@ -98,4 +108,4 @@ Secondary.args = {
     },
   },
 };
-Secondary.storyName = "Horizontal Bar Chart";
+Horizontal.storyName = "Horizontal Bar Chart";
