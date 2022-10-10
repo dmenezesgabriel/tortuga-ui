@@ -14,7 +14,6 @@ const props = defineProps({
   <div
     class="card p-0 border-0 h-100 shadow rounded"
     aria-label="chart wrapper"
-    :aria-description="props.title"
     tabindex="0"
   >
     <div class="card-header d-flex flex-row justify-content-between">
