@@ -4,6 +4,7 @@ import { ref, useCssModule } from "vue";
 useCssModule("classes");
 
 const tags = ref<Array<string>>([]);
+const emit = defineEmits(["add-tag", "remove-tag"]);
 
 const addTag = (event: any) => {
   if (event.code == "Comma" || event.code == "Enter") {
@@ -13,6 +14,7 @@ const addTag = (event: any) => {
     if (value.length > 0) {
       tags.value.push(value);
       (event.target as HTMLInputElement).value = "";
+      emit("add-tag", value)
     }
   }
 };
@@ -23,6 +25,7 @@ const removeTag = (index: number) => {
 
 const removeLastTag = (event: any) => {
   if ((event.target as HTMLInputElement).value.length === 0) {
+    emit("remove-tag", tags.value[tags.value.length - 1])
     removeTag(tags.value.length - 1);
   }
 };

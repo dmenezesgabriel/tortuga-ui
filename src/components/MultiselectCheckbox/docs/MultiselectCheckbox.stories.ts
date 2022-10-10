@@ -9,13 +9,19 @@ export default {
       template: "<div style='margin: 3em; width: 300px;'><story /></div>",
     }),
   ],
+  argTypes: {
+    onMounted: {},
+    onApply: {},
+    onRevert: {},
+    onUnmounted: {},
+  },
 };
 
 const actionsData = {
-  onMounted: action("Mounted"),
-  onApply: action("Apply"),
-  onRevert: action("Revert"),
-  onUnmounted: action("onUnmounted"),
+  onMounted: action("mounted"),
+  onApply: action("apply"),
+  onRevert: action("revert"),
+  onUnmounted: action("unmounted"),
 };
 
 const Template = (args: any) => ({

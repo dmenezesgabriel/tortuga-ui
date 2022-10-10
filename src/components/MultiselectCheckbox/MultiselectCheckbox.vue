@@ -23,7 +23,7 @@ const props = defineProps({
   isOriginalState: { type: Boolean, required: false, default: true }
 });
 
-const emit = defineEmits(["onMounted", "onApply", "onRevert", "onUnmounted"])
+const emit = defineEmits(["mounted", "apply", "revert", "unmounted"])
 
 
 // runtime persistence for checkboxes values
@@ -106,7 +106,7 @@ const revertOptions = () => {
     exclude: option.exclude,
   }));
 
-  emit("onRevert", {
+  emit("revert", {
     id: props.id,
     title: props.title,
     options: options,
@@ -151,7 +151,7 @@ const apply = (): void => {
     exclude: option.exclude,
   }));
 
-  emit("onApply", {
+  emit("apply", {
     id: props.id,
     title: props.title,
     options: options,
@@ -191,7 +191,7 @@ onMounted(() => {
       exclude: option.exclude,
     }));
 
-    emit("onMounted", {
+    emit("mounted", {
       id: props.id,
       title: props.title,
       options: options,
@@ -201,7 +201,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  emit("onUnmounted");
+  emit("unmounted");
 });
 </script>
 
