@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Tooltip from "@/components/tooltip/TooltipComponent.vue";
+import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 
 const props = defineProps({
   text: { type: String, required: true },
@@ -18,15 +18,21 @@ const props = defineProps({
       <div class="d-flex flex-column alig-items-center text-center">
         <span class="fs-5">{{ props.value }}</span>
         <div class="d-flex flex-row justify-content-center align-items-center">
-          <span class="fs-7" aria-hidden="true">{{ props.text }}</span>
-          <span class="mx-2" v-if="props.tooltip">
-            <Tooltip :text="props.tooltip">
+          <span
+            class="fs-7"
+            aria-hidden="true"
+          >{{ props.text }}</span>
+          <span
+            class="mx-2"
+            v-if="props.tooltip"
+          >
+            <BsTooltip :options="{title:props.tooltip}">
               <i
                 class="bi bi-info-circle"
                 role="img"
                 aria-label="info icon"
               ></i>
-            </Tooltip>
+            </BsTooltip>
           </span>
         </div>
       </div>
@@ -34,7 +40,7 @@ const props = defineProps({
   </div>
 </template>
 <style lang="scss" scoped>
-@use "@/assets/scss/abstracts/mixins";
+@use "@/assets/scss/variables";
 
 .kpi {
   border: none;
@@ -44,7 +50,10 @@ const props = defineProps({
 [data-mode="dark"] .darker {
   .kpi {
     border: none;
-    @include mixins.gradient;
+    background: linear-gradient(to right,
+        rgba(variables.$dark-alt, 0.95),
+        rgba(variables.$primary, 0.95));
+
   }
 }
 </style>
