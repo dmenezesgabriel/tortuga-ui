@@ -11,7 +11,10 @@ export default {
     },
   },
   decorators: [
-    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+    () => ({
+      template:
+        "<div style='margin: 3em; width: 600px; height: 300px;'><story /></div>",
+    }),
   ],
   argTypes: {
     onClick: {},
