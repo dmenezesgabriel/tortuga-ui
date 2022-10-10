@@ -5,7 +5,7 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/esm/index.d.ts",
   "main": "./dist/vbc-ui.umd.cjs",
   "module": "./dist/vbc-ui.es.js",
   "exports": {
@@ -18,7 +18,7 @@
   "scripts": {
     "build": "run-p type-check build-only",
     "test:unit": "vitest --environment jsdom",
-    "build-only": "vite build && vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+    "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "storybook": "start-storybook -p 6006",
