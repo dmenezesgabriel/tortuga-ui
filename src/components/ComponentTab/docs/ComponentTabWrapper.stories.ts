@@ -23,8 +23,8 @@ export const Default: Story = Template.bind({});
 Default.args = {
   currentTab: "FirstTab",
   tabs: {
-    FirstTab: h(TextContent, { type: "h1" }, "First Component"),
-    SecondTab: h(TextContent, { type: "h2" }, "Second Component"),
-    ThirdTab: h(TextContent, { type: "h3" }, "Third Component"),
+    FirstTab: h(TextContent, { type: "p" }, "First Component"),
+    SecondTab: h(TextContent, { type: "p" }, "Second Component"),
+    ThirdTab: h(TextContent, { type: "p" }, "Third Component"),
   },
 };
