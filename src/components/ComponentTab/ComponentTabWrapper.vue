@@ -22,7 +22,10 @@ onMounted(() => {
 
 <template>
   <div class="component-tabs">
-    <div class="btn-group mx-3" role="group">
+    <div
+      class="btn-group mx-3"
+      role="group"
+    >
       <button
         type="button"
         role="button"
@@ -43,13 +46,10 @@ onMounted(() => {
     <div class="component-tabs__tab">
       <div class="component-tabs__tab--content">
         <KeepAlive>
-          <slot name="tabHeader"></slot>
-        </KeepAlive>
-        <KeepAlive>
-          <component :is="tabs[selectedTab]" :key="tabs[selectedTab]" />
-        </KeepAlive>
-        <KeepAlive>
-          <slot name="tabFooter"></slot>
+          <component
+            :is="tabs[selectedTab]"
+            :key="tabs[selectedTab]"
+          />
         </KeepAlive>
       </div>
     </div>
@@ -68,9 +68,11 @@ onMounted(() => {
     margin-bottom: -1px;
     margin-right: -1px;
   }
+
   &__button:hover {
     background: #e0e0e0;
   }
+
   &__button.active {
     background: #e0e0e0;
   }
@@ -87,9 +89,11 @@ onMounted(() => {
       border: 1px solid var(--bs-gray-600);
       background: var(--bs-gray-700);
     }
+
     &__button:hover {
       background: var(--bs-gray-500);
     }
+
     &__button.active {
       background: var(--bs-gray-500);
     }
