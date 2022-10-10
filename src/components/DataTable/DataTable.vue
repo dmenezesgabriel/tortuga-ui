@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, type PropType } from "vue";
 import { ref } from "vue";
 
 const props = defineProps({
-  fields: { type: Array<string>, required: true },
-  data: { type: Array<any>, required: true },
+  fields: { type: Array as PropType<Array<string>>, required: true },
+  data: { type: Array as PropType<Array<string | number | boolean>>, required: true },
 });
 
 const sortedData = ref<any>(null);
@@ -66,7 +66,7 @@ const sortTable = (attribute: string, ascending = true): void => {
    * @param {string} attribute field name
    * @returns {void}
    */
-  const newData = [...props.data].sort((a, b) => {
+  const newData = [...props.data].sort((a: any, b: any) => {
     const first = a[attribute];
     const second = b[attribute];
     return first < second ? -1 : first > second ? 1 : 0;
@@ -124,7 +124,11 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col" v-for="(field, index) in props.fields" :key="index">
+          <th
+            scope="col"
+            v-for="(field, index) in props.fields"
+            :key="index"
+          >
             <div class="d-flex flex-row align-items-center">
               {{ field }}
               <div class="d-flex flex-column justify-content-centerr mx-2">
@@ -147,9 +151,19 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
           </th>
         </tr>
       </thead>
-      <TransitionGroup tag="tbody" name="fade">
-        <tr v-for="item in tableData" :key="item">
-          <td class="text-nowrap" v-for="field in props.fields" :key="field">
+      <TransitionGroup
+        tag="tbody"
+        name="fade"
+      >
+        <tr
+          v-for="item in tableData"
+          :key="item"
+        >
+          <td
+            class="text-nowrap"
+            v-for="field in props.fields"
+            :key="field"
+          >
             {{ item[field] }}
           </td>
         </tr>
@@ -164,11 +178,18 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
   >
     <ul class="pagination">
       <li class="page-item">
-        <span class="page-link" @click="pageBackarwrd">
+        <span
+          class="page-link"
+          @click="pageBackarwrd"
+        >
           <i class="bi bi-chevron-double-left"></i>
         </span>
       </li>
-      <li class="page-item" v-for="page in paginationItems" :key="page">
+      <li
+        class="page-item"
+        v-for="page in paginationItems"
+        :key="page"
+      >
         <span
           class="page-link"
           :class="{ active: currentPage == page }"
@@ -178,7 +199,10 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
         </span>
       </li>
       <li class="page-item">
-        <span class="page-link" @click="pageFoarwrd">
+        <span
+          class="page-link"
+          @click="pageFoarwrd"
+        >
           <i class="bi bi-chevron-double-right"></i>
         </span>
       </li>
@@ -191,6 +215,7 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
 i {
   cursor: pointer;
 }
+
 .page-item {
   .active {
     background-color: var(--bs-secondary);
@@ -220,6 +245,7 @@ i {
 .fade-leave-active {
   position: absolute;
 }
+
 // Animation end
 
 // Dark mode
@@ -228,11 +254,13 @@ i {
     background-color: var(--bs-dark);
     color: white;
   }
+
   .sort-field {
     i {
       color: var(--bs-white);
     }
   }
+
   select,
   option {
     background-color: var(--bs-dark-alt);
