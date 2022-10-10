@@ -31,8 +31,8 @@ Default.args = {
   id: "animals",
   title: "Animals",
   options: [
-    { name: "Cat", available: true, visible: true, exclude: false },
-    { name: "Dog", available: true, visible: true, exclude: false },
-    { name: "Bird", available: true, visible: true, exclude: false },
+    { name: "Cat  🐈", available: true, visible: true, exclude: false },
+    { name: "Dog 🐕", available: true, visible: true, exclude: false },
+    { name: "Bird 🐦", available: true, visible: true, exclude: false },
   ],
 };
