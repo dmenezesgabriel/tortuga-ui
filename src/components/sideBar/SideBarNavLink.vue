@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useCssModule, inject, computed } from "vue";
+import { useCssModule, inject, computed, type Ref } from "vue";
 
 useCssModule("classes")
 
-const sidebarExpanded = inject("sidebarExpanded")
-const display = computed(() => sidebarExpanded ? "inline" : "none")
+const sidebarExpanded: Ref<Boolean> | undefined = inject("sidebarExpanded")
+const display = computed(() => sidebarExpanded?.value ? "inline" : "none")
 
 </script>
 <template>
@@ -16,8 +16,6 @@ const display = computed(() => sidebarExpanded ? "inline" : "none")
             <slot name="icon"></slot>
         </span>
         <span :class="classes['nav-link__text']">
-            {{sidebarExpanded}}
-            {{display}}
             <slot name="text"></slot>
         </span>
     </a>
@@ -27,7 +25,7 @@ const display = computed(() => sidebarExpanded ? "inline" : "none")
     display: flex;
     align-items: center;
     height: 5rem;
-    color: black;
+    color: white;
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: 600ms;
