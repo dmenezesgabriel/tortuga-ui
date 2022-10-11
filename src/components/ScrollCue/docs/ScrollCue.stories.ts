@@ -7,6 +7,9 @@ export default {
   decorators: [
     () => ({ template: "<div style='margin: 3em'><story /></div>" }),
   ],
+  parameters: {
+    docs: { inlineStories: false, iframeHeight: 300 },
+  },
 };
 
 const Template = (args: any) => ({

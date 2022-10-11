@@ -19,6 +19,9 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+    parameters: {
+      docs: { inlineStories: false, iframeHeight: 600 },
+    },
   },
   backgrounds: {
     values: [
