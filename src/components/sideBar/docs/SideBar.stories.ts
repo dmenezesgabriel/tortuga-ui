@@ -6,7 +6,7 @@ export default {
   component: SideBar,
   decorators: [
     () => ({
-      template: "<div style='height: 100%;'><story /></div>",
+      template: "<div style='height: 100%; width: 100%'><story /></div>",
     }),
   ],
 };
