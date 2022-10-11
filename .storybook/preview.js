@@ -19,9 +19,6 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-    parameters: {
-      docs: { inlineStories: false, iframeHeight: 600 },
-    },
   },
   backgrounds: {
     values: [
@@ -30,6 +27,7 @@ export const parameters = {
       { name: "dark-alt", value: "#334155" },
     ],
   },
+  layout: "fullscreen",
 };
 
 // export const decorators = [

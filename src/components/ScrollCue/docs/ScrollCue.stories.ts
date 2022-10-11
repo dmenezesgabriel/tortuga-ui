@@ -4,12 +4,12 @@ import type { Story } from "@storybook/vue3";
 export default {
   title: "Components/Animations/ScrollCue",
   component: ScrollCue,
-  decorators: [
-    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
-  ],
   parameters: {
     docs: { inlineStories: false, iframeHeight: 300 },
   },
+  decorators: [
+    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+  ],
 };
 
 const Template = (args: any) => ({
