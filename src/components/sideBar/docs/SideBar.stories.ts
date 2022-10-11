@@ -18,7 +18,6 @@ const Template = (args: any) => ({
   },
   template: `
         <SideBar v-bind='args'>
-        <div>Nav</div>
         </SideBar>
   `,
 });

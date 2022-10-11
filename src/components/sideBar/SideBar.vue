@@ -38,7 +38,7 @@ useCssModule("classes")
 
     .navbar:hover {
         width: 16rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 }
 </style>
