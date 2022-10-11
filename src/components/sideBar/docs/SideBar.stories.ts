@@ -29,22 +29,41 @@ const Template: Story = (args: any, { argTypes }) => ({
           <SideBarNav>
             <SideBarNavItem>
               <SideBarNavLink>
-                Hello
+                <template #icon>
+                  <i class="bi bi-1-circle"></i>
+                </template>
+                <template #text>
+                  Link One
+                </template>
               </SideBarNavLink>
             </SideBarNavItem>
             <SideBarNavItem>
               <SideBarNavLink>
-                Hello
+                <template #icon>
+                  <i class="bi bi-2-circle"></i>
+                </template>
+                <template #text>
+                  Link Two
+                </template>
+            </SideBarNavItem>
+            <SideBarNavItem>
+              <SideBarNavLink>
+                <template #icon>
+                  <i class="bi bi-3-circle"></i>
+                </template>
+                <template #text>
+                  Link Three
+                </template>
               </SideBarNavLink>
             </SideBarNavItem>
             <SideBarNavItem>
               <SideBarNavLink>
-                Hello
-              </SideBarNavLink>
-            </SideBarNavItem>
-            <SideBarNavItem>
-              <SideBarNavLink>
-                Hello
+                <template #icon>
+                  <i class="bi bi-4-circle"></i>
+                </template>
+                <template #text>
+                  Link Four
+                </template>
               </SideBarNavLink>
             </SideBarNavItem>
           </SideBarNav>
@@ -53,4 +72,6 @@ const Template: Story = (args: any, { argTypes }) => ({
 });
 
 export const Default: Story = Template.bind({});
-Default.args = {};
+Default.args = {
+  smallScreenPlacemente: "bottom",
+};

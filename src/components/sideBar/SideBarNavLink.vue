@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { useCssModule } from "vue";
+import { useCssModule, inject, computed } from "vue";
 
 useCssModule("classes")
+
+const sidebarExpanded = inject("sidebarExpanded")
+const display = computed(() => sidebarExpanded ? "inline" : "none")
 
 </script>
 <template>
@@ -10,10 +13,12 @@ useCssModule("classes")
         :class="classes['nav-link']"
     >
         <span :class="classes['nav-link__icon']">
-            <i class="bi bi-1-circle"></i>
+            <slot name="icon"></slot>
         </span>
         <span :class="classes['nav-link__text']">
-            Nav link text
+            {{sidebarExpanded}}
+            {{display}}
+            <slot name="text"></slot>
         </span>
     </a>
 </template>
@@ -22,7 +27,7 @@ useCssModule("classes")
     display: flex;
     align-items: center;
     height: 5rem;
-    color: white;
+    color: black;
     text-decoration: none;
     filter: grayscale(100%) opacity(0.7);
     transition: 600ms;
@@ -34,6 +39,7 @@ useCssModule("classes")
     }
 
     &__icon {
+        text-align: center;
         width: 2rem;
         margin: 0 1.5rem;
     }
@@ -48,6 +54,15 @@ useCssModule("classes")
 @media only screen and (max-width: 600px) {
     .nav-link {
         justify-content: center;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .nav-link {
+        &__text {
+            display: v-bind(display);
+        }
     }
 }
 </style>

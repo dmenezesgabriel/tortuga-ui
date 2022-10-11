@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { useCssModule, computed } from "vue";
+import { useCssModule, computed, provide, ref } from "vue";
 
 useCssModule("classes")
+
+const isExpanded = ref<Boolean>(false)
+
+provide("sidebarExpanded", isExpanded)
 
 const props = defineProps({
     smallScreenPlacement: {
@@ -23,6 +27,8 @@ const style = computed(() => {
     <nav
         :class="classes['navbar']"
         :style="style"
+        @mouseover="isExpanded = true"
+        @mouseleave="isExpanded = false"
     >
         <slot></slot>
     </nav>
