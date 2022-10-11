@@ -1,11 +1,29 @@
 <script setup lang="ts">
-import { useCssModule } from "vue";
+import { useCssModule, computed } from "vue";
 
 useCssModule("classes")
 
+const props = defineProps({
+    smallScreenPlacement: {
+        type: String,
+        required: false,
+        default: "bottom",
+        validator: (value: string) => ["top", "bottom"].includes(value)
+    }
+})
+
+const style = computed(() => {
+    let style: any = {}
+    style[props.smallScreenPlacement] = 0
+    return style
+})
+
 </script>
 <template>
-    <nav :class="classes['navbar']">
+    <nav
+        :class="classes['navbar']"
+        :style="style"
+    >
         <slot></slot>
     </nav>
 </template>
