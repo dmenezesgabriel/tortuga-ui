@@ -11,7 +11,6 @@ useCssModule("classes")
 </template>
 <style lang="scss" module="classes">
 .navbar {
-    left: 0;
     position: fixed;
     background-color: var(--bs-dark);
 }

@@ -9,6 +9,9 @@ export default {
       template: "<div style='height: 100%; width: 100%'><story /></div>",
     }),
   ],
+  parameters: {
+    docs: { inlineStories: false, iframeHeight: 600 },
+  },
 };
 
 const Template = (args: any) => ({
