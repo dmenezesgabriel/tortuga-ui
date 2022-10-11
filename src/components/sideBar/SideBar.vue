@@ -31,6 +31,7 @@ const style = computed(() => {
 .navbar {
     position: fixed;
     background-color: var(--bs-dark);
+    transition: width 200ms ease;
 }
 
 
