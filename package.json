@@ -33,6 +33,7 @@
     "chartjs-adapter-date-fns": "^2.0.0",
     "chartjs-plugin-datalabels": "^2.1.0",
     "date-fns": "^2.29.2",
+    "marked": "^4.1.1",
     "vue": "^3.2.37"
   },
   "devDependencies": {
@@ -55,6 +56,7 @@
     "@storybook/vue3": "^6.5.12",
     "@types/bootstrap": "^5.2.4",
     "@types/jsdom": "^16.2.15",
+    "@types/marked": "^4.0.7",
     "@types/node": "^16.11.63",
     "@vitejs/plugin-vue": "^3.1.2",
     "@vue/eslint-config-prettier": "^7.0.0",
