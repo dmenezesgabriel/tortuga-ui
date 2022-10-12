@@ -27,6 +27,6 @@ Default.args = {
   markdown: `
   # Hello MarkedJS!
 
-  Be careful with indentation, your markdown can be parsed by markedJS as a code block.
+  Be careful with indentation, your markdown can be parsed by markedJS as a code block.😦
   `,
 };
