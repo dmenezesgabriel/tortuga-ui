@@ -8,6 +8,8 @@ const props = defineProps({
   options: { type: Object as PropType<marked.MarkedOptions>, required: false }
 })
 
+// TODO
+// Move marked.parse to a composable.
 const markdownToHTML = computed(() => marked.parse(props.markdown, props.options))
 </script>
 
