@@ -5,23 +5,15 @@ type Props = {
 };
 
 // @vue/component
-const TextContent = (
-  props: Props,
-  { emit, slots }: { emit: any; slots: any }
-) => {
+const TextContent = (props: Props, { slots }: { slots: any }) => {
   return h(
     props.type,
     {
       class: "text-content",
-      onClick(event: Event) {
-        emit("click", event);
-      },
     },
     slots.default()
   );
 };
-
-TextContent.emits = ["click"];
 
 TextContent.props = {
   type: { type: String, required: true },
