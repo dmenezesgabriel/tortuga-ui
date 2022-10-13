@@ -3,6 +3,8 @@
  * WIP
  * Use as reference
  * https://github.com/surmon-china/vue-codemirror
+ * read
+ * https://codemirror.net/docs/guide/
  */
 import { onMounted, shallowRef } from "vue";
 import { EditorState } from "@codemirror/state";
