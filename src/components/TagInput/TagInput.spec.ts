@@ -7,6 +7,7 @@ import TagInput from "@/components/TagInput/TagInput.vue";
 
 describe("TagInput", async () => {
   it("should render", async () => {
+    // Arranje
     const wrapper = await mount(TagInput, {
       props: {
         text: "Click me!",
@@ -14,6 +15,7 @@ describe("TagInput", async () => {
       },
     });
 
+    // Assert
     await wrapper.find("input[type='text']").setValue("Some Tag");
     await wrapper.trigger("keydown.enter");
   });

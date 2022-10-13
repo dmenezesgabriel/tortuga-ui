@@ -7,6 +7,7 @@ import TextContent from "@/components/TextContent/TextContent";
 
 describe("TextContent", () => {
   it("should render", () => {
+    // Arrange
     const wrapper = mount(TextContent, {
       props: {
         type: "div",
@@ -16,6 +17,7 @@ describe("TextContent", () => {
       },
     });
 
+    // Assert
     expect(wrapper.find("div").exists()).toBeTruthy();
     expect(wrapper.text()).toContain("Hello, World!");
   });

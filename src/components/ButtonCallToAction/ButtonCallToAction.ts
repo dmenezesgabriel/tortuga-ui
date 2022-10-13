@@ -2,7 +2,7 @@ import { h } from "vue";
 
 type Props = {
   text: string;
-  disabled: boolean;
+  disabled?: boolean;
 };
 
 // @vue/component
