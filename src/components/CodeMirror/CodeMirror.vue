@@ -4,27 +4,30 @@
  * Use as reference
  * https://github.com/surmon-china/vue-codemirror
  */
-import { onMounted, ref } from "vue";
-import { EditorView, basicSetup } from "codemirror";
+import { onMounted, shallowRef } from "vue";
+import { EditorState } from "@codemirror/state";
+import { EditorView } from "@codemirror/view";
+import { basicSetup } from "codemirror"
 
-const props = defineProps({
-    text: { type: String, required: true }
-})
-
-const textAreaElement = ref<HTMLElement | null>(null);
+const container = shallowRef<HTMLDivElement>();
+const state = shallowRef<EditorState>();
+const view = shallowRef<EditorView>();
 
 
 onMounted(() => {
-    if (textAreaElement.value) {
-        new EditorView({
-            doc: props.text,
-            extensions: [basicSetup],
-            parent: textAreaElement.value
-        })
-    }
+    state.value = EditorState.create({
+        doc: "Hello, World!",
+        extensions: [basicSetup]
+    })
+
+    view.value = new EditorView({
+        state: state.value,
+        parent: container.value
+    })
+
 })
 </script>
 
 <template>
-    <div ref="textAreaElement"></div>
+    <div ref="container"></div>
 </template>
