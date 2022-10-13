@@ -24,7 +24,12 @@ export default defineConfig(() => {
         fileName: (format) => `vbc-ui.${format}.js`,
       },
       rollupOptions: {
-        external: ["vue"],
+        external: [
+          "vue",
+          "@codemirror/state",
+          "@codemirror/view",
+          "codemirror",
+        ],
         output: {
           globals: {
             vue: "Vue",
