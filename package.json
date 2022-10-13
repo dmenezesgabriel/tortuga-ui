@@ -60,6 +60,7 @@
     "@types/marked": "^4.0.7",
     "@types/node": "^16.11.63",
     "@vitejs/plugin-vue": "^3.1.2",
+    "@vitest/coverage-c8": "^0.24.1",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "@vue/test-utils": "^2.0.0-rc.18",
@@ -78,8 +79,8 @@
     "style-loader": "^3.3.1",
     "typescript": "~4.7.4",
     "vite": "^3.1.4",
-    "vitest": "^0.15.1",
+    "vitest": "^0.24.1",
     "vue-loader": "^16.8.3",
-    "vue-tsc": "^0.38.1"
+    "vue-tsc": "^0.40.7"
   }
 }
