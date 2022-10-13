@@ -22,7 +22,13 @@ const config: StorybookViteConfig = {
     storyStoreV7: true,
     interactionsDebugger: true,
   },
-  async viteFinal(config, options) {
+  async viteFinal(config, { configType }) {
+    if (configType === "DEVELOPMENT") {
+      config.base = "/";
+    }
+    if (configType === "PRODUCTION") {
+      config.base = "./";
+    }
     if (config.resolve && config.resolve.alias)
       config.resolve.alias["@"] = resolve(__dirname, "../src");
     return mergeConfig(config, {
