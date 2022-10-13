@@ -11,6 +11,8 @@ export default mergeConfig(
     test: {
       globals: true,
       exclude: [...configDefaults.exclude],
+      setupFiles: ["./vitest.setup.ts"],
+      environment: "jsdom",
     },
     resolve: {
       alias: {
