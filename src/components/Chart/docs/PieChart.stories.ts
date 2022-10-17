@@ -1,8 +1,8 @@
-import DoughnutChart from "@/components/DoughnutChart/DoughnutChart.vue";
+import { PieChart } from "@/components/Chart/BaseChart";
 import type { Story, Meta } from "@storybook/vue3";
 // Metadata default export
 export default {
-  title: "Components/ChartJS/DoughnutChart",
+  title: "Components/ChartJS/PieChart",
   parameters: {
     backgrounds: {
       values: [{ name: "dark", value: "#1e293b" }],
@@ -14,21 +14,21 @@ export default {
         "<div style='margin: 3em; width: 600px; height: 300px;'><story /></div>",
     }),
   ],
-  component: DoughnutChart,
-} as Meta<typeof DoughnutChart>;
+  component: PieChart,
+} as Meta<typeof PieChart>;
 
 const Template = (args: any) => ({
-  components: { DoughnutChart },
+  components: { PieChart },
   setup() {
     return { args };
   },
-  template: "<DoughnutChart v-bind='args' />",
+  template: "<PieChart v-bind='args' />",
 });
 
 // TODO
-// Change to StoryFn<typeof DoughnutChart>
+// Change to StoryFn<typeof PieChart>
 
-// Vertical Doughnut Chart
+// Vertical Pie Chart
 export const Default: Story = Template.bind({});
 Default.args = {
   data: {
@@ -67,4 +67,4 @@ Default.args = {
     },
   },
 };
-Default.storyName = "Doughnut Chart";
+Default.storyName = "Pie Chart";

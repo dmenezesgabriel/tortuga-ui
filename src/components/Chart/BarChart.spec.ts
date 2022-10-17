@@ -3,13 +3,14 @@
  */
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
-import DoughnutChart from "@/components/DoughnutChart/DoughnutChart.vue";
+import { BaseChart } from "@/components/Chart/BaseChart";
 
-describe("DoughnutChart", async () => {
+describe("BarChart", async () => {
   it("Should render", async () => {
     // Arrange
-    const wrapper = mount(DoughnutChart as any, {
+    const wrapper = mount(BaseChart, {
       props: {
+        type: "bar",
         data: {
           labels: [
             "January",

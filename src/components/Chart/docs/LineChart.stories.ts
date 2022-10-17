@@ -1,4 +1,4 @@
-import LineChart from "@/components/LineChart/LineChart.vue";
+import { LineChart } from "@/components/Chart/BaseChart";
 import type { Story, Meta } from "@storybook/vue3";
 // Metadata default export
 export default {
