@@ -6,13 +6,17 @@
  * read
  * https://codemirror.net/docs/guide/
  */
-import { onMounted, shallowRef, type PropType } from "vue";
-import { EditorState } from "@codemirror/state";
+import { onBeforeMount, onMounted, shallowRef, type PropType } from "vue";
+import { EditorState, type EditorStateConfig } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";
 import { basicSetup } from "codemirror";
 
 const props = defineProps({
   text: { type: String, default: "" },
+  extensions: {
+    type: Array as PropType<EditorStateConfig["extensions"]>,
+    default: [basicSetup],
+  },
 });
 
 const emit = defineEmits(["change", "update", "focus", "blur", "ready"]);
@@ -25,7 +29,7 @@ onMounted(() => {
   state.value = EditorState.create({
     doc: props.text,
     extensions: [
-      basicSetup,
+      ...(Array.isArray(props.extensions) ? props.extensions : [basicSetup]),
       EditorView.updateListener.of((viewUpdate) => {
         emit("update", viewUpdate);
 
@@ -45,6 +49,12 @@ onMounted(() => {
     state: state.value,
     parent: container.value,
   });
+});
+
+onBeforeMount(() => {
+  if (view.value) {
+    view.value.destroy();
+  }
 });
 </script>
 
