@@ -29,7 +29,7 @@ const actionsData = {
 const Template = (args: any) => ({
   components: { BarChart },
   setup() {
-    return { args };
+    return { args, ...actionsData };
   },
   template: "<BarChart v-bind='args' />",
 });
