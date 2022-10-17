@@ -12,8 +12,6 @@ const props = defineProps({
   },
 });
 
-// TODO
-// Move marked.parse to a composable.
 const markdownToHTML = computed(
   () => useMarkdownRef(props.markdown, props?.options).value
 );
