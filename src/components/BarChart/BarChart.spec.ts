@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import BarChart from "@/components/BarChart/BarChart.vue";
 
 describe("BarChart", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arrange
     const wrapper = mount(BarChart, {
       props: {

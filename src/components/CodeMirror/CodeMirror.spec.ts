@@ -39,7 +39,7 @@ document.createRange = () => {
 };
 
 describe("CodeMirror", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arrange
     const wrapper = mount(CodeMirror as any, {
       props: {

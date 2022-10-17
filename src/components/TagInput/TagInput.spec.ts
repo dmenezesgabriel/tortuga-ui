@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import TagInput from "@/components/TagInput/TagInput.vue";
 
 describe("TagInput", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arranje
     const wrapper = await mount(TagInput, {
       props: {

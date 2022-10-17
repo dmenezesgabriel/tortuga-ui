@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 
 describe("BsTooltip", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arrange
     const wrapper = mount(BsTooltip as any, {
       props: {

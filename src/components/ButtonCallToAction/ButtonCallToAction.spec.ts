@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import ButtonCallToAction from "@/components/ButtonCallToAction/ButtonCallToAction";
 
 describe("ButtonCallToAction", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arrange
     const wrapper = mount(ButtonCallToAction, {
       props: {

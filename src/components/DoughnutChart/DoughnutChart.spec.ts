@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import DoughnutChart from "@/components/DoughnutChart/DoughnutChart.vue";
 
 describe("DoughnutChart", async () => {
-  it("should render", async () => {
+  it("Should render", async () => {
     // Arrange
     const wrapper = mount(DoughnutChart as any, {
       props: {

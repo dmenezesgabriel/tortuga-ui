@@ -6,7 +6,7 @@ import { mount } from "@vue/test-utils";
 import TextContent from "@/components/TextContent/TextContent";
 
 describe("TextContent", () => {
-  it("should render", () => {
+  it("Should render", () => {
     // Arrange
     const wrapper = mount(TextContent, {
       props: {
