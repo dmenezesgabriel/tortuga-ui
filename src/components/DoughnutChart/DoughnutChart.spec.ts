@@ -8,7 +8,7 @@ import DoughnutChart from "@/components/DoughnutChart/DoughnutChart.vue";
 describe("DoughnutChart", async () => {
   it("should render", async () => {
     // Arrange
-    const wrapper = mount(DoughnutChart, {
+    const wrapper = mount(DoughnutChart as any, {
       props: {
         data: {
           labels: [

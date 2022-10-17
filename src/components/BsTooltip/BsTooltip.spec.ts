@@ -8,7 +8,7 @@ import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 describe("BsTooltip", async () => {
   it("should render", async () => {
     // Arrange
-    const wrapper = mount(BsTooltip, {
+    const wrapper = mount(BsTooltip as any, {
       props: {
         options: {
           title: "This is a tooltip",
