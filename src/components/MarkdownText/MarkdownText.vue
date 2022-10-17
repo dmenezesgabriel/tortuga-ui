@@ -1,16 +1,22 @@
 <script setup lang="ts">
 import { computed } from "@vue/reactivity";
+import useMarkdownRef from "@/composables/useMarkdownRef";
 import type { PropType } from "vue";
-import { marked } from "marked";
+import type { marked } from "marked";
 
 const props = defineProps({
   markdown: { type: String, required: true },
-  options: { type: Object as PropType<marked.MarkedOptions>, required: false }
-})
+  options: {
+    type: Object as PropType<Partial<marked.MarkedOptions>>,
+    required: false,
+  },
+});
 
 // TODO
 // Move marked.parse to a composable.
-const markdownToHTML = computed(() => marked.parse(props.markdown, props.options))
+const markdownToHTML = computed(
+  () => useMarkdownRef(props.markdown, props?.options).value
+);
 </script>
 
 <template>
