@@ -83,7 +83,7 @@ onBeforeMount(() => {
           @revert="applyFilters"
         />
         <button
-          class="btn btn-primary text-white"
+          class="btn btn-primary text-white float-end"
           @click="filter.isOriginalState = true"
         >
           Reset Filter
