@@ -17,9 +17,10 @@ const props = defineProps({
     required: false,
     default: {
       all: "All",
-      multiple: "multiple",
+      multiple: "Multiple",
       "select-option": "Select an Option",
-      empty: "empty",
+      empty: "Empty",
+      apply: "Apply",
     },
   },
   isOriginalState: { type: Boolean, required: false, default: true },
@@ -284,7 +285,7 @@ onUnmounted(() => {
                 class="btn btn-outline-secondary btn-sm rounded-pill apply"
                 @click="apply"
               >
-                Apply
+                {{ props.text["apply"] }}
               </button>
             </div>
           </div>
