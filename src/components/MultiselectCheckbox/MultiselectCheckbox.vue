@@ -388,6 +388,32 @@ onUnmounted(() => {
   }
 }
 
+// Pulse buttn
+.btn {
+  position: relative;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 10px var(--bs-secondary);
+}
+
+.btn:active:after {
+  box-shadow: 0 0 0 0 var(--bs-secondary);
+  opacity: 0.95;
+  transition: 0s;
+}
+// Pulse button
+
 // Animation start
 .fade-move,
 .fade-enter-active,
