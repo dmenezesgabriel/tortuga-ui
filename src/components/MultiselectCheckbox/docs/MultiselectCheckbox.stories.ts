@@ -4,6 +4,7 @@ import { action } from "@storybook/addon-actions";
 
 export default {
   component: MultiselectCheckbox,
+  title: "Components/MultiselectCheckbox",
   decorators: [
     () => ({
       template: "<div style='margin: 3em; width: 300px;'><story /></div>",
