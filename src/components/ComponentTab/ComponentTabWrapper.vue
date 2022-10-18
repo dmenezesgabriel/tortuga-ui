@@ -22,10 +22,7 @@ onMounted(() => {
 
 <template>
   <div class="component-tabs">
-    <div
-      class="btn-group mx-3"
-      role="group"
-    >
+    <div class="btn-group mx-3" role="group">
       <button
         type="button"
         role="button"
@@ -46,10 +43,7 @@ onMounted(() => {
     <div class="component-tabs__tab">
       <div class="component-tabs__tab--content">
         <KeepAlive>
-          <component
-            :is="tabs[selectedTab]"
-            :key="tabs[selectedTab]"
-          />
+          <component :is="tabs[selectedTab]" :key="tabs[selectedTab]" />
         </KeepAlive>
       </div>
     </div>
@@ -83,7 +77,7 @@ onMounted(() => {
   }
 }
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .component-tabs {
     &__button {
       border: 1px solid var(--bs-gray-600);

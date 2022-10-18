@@ -35,10 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <span
-    ref="textDisplay"
-    class="typing"
-  ></span>
+  <span ref="textDisplay" class="typing"></span>
 </template>
 
 <style lang="scss" scoped>
@@ -64,7 +61,7 @@ onMounted(() => {
   }
 }
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .typing {
     color: var(--bs-white);
 

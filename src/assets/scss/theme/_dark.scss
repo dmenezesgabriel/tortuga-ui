@@ -3,7 +3,7 @@
 ******************************************************************************/
 @use "../variables" as custom;
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   @import "bootstrap/scss/functions";
   $primary: custom.$primary;
   // Card

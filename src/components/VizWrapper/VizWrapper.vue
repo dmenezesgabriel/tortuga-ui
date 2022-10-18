@@ -18,26 +18,13 @@ const props = defineProps({
   >
     <div class="card-header d-flex flex-row justify-content-between">
       <div class="card-title text-capitalize">{{ props.title }}</div>
-      <BsTooltip
-        :options="{title: props.tooltip}"
-        v-if="props.tooltip"
-      >
-        <i
-          class="bi bi-info-circle"
-          role="img"
-          aria-label="info icon"
-        ></i>
+      <BsTooltip :options="{ title: props.tooltip }" v-if="props.tooltip">
+        <i class="bi bi-info-circle" role="img" aria-label="info icon"></i>
       </BsTooltip>
     </div>
     <div class="card-body">
-      <slot
-        v-if="isLoaded"
-        name="content"
-      ></slot>
-      <slot
-        v-else-if="!isLoaded"
-        name="fallback"
-      ></slot>
+      <slot v-if="isLoaded" name="content"></slot>
+      <slot v-else-if="!isLoaded" name="fallback"></slot>
     </div>
   </div>
 </template>
@@ -58,7 +45,7 @@ i {
 }
 
 // Dark mode
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   i {
     color: var(--bs-white);
   }

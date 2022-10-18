@@ -14,7 +14,7 @@ const addTag = (event: any) => {
     if (value.length > 0) {
       tags.value.push(value);
       (event.target as HTMLInputElement).value = "";
-      emit("add-tag", value)
+      emit("add-tag", value);
     }
   }
 };
@@ -25,7 +25,7 @@ const removeTag = (index: number) => {
 
 const removeLastTag = (event: any) => {
   if ((event.target as HTMLInputElement).value.length === 0) {
-    emit("remove-tag", tags.value[tags.value.length - 1])
+    emit("remove-tag", tags.value[tags.value.length - 1]);
     removeTag(tags.value.length - 1);
   }
 };
@@ -33,34 +33,31 @@ const removeLastTag = (event: any) => {
 
 <template>
   <div
-    class="w-100 border border-light px-2 text-sm "
+    class="w-100 border border-light px-2 text-sm"
     :class="classes['tag-input']"
   >
     <!-- Tag -->
     <span
       v-for="(tag, index) in tags"
       :key="tag"
-      class="d-flex align-items-center badge bg-primary float-start rounded "
+      class="d-flex align-items-center badge bg-primary float-start rounded"
       :class="classes['tag-input__tag']"
     >
       <span
-        class="opacity-75 "
+        class="opacity-75"
         :class="classes['tag-input__tag--icon']"
         @click="removeTag(index)"
       >
         <i class="bi bi-x-lg"></i>
       </span>
-      <span
-        class="mx-1 "
-        :class="classes['tag-input__tag--text']"
-      >
+      <span class="mx-1" :class="classes['tag-input__tag--text']">
         {{ tag as string }}
       </span>
     </span>
     <!-- Tag end -->
     <input
       type="text"
-      class="border-0 "
+      class="border-0"
       :class="classes['tag-input__entry']"
       placeholder="Enter Tag..."
       @keydown="addTag"
@@ -96,7 +93,7 @@ const removeLastTag = (event: any) => {
 }
 
 // Dark mode
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .tag-input {
     &__entry {
       color: var(--bs-white);

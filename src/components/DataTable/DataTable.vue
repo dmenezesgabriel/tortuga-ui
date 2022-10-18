@@ -4,7 +4,10 @@ import { ref } from "vue";
 
 const props = defineProps({
   fields: { type: Array as PropType<Array<string>>, required: true },
-  data: { type: Array as PropType<Array<string | number | boolean>>, required: true },
+  data: {
+    type: Array as PropType<Array<string | number | boolean>>,
+    required: true,
+  },
 });
 
 const sortedData = ref<any>(null);
@@ -124,11 +127,7 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
     <table class="table table-striped">
       <thead>
         <tr>
-          <th
-            scope="col"
-            v-for="(field, index) in props.fields"
-            :key="index"
-          >
+          <th scope="col" v-for="(field, index) in props.fields" :key="index">
             <div class="d-flex flex-row align-items-center">
               {{ field }}
               <div class="d-flex flex-column justify-content-centerr mx-2">
@@ -151,19 +150,9 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
           </th>
         </tr>
       </thead>
-      <TransitionGroup
-        tag="tbody"
-        name="fade"
-      >
-        <tr
-          v-for="item in tableData"
-          :key="item"
-        >
-          <td
-            class="text-nowrap"
-            v-for="field in props.fields"
-            :key="field"
-          >
+      <TransitionGroup tag="tbody" name="fade">
+        <tr v-for="item in tableData" :key="item">
+          <td class="text-nowrap" v-for="field in props.fields" :key="field">
             {{ item[field] }}
           </td>
         </tr>
@@ -178,18 +167,11 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
   >
     <ul class="pagination">
       <li class="page-item">
-        <span
-          class="page-link"
-          @click="pageBackarwrd"
-        >
+        <span class="page-link" @click="pageBackarwrd">
           <i class="bi bi-chevron-double-left"></i>
         </span>
       </li>
-      <li
-        class="page-item"
-        v-for="page in paginationItems"
-        :key="page"
-      >
+      <li class="page-item" v-for="page in paginationItems" :key="page">
         <span
           class="page-link"
           :class="{ active: currentPage == page }"
@@ -199,10 +181,7 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
         </span>
       </li>
       <li class="page-item">
-        <span
-          class="page-link"
-          @click="pageFoarwrd"
-        >
+        <span class="page-link" @click="pageFoarwrd">
           <i class="bi bi-chevron-double-right"></i>
         </span>
       </li>
@@ -249,7 +228,7 @@ i {
 // Animation end
 
 // Dark mode
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .table {
     background-color: var(--bs-dark);
     color: white;

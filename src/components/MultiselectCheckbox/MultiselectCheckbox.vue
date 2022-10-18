@@ -432,7 +432,7 @@ onUnmounted(() => {
 
 // Animation end
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .button,
   .text,
   .checkbox-select__dropdown-wrapper,

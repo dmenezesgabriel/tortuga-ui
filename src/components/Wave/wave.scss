@@ -7,7 +7,7 @@ svg.wave {
   }
 }
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   svg.wave {
     path {
       stroke: var(--bs-dark-alt);

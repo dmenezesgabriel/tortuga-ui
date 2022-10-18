@@ -26,7 +26,7 @@ import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
   border-right: 3px solid var(--bs-secondary);
 }
 
-[data-mode="dark"] .darker {
+[data-mode="dark"] .dark {
   .kpi {
     border: none;
     @include mixins.gradient;
