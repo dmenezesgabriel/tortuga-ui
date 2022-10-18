@@ -16,7 +16,7 @@ const Template = (args: any) => ({
   },
   template: `
     <BsTooltip v-bind='args'>
-        <button class="btn btn-primary">Hover Me!</button>
+        <button class="btn btn-primary text-white">Hover Me!</button>
     </BsTooltip>
   `,
 });
