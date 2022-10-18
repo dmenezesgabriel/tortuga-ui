@@ -1,8 +1,8 @@
-import SimpleDashboard from "@/views/Dashboard/SimpleDashboardView.vue";
+import SimpleDashboard from "@/views/Dashboard/FilterChartView.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {
-  title: "Views/Dashboards/SimpleDashboard",
+  title: "Views/Dashboards/FilterChart",
   component: SimpleDashboard,
   decorators: [
     () => ({ template: "<div style='margin: 3em'><story /></div>" }),
