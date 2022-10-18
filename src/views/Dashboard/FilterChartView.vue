@@ -41,6 +41,13 @@ const applyFilters = ({ options }: { options: IOption[] }) => {
   const available = options
     .filter((o) => o.available === true)
     .map((o) => o.name);
+
+  if (options.every((o) => o.available === true)) {
+    filter.value.isOriginalState = true;
+  } else {
+    filter.value.isOriginalState = false;
+  }
+
   filteredData.value = data.filter((d) => available.includes(d.x));
 };
 
@@ -56,6 +63,7 @@ onBeforeMount(() => {
     id: "months",
     title: "Months",
     options: options,
+    isOriginalState: true,
   };
 });
 </script>
@@ -64,7 +72,17 @@ onBeforeMount(() => {
   <div class="container">
     <div class="row">
       <div class="col-6">
-        <MultiselectCheckbox v-bind="filter" @apply="applyFilters" />
+        <MultiselectCheckbox
+          v-bind="filter"
+          @apply="applyFilters"
+          @revert="applyFilters"
+        />
+        <button
+          class="btn btn-primary text-white"
+          @click="filter.isOriginalState = true"
+        >
+          Reset Filter
+        </button>
         <BarChart :data="chartData" :options="options" />
       </div>
       <div class="col-6"></div>
