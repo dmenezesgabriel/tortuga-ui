@@ -1,5 +1,5 @@
 @use "../variables";
-@use "../theme/default" as default;
+@use "../custom" as custom;
 /**************************************************************************** /
 * Text
 ******************************************************************************/
@@ -22,7 +22,7 @@
     margin-top: 1.2rem;
     text-transform: none;
 
-    @include default.media-breakpoint-up(lg) {
+    @include custom.media-breakpoint-up(lg) {
       font-size: 1.5rem;
       display: inline-block;
     }
@@ -46,7 +46,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @include default.media-breakpoint-up(lg) {
+    @include custom.media-breakpoint-up(lg) {
       font-size: 1.8rem;
     }
   }

@@ -5,25 +5,9 @@
 
 [data-mode="dark"] .dark {
   @import "bootstrap/scss/functions";
-  $primary: var.$primary;
-  // Card
-  $card-bg: var.$dark;
-  $card-border-color: var.$gray-600;
-  $card-color: var.$gray-300;
-  // Card Header
-  $card-cap-bg: var.$dark;
-  $card-cap-color: var.$gray-300;
-  // Table
-  $table-striped-color: var.$gray-400;
-  $table-striped-bg-factor: 0.05;
-  $table-striped-bg: var.$dark-alt;
-  // Offcanvas
-  $offcanvas-bg-color: var.$dark;
-
   // Pagination
-  $pagination-color: var.$secondary;
-  $pagination-bg: var.$dark-alt;
   $pagination-border-color: var.$secondary;
+  $pagination-color: var.$secondary;
 
   $pagination-focus-color: var.$white;
   $pagination-focus-bg: var.$secondary;
@@ -41,33 +25,16 @@
   $pagination-disabled-bg: var.$gray-200;
   $pagination-disabled-border-color: var.$secondary;
 
-  // Accordion
-  $accordion-color: var.$white;
-  $accordion-bg: var.$dark-alt;
-  $accordion-button-color: var.$white;
-  $accordion-button-bg: var.$dark;
-  $accordion-button-active-bg: var.$primary;
-  $accordion-button-active-color: var.$white;
-
-  $accordion-padding-x: var.$accordion-padding-x;
+  // Accordion overrides
   $accordion-padding-y: var.$accordion-padding-y;
   $accordion-icon-color: var.$primary;
   $accordion-icon-active-color: var.$dark-alt;
   $accordion-icon-width: var.$accordion-icon-width;
 
-  // Select
-  $form-select-color: var.$white;
-  $form-select-bg: var.$dark;
-  $form-select-indicator-color: var.$white;
-
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
   @import "bootstrap/scss/mixins";
 
-  @import "bootstrap/scss/card";
-  @import "bootstrap/scss/offcanvas";
-  @import "bootstrap/scss/tables";
   @import "bootstrap/scss/pagination";
   @import "bootstrap/scss/accordion";
-  @import "bootstrap/scss/forms/form-select";
 }

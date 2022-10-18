@@ -1,7 +1,7 @@
 /**************************************************************************** /
 * Custom bootstrap scss
 ******************************************************************************/
-@use "../variables" as custom;
+@use "variables" as var;
 @import "bootstrap/scss/functions";
 /**************************************************************************** /
 * Custom variables definition
@@ -12,35 +12,9 @@
 
 // Main colors
 // Color pallet https://getbootstrap.com/docs/5.1/customize/color/
-$primary: custom.$primary;
-$secondary: custom.$secondary;
-$dark: custom.$dark;
-
-// Accordion overrides
-$accordion-padding-y: custom.$accordion-padding-y;
-$accordion-icon-color: custom.$primary;
-$accordion-icon-active-color: custom.$dark-alt;
-$accordion-icon-width: custom.$accordion-icon-width;
-
-// Pagination
-$pagination-border-color: custom.$secondary;
-$pagination-color: custom.$secondary;
-
-$pagination-focus-color: custom.$white;
-$pagination-focus-bg: custom.$secondary;
-$pagination-focus-outline: custom.$secondary;
-
-$pagination-hover-color: custom.$white;
-$pagination-hover-bg: custom.$secondary;
-$pagination-hover-border-color: custom.$secondary;
-
-$pagination-active-color: custom.$white;
-$pagination-active-bg: custom.$secondary;
-$pagination-active-border-color: custom.$secondary;
-
-$pagination-disabled-color: custom.$secondary;
-$pagination-disabled-bg: custom.$gray-200;
-$pagination-disabled-border-color: custom.$secondary;
+$primary: var.$primary;
+$secondary: var.$secondary;
+$dark: var.$dark;
 
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/maps";
@@ -52,8 +26,8 @@ $pagination-disabled-border-color: custom.$secondary;
 
 // Custom map
 $custom-colors: (
-  "neutral": custom.$gray-500,
-  "dark-alt": custom.$dark-alt,
+  "neutral": var.$gray-500,
+  "dark-alt": var.$dark-alt,
 );
 
 // Merge the maps

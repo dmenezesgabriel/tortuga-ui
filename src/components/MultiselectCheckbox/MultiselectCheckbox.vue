@@ -330,7 +330,7 @@ onUnmounted(() => {
       border-radius: 5px;
 
       &:hover {
-        background-color: var(--bs-gray-500);
+        background: var(--bs-gray-500);
       }
     }
 
@@ -433,14 +433,14 @@ onUnmounted(() => {
 // Animation end
 
 [data-mode="dark"] .dark {
-  .button,
+  .checkbox-select__colapse-button,
   .text,
   .checkbox-select__dropdown-wrapper,
   .checkbox-select__dropdown,
   input[type="text"],
   label,
   .checkbox-select__option {
-    background-color: var(--bs-dark);
+    background: var(--bs-dark);
   }
 
   input[type="text"],
@@ -455,10 +455,10 @@ onUnmounted(() => {
 
   .checkbox-select__option {
     &:hover {
-      background-color: var(--bs-dark-alt);
+      background: var(--bs-dark-alt);
 
       label {
-        background-color: var(--bs-dark-alt);
+        background: var(--bs-dark-alt);
       }
     }
   }

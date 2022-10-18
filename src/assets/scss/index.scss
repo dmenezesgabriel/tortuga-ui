@@ -1,5 +1,6 @@
 // Custom contains bootstrap components plus it's customizations
-@use "./theme/default";
+@use "./custom";
+@use "./theme/light";
 @use "./theme/dark";
 @use "./abstracts";
 @use "./components";
