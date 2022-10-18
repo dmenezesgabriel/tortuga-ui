@@ -11,7 +11,7 @@ export default {
   decorators: [
     () => ({
       template:
-        "<div style='margin: 3em; width: 600px; height: 300px;'><story /></div>",
+        "<div style='padding: 3em; width: 600px; height: 300px;'><story /></div>",
     }),
   ],
   component: DoughnutChart,

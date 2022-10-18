@@ -5,7 +5,7 @@ export default {
   title: "Components/Animations/SkeletonBase",
   component: SkeletonBase,
   decorators: [
-    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+    () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
 };
 

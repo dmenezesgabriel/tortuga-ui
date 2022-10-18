@@ -6,7 +6,7 @@ export default {
   component: VizWrapper,
   decorators: [
     () => ({
-      template: "<div style='margin: 3em; max-width:350px;'><story /></div>",
+      template: "<div style='padding: 3em; max-width:350px;'><story /></div>",
     }),
   ],
 } as Meta<typeof VizWrapper>;

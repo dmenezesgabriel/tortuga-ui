@@ -7,7 +7,7 @@ export default {
   title: "Components/Form/MultiselectCheckbox",
   decorators: [
     () => ({
-      template: "<div style='margin: 3em; width: 300px;'><story /></div>",
+      template: "<div style='padding: 3em; width: 300px;'><story /></div>",
     }),
   ],
   argTypes: {

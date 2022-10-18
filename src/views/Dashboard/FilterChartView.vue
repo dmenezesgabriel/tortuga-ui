@@ -38,7 +38,12 @@ const filteredData = ref();
 
 const chartData = computed(() => {
   return {
-    datasets: [{ data: filteredData.value ? filteredData.value : data }],
+    datasets: [
+      {
+        data: filteredData.value ? filteredData.value : data,
+        backgroundColor: "rgb(255, 99, 132)",
+      },
+    ],
   };
 });
 
@@ -74,7 +79,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <main class="main-wrapper">
+  <main class="p-5">
     <div class="container">
       <div class="row">
         <div class="col-6">
@@ -84,7 +89,7 @@ onBeforeMount(() => {
             @revert="applyFilters"
           />
           <button
-            class="btn btn-primary text-white float-end"
+            class="btn btn-primary text-white float-end m-1"
             @click="filter.isOriginalState = true"
           >
             Reset Filter
@@ -96,8 +101,3 @@ onBeforeMount(() => {
     </div>
   </main>
 </template>
-<style scoped>
-.main-wrapper {
-  background: var(--bg-primary);
-}
-</style>

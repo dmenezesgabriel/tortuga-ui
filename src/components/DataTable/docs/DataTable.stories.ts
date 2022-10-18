@@ -6,7 +6,7 @@ export default {
   component: DataTable,
   decorators: [
     () => ({
-      template: "<div style='margin: 3em; max-width: 600px;'><story /></div>",
+      template: "<div style='padding: 3em; max-width: 600px;'><story /></div>",
     }),
   ],
 } as Meta<typeof DataTable>;

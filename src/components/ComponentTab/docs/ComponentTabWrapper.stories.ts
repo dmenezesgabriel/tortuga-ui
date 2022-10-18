@@ -7,7 +7,7 @@ export default {
   title: "Components/Tab/ComponentTabWrapper",
   component: ComponentTabWrapper,
   decorators: [
-    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+    () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
 };
 

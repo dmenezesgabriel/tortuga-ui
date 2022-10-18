@@ -8,7 +8,7 @@ export default {
     docs: { inlineStories: false, iframeHeight: 300 },
   },
   decorators: [
-    () => ({ template: "<div style='margin: 3em'><story /></div>" }),
+    () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
 };
 

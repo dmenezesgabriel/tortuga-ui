@@ -10,7 +10,7 @@ export default {
   },
   decorators: [
     () => ({
-      template: "<div style='margin: 3em; width: 350px;'><story /></div>",
+      template: "<div style='padding: 3em; width: 350px;'><story /></div>",
     }),
   ],
 };
