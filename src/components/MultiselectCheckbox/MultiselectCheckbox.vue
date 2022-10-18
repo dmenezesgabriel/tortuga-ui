@@ -13,18 +13,19 @@ const props = defineProps({
   exclude: { type: Array as PropType<Array<string>>, required: false },
   meta: { type: Object as PropType<Record<string, string>>, required: false },
   text: {
-    type: Object as PropType<Record<string, string>>, required: false, default: {
-      all: "all",
+    type: Object as PropType<Record<string, string>>,
+    required: false,
+    default: {
+      all: "All",
       multiple: "multiple",
       "select-option": "Select an Option",
-      empty: "empty"
-    }
+      empty: "empty",
+    },
   },
-  isOriginalState: { type: Boolean, required: false, default: true }
+  isOriginalState: { type: Boolean, required: false, default: true },
 });
 
-const emit = defineEmits(["mounted", "apply", "revert", "unmounted"])
-
+const emit = defineEmits(["mounted", "apply", "revert", "unmounted"]);
 
 // runtime persistence for checkboxes values
 const checkedValues = ref<Array<string>>(
@@ -79,7 +80,6 @@ const selectedText = computed((): string => {
   }
   return props.text["empty"];
 });
-
 
 const collapseMenu = (): void => {
   /**
@@ -207,19 +207,19 @@ onUnmounted(() => {
 
 <template>
   <div class="card p-1 border-0">
-    <div class="card-header p-1 d-flex">
+    <div class="card-header border-0 p-1 d-flex">
       <div class="card-title text-capitalize mb-0 me-auto">
         {{ title as string }}
       </div>
     </div>
-    <div class="card-body p-0">
+    <div class="card-body p-1">
       <div
         class="checkbox-select"
         :class="{ show: isCollapsed }"
         v-click-outside="closeMenu"
       >
         <button
-          class="button border-2"
+          class="checkbox-select__colapse-button"
           @click="collapseMenu"
           aria-label="colapse"
         >
@@ -232,11 +232,7 @@ onUnmounted(() => {
           <div class="checkbox-select__dropdown w-100 shadow">
             <div class="search">
               <div class="search__input-group">
-                <input
-                  type="text"
-                  placeholder="search..."
-                  v-model="search"
-                />
+                <input type="text" placeholder="search..." v-model="search" />
                 <span class="input-border"></span>
               </div>
             </div>
@@ -246,10 +242,7 @@ onUnmounted(() => {
               name="fade"
             >
               <!-- Fixed li -->
-              <li
-                class="checkbox-select__option"
-                :key="9999"
-              >
+              <li class="checkbox-select__option" :key="9999">
                 <div class="form-check">
                   <input
                     id="selectAll"
@@ -258,10 +251,9 @@ onUnmounted(() => {
                     v-model="allSelected"
                     @click="selectAll"
                   />
-                  <label
-                    class="form-check-label"
-                    for="selectAll"
-                  >All</label>
+                  <label class="form-check-label" for="selectAll">
+                    {{ props.text["all"] }}
+                  </label>
                 </div>
               </li>
               <!-- Fixed li -->
@@ -279,10 +271,7 @@ onUnmounted(() => {
                     v-model="checkedValues"
                     :disabled="!option.visible"
                   />
-                  <label
-                    class="form-check-label"
-                    :for="option.name"
-                  >
+                  <label class="form-check-label" :for="option.name">
                     {{ option.name as string }}
                   </label>
                 </div>
@@ -306,6 +295,8 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Change to scss module
 .card-header {
   background-color: var(--bs-gray-100);
 }
@@ -355,7 +346,7 @@ onUnmounted(() => {
         }
 
         input:focus {
-          &+.input-border {
+          & + .input-border {
             width: 100%;
             transform: translateX(-50%) scale(1);
           }
@@ -385,7 +376,10 @@ onUnmounted(() => {
     }
   }
 
-  .button {
+  &__colapse-button {
+    border: 1px solid var(--bs-gray-500);
+    border-radius: 5px;
+    background: white;
     display: flex;
     padding: 5px;
     width: 100%;
@@ -412,7 +406,6 @@ onUnmounted(() => {
 // Animation end
 
 [data-mode="dark"] .darker {
-
   .button,
   .text,
   .checkbox-select__dropdown-wrapper,
@@ -429,7 +422,7 @@ onUnmounted(() => {
     color: var(--bs-white);
   }
 
-  .button {
+  &__colapse-button {
     border: 1px solid var(--bs-dark-alt);
   }
 
