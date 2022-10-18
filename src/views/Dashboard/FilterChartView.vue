@@ -21,10 +21,15 @@ const options = ref({
     },
   },
   plugins: {
+    legend: false,
     datalabels: {
       anchor: "end",
       align: "end",
+      formatter: ({ y }: { y: number }) => y,
     },
+  },
+  layout: {
+    padding: 20,
   },
 });
 
