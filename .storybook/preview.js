@@ -43,7 +43,7 @@ export const globalTypes = {
     description: "Global theme for components",
     defaultValue: "light",
     toolbar: {
-      icon: "circlehollow",
+      icon: "contrast",
       items: ["light", "dark"],
       showName: true,
       dynamicTitle: true,
