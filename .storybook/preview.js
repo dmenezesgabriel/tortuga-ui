@@ -11,8 +11,8 @@ import "bootstrap/js/dist/popover";
 // import "bootstrap/js/dist/scrollspy";
 // import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/toast";
-
 import { useTheme } from "./useTheme";
+
 /**
  * Global parameters
  */
