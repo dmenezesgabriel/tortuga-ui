@@ -12,6 +12,10 @@ import "bootstrap/js/dist/popover";
 // import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/toast";
 
+import { useTheme } from "./useTheme";
+/**
+ * Global parameters
+ */
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -30,9 +34,24 @@ export const parameters = {
   layout: "fullscreen",
 };
 
-// export const decorators = [
-//   (story) => ({
-//     components: { story },
-//     template: '<div style="margin: 3em;"><story /></div>',
-//   }),
-// ];
+/**
+ * Global Theme toggle for components
+ */
+export const globalTypes = {
+  theme: {
+    name: "Toggle Theme",
+    description: "Global theme for components",
+    defaultValue: "light",
+    toolbar: {
+      icon: "circlehollow",
+      items: ["light", "dark"],
+      showName: true,
+      dynamicTitle: true,
+    },
+  },
+};
+
+/**
+ * Global decorators
+ */
+export const decorators = [useTheme];
