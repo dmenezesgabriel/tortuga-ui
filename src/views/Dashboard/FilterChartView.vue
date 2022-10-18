@@ -79,8 +79,8 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <main class="p-5">
-    <div class="container">
+  <main>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-6">
           <MultiselectCheckbox
@@ -89,7 +89,7 @@ onBeforeMount(() => {
             @revert="applyFilters"
           />
           <button
-            class="btn btn-primary text-white float-end m-1"
+            class="btn btn-primary text-white float-end m-3"
             @click="filter.isOriginalState = true"
           >
             Reset Filter
