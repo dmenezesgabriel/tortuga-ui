@@ -3,7 +3,7 @@
 ******************************************************************************/
 @use "../variables" as var;
 
-[data-mode="dark"] .dark {
+[data-mode="light"] .light {
   @import "bootstrap/scss/functions";
   // Pagination
   $pagination-border-color: var.$secondary;
