@@ -5,14 +5,19 @@
 
 [data-mode="dark"] .dark {
   @import "bootstrap/scss/functions";
-  $primary: var.$primary;
+  /*
+  * Get theme colors
+  */
+  $darkTheme: map-get(var.$themes, "dark");
+
+  $primary: map-get($darkTheme, "primary");
   // Card
-  $card-bg: var.$dark;
-  $card-border-color: var.$gray-600;
-  $card-color: var.$gray-300;
+  $card-bg: map-get($darkTheme, "background-secondary");
+  $card-border-color: map-get($darkTheme, "border-primary");
+  $card-color: map-get($darkTheme, "text-primary");
   // Card Header
-  $card-cap-bg: var.$dark;
-  $card-cap-color: var.$gray-300;
+  $card-cap-bg: map-get($darkTheme, "background-secondary");
+  $card-cap-color: map-get($darkTheme, "text-primary");
   // Table
   $table-striped-color: var.$gray-400;
   $table-striped-bg-factor: 0.05;
@@ -21,7 +26,7 @@
   $offcanvas-bg-color: var.$dark;
 
   // Pagination
-  $pagination-color: var.$secondary;
+  $pagination-color: map-get($darkTheme, "secondary");
   $pagination-bg: var.$dark-alt;
   $pagination-border-color: var.$secondary;
 
