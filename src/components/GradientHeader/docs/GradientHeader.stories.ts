@@ -4,9 +4,6 @@ import type { Story } from "@storybook/vue3";
 export default {
   title: "Components/Layout/GradientHeader",
   component: GradientHeader,
-  decorators: [
-    () => ({ template: "<div style='padding: 3em'><story /></div>" }),
-  ],
 };
 
 const Template = (args: any) => ({
