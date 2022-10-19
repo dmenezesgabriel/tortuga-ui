@@ -4,21 +4,26 @@ Move to functional component ? -->
 import { useSlots, ref, provide } from "vue";
 
 const slots = useSlots();
-const tabTitles = ref(slots.default?.().map((tab) => tab.props?.title));
-const selectedTitle = ref(tabTitles.value?.[0]);
+// TODO
+// supress [warn] Slot "default" invoked outside of the render function
+const selectedTitle = ref(slots.default?.()[0].props?.title);
 
 provide("selectedTitle", selectedTitle);
 </script>
 <template>
   <div class="tabs-wrapper">
-    <ul class="tabs-wrapper__header">
+    <ul class="tabs-wrapper__header" v-if="$slots.default">
       <li
-        v-for="title in tabTitles"
-        :key="title"
-        :class="{ selected: title == selectedTitle }"
-        @click="selectedTitle = title"
+        v-for="(slotItem, index) in $slots.default()"
+        :key="slotItem.props?.title"
+        :class="{
+          selected: selectedTitle
+            ? slotItem.props?.title === selectedTitle
+            : index === 0,
+        }"
+        @click="selectedTitle = slotItem.props?.title"
       >
-        {{ title as string }}
+        {{ slotItem.props?.title as string }}
       </li>
     </ul>
     <slot></slot>
