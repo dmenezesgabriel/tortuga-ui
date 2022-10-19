@@ -1,5 +1,5 @@
 <template>
-  <div class="gradient bg-primary">
+  <header class="gradient bg-primary">
     <div class="container-fluid mb-3 p-3">
       <div class="row">
         <div class="col">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
