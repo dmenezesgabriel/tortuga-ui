@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, onMounted, ref, watch } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 const switchRef = ref<any>(null);
 
 const emit = defineEmits(["mode-change"]);
