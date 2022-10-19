@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeMount } from "vue";
+import { ref, computed, onBeforeMount, nextTick } from "vue";
 import { BarChart } from "@/components/Chart/BaseChart";
 import MultiselectCheckbox from "@/components/MultiselectCheckbox/MultiselectCheckbox.vue";
 import type { IOption } from "@/types/IFilter";
@@ -14,23 +14,25 @@ const data = [
   { x: "July", y: 40 },
 ];
 
-const options = ref({
-  scales: {
-    y: {
-      beginAtZero: true,
+const options = computed(() => {
+  return {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
     },
-  },
-  plugins: {
-    legend: false,
-    datalabels: {
-      anchor: "end",
-      align: "end",
-      formatter: ({ y }: { y: number }) => y,
+    plugins: {
+      legend: false,
+      datalabels: {
+        anchor: "end",
+        align: "end",
+        formatter: ({ y }: { y: number }) => y,
+      },
     },
-  },
-  layout: {
-    padding: 20,
-  },
+    layout: {
+      padding: 20,
+    },
+  };
 });
 
 const filter = ref();

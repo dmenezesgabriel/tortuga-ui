@@ -1,5 +1,8 @@
 @import "./abstracts/mixins";
 
+/*
+* Custom colors.
+*/
 // White and gray
 $white: #fff;
 $gray-100: #f8f9fa;
@@ -13,7 +16,6 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black: #000;
 
-// Main colors
 // Color pallet https://getbootstrap.com/docs/5.1/customize/color/
 $primary: getColor("blue");
 $secondary: getColor("orange", 400);
@@ -21,10 +23,16 @@ $gray: #64748b;
 $dark: #1e293b;
 $dark-alt: #334155;
 
+/*
+* Bootstrap custom variables.
+*/
 $accordion-padding-x: 1.5rem;
 $accordion-padding-y: 1.5rem;
 $accordion-icon-width: 1.875rem;
 
+/*
+* Theme colors map.
+*/
 $themes: (
   "light": (
     "primary": #460e7b,
@@ -49,7 +57,9 @@ $themes: (
     "text": #f5f5f5,
   ),
 );
-
+/*
+* Create CSS theme color variables.
+*/
 @each $theme-name, $properties in $themes {
   [data-mode="#{$theme-name}"] .#{$theme-name} {
     // define a css variable for each property
