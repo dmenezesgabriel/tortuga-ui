@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onBeforeMount, nextTick } from "vue";
+import { ref, computed, onBeforeMount } from "vue";
 import { BarChart } from "@/components/Chart/BaseChart";
 import MultiselectCheckbox from "@/components/MultiselectCheckbox/MultiselectCheckbox.vue";
 import type { IOption } from "@/types/IFilter";
