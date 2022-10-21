@@ -39,16 +39,20 @@ $themes: (
     "secondary": $secondary,
     "background-primary": $white,
     "background-secondary": #f5f5f5,
+    "background-disabled": $gray-200,
     "border-primary": $gray-600,
     "text-primary": #0c0c0c,
+    "text-secondary": $white,
   ),
   "dark": (
     "primary": $primary,
     "secondary": $secondary,
     "background-primary": $dark-alt,
     "background-secondary": $dark,
+    "background-disabled": $gray-200,
     "border-primary": $gray-600,
     "text-primary": #f5f5f5,
+    "text-secondary": #0c0c0c,
   ),
 );
 /*

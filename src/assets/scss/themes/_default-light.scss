@@ -1,5 +1,5 @@
 /**************************************************************************** /
-* Dark mode
+* Light mode
 ******************************************************************************/
 @use "../variables" as var;
 
@@ -7,31 +7,34 @@
   @import "bootstrap/scss/functions"; /*
   * Get theme colors
   */
-  $lightTheme: map-get(var.$themes, "light");
+  @function getTheme($var) {
+    $lightTheme: map-get(var.$themes, "light");
+    @return map-get($lightTheme, $var);
+  }
 
   // Pagination
-  $pagination-border-color: var.$secondary;
-  $pagination-color: var.$secondary;
+  $pagination-border-color: getTheme("secondary");
+  $pagination-color: getTheme("secondary");
 
-  $pagination-focus-color: var.$white;
-  $pagination-focus-bg: var.$secondary;
-  $pagination-focus-outline: var.$secondary;
+  $pagination-focus-color: getTheme("text-secondary");
+  $pagination-focus-bg: getTheme("secondary");
+  $pagination-focus-outline: getTheme("secondary");
 
-  $pagination-hover-color: var.$white;
-  $pagination-hover-bg: var.$secondary;
-  $pagination-hover-border-color: var.$secondary;
+  $pagination-hover-color: getTheme("text-secondary");
+  $pagination-hover-bg: getTheme("secondary");
+  $pagination-hover-border-color: getTheme("secondary");
 
-  $pagination-active-color: var.$white;
-  $pagination-active-bg: var.$secondary;
-  $pagination-active-border-color: var.$secondary;
+  $pagination-active-color: getTheme("text-secondary");
+  $pagination-active-bg: getTheme("secondary");
+  $pagination-active-border-color: getTheme("secondary");
 
-  $pagination-disabled-color: var.$secondary;
-  $pagination-disabled-bg: var.$gray-200;
-  $pagination-disabled-border-color: var.$secondary;
+  $pagination-disabled-color: getTheme("secondary");
+  $pagination-disabled-bg: getTheme("background-disabled");
+  $pagination-disabled-border-color: getTheme("secondary");
 
   // Accordion overrides
   $accordion-padding-y: var.$accordion-padding-y;
-  $accordion-icon-color: var.$primary;
+  $accordion-icon-color: getTheme("primary");
   $accordion-icon-active-color: var.$dark-alt;
   $accordion-icon-width: var.$accordion-icon-width;
 
