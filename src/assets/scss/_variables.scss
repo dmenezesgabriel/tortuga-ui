@@ -43,6 +43,8 @@ $themes: (
     "border-primary": $gray-600,
     "text-primary": #0c0c0c,
     "text-secondary": $white,
+    "navbar-background-primary": $dark,
+    "navbar-background-secondary": $dark-alt,
   ),
   "dark": (
     "primary": $primary,
@@ -53,8 +55,11 @@ $themes: (
     "border-primary": $gray-600,
     "text-primary": #f5f5f5,
     "text-secondary": #0c0c0c,
+    "navbar-background-primary": $dark,
+    "navbar-background-secondary": $dark-alt,
   ),
 );
+
 /*
 * Create CSS theme color variables.
 */
