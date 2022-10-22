@@ -44,10 +44,10 @@ const toogleChildrenIcon = computed(() => {
 
     <div v-if="hasChildren" v-show="showChildren">
       <Tree
-        v-for="node in props.contents"
-        :key="node.name"
-        :name="node.name"
-        :contents="node.contents"
+        v-for="children in props.contents"
+        :key="children.name"
+        :name="children.name"
+        :contents="children.contents"
         :spacing="spacing + 10"
       />
     </div>
