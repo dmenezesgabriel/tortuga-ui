@@ -4,14 +4,14 @@ import type { PropType } from "vue";
 
 export interface TreeNode {
   name: string;
-  contents?: Array<TreeNode>;
+  node?: Array<TreeNode>;
   spacing: number;
   spacingIncrement?: number;
 }
 
 const props = defineProps({
   name: { type: String },
-  contents: { type: Array as PropType<Array<TreeNode>>, required: false },
+  node: { type: Array as PropType<Array<TreeNode>>, required: false },
   spacing: { type: Number, default: 0 },
   spacingIncrement: { type: Number, default: 10 },
 });
@@ -19,7 +19,7 @@ const props = defineProps({
 const showChildren = ref<boolean>(false);
 
 const hasChildren = computed(() => {
-  return props.contents && props.contents.length > 0;
+  return props.node && props.node.length > 0;
 });
 
 const nodeMargin = computed(() => {
@@ -46,10 +46,10 @@ const toogleChildrenIcon = computed(() => {
 
     <div v-if="hasChildren" v-show="showChildren">
       <Tree
-        v-for="children in props.contents"
+        v-for="children in props.node"
         :key="children.name"
         :name="children.name"
-        :contents="children.contents"
+        :node="children.node"
         :spacing="spacing + props.spacingIncrement"
       />
     </div>

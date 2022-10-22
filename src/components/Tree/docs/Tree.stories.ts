@@ -22,12 +22,12 @@ const Template = (args: any) => ({
 export const Default: Story = Template.bind({});
 Default.args = {
   name: "FileTree",
-  contents: [
+  node: [
     { type: "file", name: "README.md" },
     {
       type: "folder",
       name: "src",
-      contents: [
+      node: [
         { type: "file", name: "foo.js" },
         { type: "file", name: "bar.js" },
       ],
