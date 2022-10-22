@@ -6,12 +6,14 @@ export interface TreeNode {
   name: string;
   contents?: Array<TreeNode>;
   spacing: number;
+  spacingIncrement?: number;
 }
 
 const props = defineProps({
   name: { type: String },
   contents: { type: Array as PropType<Array<TreeNode>>, required: false },
   spacing: { type: Number, default: 0 },
+  spacingIncrement: { type: Number, default: 10 },
 });
 
 const showChildren = ref<boolean>(false);
@@ -48,7 +50,7 @@ const toogleChildrenIcon = computed(() => {
         :key="children.name"
         :name="children.name"
         :contents="children.contents"
-        :spacing="spacing + 10"
+        :spacing="spacing + props.spacingIncrement"
       />
     </div>
   </div>
