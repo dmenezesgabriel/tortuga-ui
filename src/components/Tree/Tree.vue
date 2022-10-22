@@ -3,20 +3,25 @@ import { computed, ref } from "vue";
 import type { PropType } from "vue";
 
 export interface TreeNode {
-  type: string;
   name: string;
   contents?: Array<TreeNode>;
+  spacing: number;
 }
 
 const props = defineProps({
   name: { type: String },
-  contents: { type: Array as PropType<Array<TreeNode>> },
+  contents: { type: Array as PropType<Array<TreeNode>>, required: false },
+  spacing: { type: Number, default: 0 },
 });
 
 const showChildren = ref<boolean>(false);
 
 const hasChildren = computed(() => {
   return props.contents && props.contents.length > 0;
+});
+
+const nodeMargin = computed(() => {
+  return { "margin-left": `${props.spacing}px` };
 });
 
 const toggleChildren = () => {
@@ -29,10 +34,10 @@ const toogleChildrenIcon = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div :style="nodeMargin">
     <div>
       {{ props.name }}
-      <span class="" @click="toggleChildren" v-if="hasChildren">
+      <span class="fw-bold" @click="toggleChildren" v-if="hasChildren">
         [{{ toogleChildrenIcon }}]
       </span>
     </div>
@@ -43,6 +48,7 @@ const toogleChildrenIcon = computed(() => {
         :key="node.name"
         :name="node.name"
         :contents="node.contents"
+        :spacing="spacing + 10"
       />
     </div>
   </div>
