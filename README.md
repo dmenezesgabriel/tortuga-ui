@@ -71,3 +71,4 @@ This will create a `.tgz` file that can be installed locally.
 - Test only the template render, do not test component internals.
 - Do not change wrapper.vm directly.
 - Child components are black boxes.
+- don't forget to await for the nextTick().

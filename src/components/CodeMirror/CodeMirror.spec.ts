@@ -1,8 +1,8 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect } from "vitest";
-import { mount } from "@vue/test-utils";
+import { describe, it, expect, beforeEach } from "vitest";
+import { mount, VueWrapper } from "@vue/test-utils";
 import CodeMirror from "@/components/CodeMirror/CodeMirror.vue";
 
 /**
@@ -38,17 +38,40 @@ document.createRange = () => {
   return range;
 };
 
-describe("CodeMirror", async () => {
-  it("Should render", async () => {
+let wrapper: VueWrapper;
+
+describe("CodeMirror", () => {
+  beforeEach(() => {
     // Arrange
-    const wrapper = mount(CodeMirror as any, {
+    wrapper = mount(CodeMirror as any, {
       props: {
         text: "let counter = 0;",
       },
     });
+  });
 
+  it("is called", () => {
+    expect(wrapper.exists()).toBeTruthy();
+  });
+
+  it("Should render", () => {
     // Assert
     expect(wrapper.find("div").exists()).toBeTruthy();
     expect(wrapper.text()).toContain("let counter = 0;");
   });
+
+  it("should show text", () => {
+    // Assert
+    expect(wrapper.text()).toContain("let counter = 0;");
+  });
+
+  it.todo("should emit change");
+
+  it.todo("should emit update");
+
+  it.todo("should emit focus");
+
+  it.todo("should emit blur");
+
+  it.todo("should emit ready");
 });

@@ -6,17 +6,18 @@
  * read
  * https://codemirror.net/docs/guide/
  */
-import { onBeforeMount, onMounted, shallowRef, type PropType } from "vue";
+import { onBeforeMount, onMounted, shallowRef, withDefaults } from "vue";
 import { EditorState, type EditorStateConfig } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";
 import { basicSetup } from "codemirror";
 
-const props = defineProps({
-  text: { type: String, default: "" },
-  extensions: {
-    type: Array as PropType<EditorStateConfig["extensions"]>,
-    default: [basicSetup],
-  },
+export interface Props {
+  text: string;
+  extensions: EditorStateConfig["extensions"];
+}
+const props = withDefaults(defineProps<Props>(), {
+  text: "",
+  default: [basicSetup],
 });
 
 const emit = defineEmits(["change", "update", "focus", "blur", "ready"]);

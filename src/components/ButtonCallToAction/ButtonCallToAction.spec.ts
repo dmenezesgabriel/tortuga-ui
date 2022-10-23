@@ -20,7 +20,7 @@ describe("ButtonCallToAction", async () => {
 
   it("is called", () => {
     // Assert
-    expect(wrapper.exists).toBeTruthy();
+    expect(wrapper.exists()).toBeTruthy();
   });
 
   it("should emit click", async () => {
