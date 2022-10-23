@@ -13,5 +13,9 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
+<<<<<<< HEAD
       - run: npm run test:unit
+=======
+      - run: npm test:unit
+>>>>>>> 8cf2a2ff244c1c0ceb1c5522009b5bf1e13f4d88
       - run: npm run build
