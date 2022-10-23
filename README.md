@@ -23,7 +23,7 @@ Welcome, and feel free to contribute!
 
 This will sync the changes between this package and a test project.
 
-1. into the root of this folder use the command `npm link`.
+1. In the root of this project use the command `npm link`.
 2. Create another vue project with `npm init vue@latest`.
 3. Enter in the new project and use the command `npm link vbc-ui`.
 4. You can then use the package as the following:
@@ -55,3 +55,10 @@ import "vbc-ui/dist/style.css";
   </main>
 </template>
 ```
+
+### NPM pack
+
+This will create a `.tgz` file that can be installed locally.
+
+1. In the root of this project use the command `npm pack`.
+2. Install the package in the desired project `npm install <path>/vbc-ui-0.0.0.tgz`.
