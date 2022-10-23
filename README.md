@@ -16,3 +16,38 @@ On a nice environment 🏖️:
 - [NodeJS](https://nodejs.org/en/)
 
 Welcome, and feel free to contribute!
+
+## Development
+
+### NPM link
+
+This will sync the changes between this package and a test project.
+
+1. into the root of this folder use the command `npm link`.
+2. Create another vue project with `npm init vue@latest`.
+3. Enter in the new project and use the command `npm link vbc-ui`.
+4. You can then use the package as the following:
+
+```vue
+<script setup>
+// Import a component
+import { TextContent } from "vbc-ui";
+// Import general style sheet (containing customized bootstrap)
+import "vbc-ui/dist/style.css";
+</script>
+
+<template>
+  <main>
+    <div class="container border border-secondary">
+      <div class="row">
+        <div class="col-6 text-center">
+          <TextContent type="h2">Hello, World</TextContent>
+        </div>
+        <div class="col-6 text-center">
+          <TextContent type="h2">Hello, My Friend!</TextContent>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+```
