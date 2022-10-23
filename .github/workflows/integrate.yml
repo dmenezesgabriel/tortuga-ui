@@ -13,9 +13,5 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-<<<<<<< HEAD
       - run: npm run test:unit
-=======
-      - run: npm test:unit
->>>>>>> 8cf2a2f (Add integrate action)
       - run: npm run build
