@@ -1,23 +1,35 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect } from "vitest";
-import { mount } from "@vue/test-utils";
+import { describe, it, expect, beforeEach } from "vitest";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
 import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 
-describe("BsTooltip", async () => {
-  it("Should render", async () => {
+let wrapper: VueWrapper;
+
+describe("BsTooltip", () => {
+  beforeEach(() => {
     // Arrange
-    const wrapper = mount(BsTooltip as any, {
+    wrapper = shallowMount(BsTooltip as any, {
       props: {
         options: {
           title: "This is a tooltip",
         },
       },
     });
+  });
+
+  it("is called", () => {
+    // Assert
+    expect(wrapper.exists()).toBeTruthy();
+  });
+
+  it("should render", () => {
+    // Arrange
 
     // Assert
     expect(wrapper.find("span").exists()).toBeTruthy();
     expect(wrapper.attributes("aria-label")).toContain("tooltip");
+    expect(wrapper.attributes("tabindex")).toContain(0);
   });
 });

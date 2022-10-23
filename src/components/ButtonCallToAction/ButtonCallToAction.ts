@@ -1,12 +1,14 @@
-import { h } from "vue";
+import { h, type SetupContext } from "vue";
 
 type Props = {
-  text: string;
   disabled?: boolean;
 };
 
 // @vue/component
-const ButtonCallToAction = (props: Props, { emit }: { emit: any }) => {
+const ButtonCallToAction = (
+  props: Props,
+  { emit, slots }: { emit: SetupContext["emit"]; slots: SetupContext["slots"] }
+) => {
   const style = () =>
     import("@/components/ButtonCallToAction/btn-call-to-action.scss");
 
@@ -21,7 +23,7 @@ const ButtonCallToAction = (props: Props, { emit }: { emit: any }) => {
   const buttonText = h(
     "span",
     { class: "btn-call-to-action__text" },
-    props.text
+    slots.default?.()
   );
 
   return h(
@@ -42,7 +44,6 @@ const ButtonCallToAction = (props: Props, { emit }: { emit: any }) => {
 };
 
 ButtonCallToAction.props = {
-  text: { type: String, required: true },
   disabled: { type: Boolean, required: false, default: false },
 };
 

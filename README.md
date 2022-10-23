@@ -62,3 +62,12 @@ This will create a `.tgz` file that can be installed locally.
 
 1. In the root of this project use the command `npm pack`.
 2. Install the package in the desired project `npm install <path>/vbc-ui-0.0.0.tgz`.
+
+### Testing
+
+- Forget about asserting wrapper.vm.
+- Do not spy on methods.
+- If we rename method or computed, test should pass.
+- Test only the template render, do not test component internals.
+- Do not change wrapper.vm directly.
+- Child components are black boxes.

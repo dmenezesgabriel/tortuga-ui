@@ -1,5 +1,5 @@
 import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
-import type { Story } from "@storybook/vue3";
+import type { Meta, Story } from "@storybook/vue3";
 
 export default {
   title: "Components/Bootstrap/BsTooltip",
@@ -7,7 +7,7 @@ export default {
   decorators: [
     () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
-};
+} as Meta;
 
 const Template = (args: any) => ({
   components: { BsTooltip },

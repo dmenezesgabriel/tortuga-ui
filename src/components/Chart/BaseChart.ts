@@ -94,12 +94,16 @@ const BaseChart = {
           options: props.options,
           type: props.type,
           ref: canvasElement,
+          tabindex: 0,
+          role: "img",
         },
         []
       );
   },
 };
 
+// TODO
+// Fix this prop types
 const BarChart = (props: any) =>
   h(BaseChart, { data: props.data, options: props.options, type: "bar" });
 

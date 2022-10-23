@@ -1,11 +1,11 @@
 import { h } from "vue";
 
-interface Props {
+export interface Props {
   color: string;
 }
 
 // @vue/component
-const ScrollCue = (props: any) => {
+const ScrollCue = (props: Props) => {
   const style = () => import("@/components/ScrollCue/scroll-cue.scss");
   const arrow = h(
     "div",

@@ -1,5 +1,5 @@
 import ScrollCue from "@/components/ScrollCue/ScrollCue";
-import type { Story } from "@storybook/vue3";
+import type { Story, Meta } from "@storybook/vue3";
 
 export default {
   title: "Components/Animations/ScrollCue",
@@ -10,7 +10,7 @@ export default {
   decorators: [
     () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
-};
+} as Meta;
 
 const Template = (args: any) => ({
   components: { ScrollCue },

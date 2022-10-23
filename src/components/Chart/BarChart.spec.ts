@@ -1,14 +1,15 @@
 /**
  * @vitest-environment jsdom
  */
-import { describe, it, expect } from "vitest";
-import { mount } from "@vue/test-utils";
+import { describe, it, expect, beforeEach } from "vitest";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
 import { BaseChart } from "@/components/Chart/BaseChart";
 
+let wrapper: VueWrapper;
+
 describe("BarChart", async () => {
-  it("Should render", async () => {
-    // Arrange
-    const wrapper = mount(BaseChart, {
+  beforeEach(() => {
+    wrapper = shallowMount(BaseChart, {
       props: {
         type: "bar",
         data: {
@@ -62,8 +63,14 @@ describe("BarChart", async () => {
         },
       },
     });
+  });
+
+  it("Should render", async () => {
+    // Arrange
 
     // Assert
     expect(wrapper.find("canvas").exists()).toBeTruthy();
+    expect(wrapper.attributes("tabindex")).toContain(0);
+    expect(wrapper.attributes("role")).toContain("img");
   });
 });

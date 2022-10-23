@@ -1,5 +1,5 @@
 import ButtonCallToAction from "@/components/ButtonCallToAction/ButtonCallToAction";
-import type { Story } from "@storybook/vue3";
+import type { Meta, Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 
 export default {
@@ -11,7 +11,7 @@ export default {
   decorators: [
     () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
-};
+} as Meta;
 
 const actionsData = {
   onClick: action("click"),
@@ -22,16 +22,12 @@ const Template = (args: any) => ({
   setup() {
     return { args, ...actionsData };
   },
-  template: "<ButtonCallToAction v-bind='args' />",
+  template: "<ButtonCallToAction v-bind='args'>Learn More</ButtonCallToAction>",
 });
 
 export const Default: Story = Template.bind({});
-Default.args = {
-  text: "Learn More",
-};
 
 export const Disabled: Story = Template.bind({});
 Disabled.args = {
-  ...Default.args,
   disabled: true,
 };

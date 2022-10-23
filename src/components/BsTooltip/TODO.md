@@ -1,12 +1,12 @@
 ---
-name:
-updated_at:
+name: Gabriel
+updated_at: 2022-10-21
 ---
 
 # TODO
 
-- [ ] Component
-- [ ] Styles
-- [ ] Unit tests
+- [x] Component
+- [x] Styles
+- [x] Unit tests
 - [ ] Interaction tests
 - [ ] Documentation

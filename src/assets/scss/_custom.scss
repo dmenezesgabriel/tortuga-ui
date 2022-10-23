@@ -12,6 +12,8 @@
 
 // Main colors
 // Color pallet https://getbootstrap.com/docs/5.1/customize/color/
+// TODO
+// This should be defined at each theme
 $primary: var.$primary;
 $secondary: var.$secondary;
 $dark: var.$dark;
@@ -45,11 +47,11 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/accordion";
 @import "bootstrap/scss/alert";
 @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/button-group";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/card";
-// @import "bootstrap/scss/carousel";
+@import "bootstrap/scss/carousel";
 @import "bootstrap/scss/close";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/dropdown";
@@ -64,10 +66,10 @@ $theme-colors: map-remove($theme-colors, "info");
 @import "bootstrap/scss/offcanvas"; // sidebar, depends on modal
 @import "bootstrap/scss/pagination";
 @import "bootstrap/scss/placeholders";
-// @import "bootstrap/scss/progress";
+@import "bootstrap/scss/progress";
 @import "bootstrap/scss/reboot";
 @import "bootstrap/scss/root";
-// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/spinners";
 @import "bootstrap/scss/tables";
 @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/tooltip";
