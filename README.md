@@ -6,7 +6,7 @@ Built on top of rock solid frameworks as a turtle 🐢 shell!
 - [Bootstrap](https://getbootstrap.com/)
 - [ChartJS](https://www.chartjs.org/)
 
-With some spice 🌶️:
+With some spice 🌶️ to improve code maintainability:
 
 - [Typescript](https://www.typescriptlang.org/)
 - [Sass](https://sass-lang.com/)
