@@ -30,6 +30,10 @@ This will sync the changes between this package and a test project.
 
 ```vue
 <script setup>
+/**
+ * App.vue
+ */
+
 // Import a component
 import { TextContent } from "vbc-ui";
 // Import general style sheet (containing customized bootstrap)
