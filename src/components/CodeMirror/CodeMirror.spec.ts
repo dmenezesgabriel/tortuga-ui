@@ -2,7 +2,7 @@
  * @vitest-environment jsdom
  */
 import { describe, it, expect, beforeEach } from "vitest";
-import { mount, VueWrapper } from "@vue/test-utils";
+import { shallowMount, VueWrapper } from "@vue/test-utils";
 import CodeMirror from "@/components/CodeMirror/CodeMirror.vue";
 
 /**
@@ -43,7 +43,7 @@ let wrapper: VueWrapper;
 describe("CodeMirror", () => {
   beforeEach(() => {
     // Arrange
-    wrapper = mount(CodeMirror as any, {
+    wrapper = shallowMount(CodeMirror as any, {
       props: {
         text: "let counter = 0;",
       },
