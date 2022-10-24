@@ -30,7 +30,10 @@ onMounted(() => {
         v-for="tab in Object.keys(props.tabs)"
         :key="tab"
         @click="setSelectedTab(tab)"
-        :class="['btn component-tabs__button', { active: selectedTab === tab }]"
+        :class="[
+          'btn border-0 component-tabs__button',
+          { active: selectedTab === tab },
+        ]"
       >
         {{ tab }}
       </button>
@@ -54,6 +57,8 @@ onMounted(() => {
 .component-tabs {
   &__button {
     padding: 6px 10px;
+    border: none;
+    border-radius: 0px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border: 1px solid #ccc;
@@ -73,6 +78,7 @@ onMounted(() => {
 
   &__tab {
     border: 1px solid #ccc;
+    border-radius: 5px;
     padding: 10px;
   }
 }

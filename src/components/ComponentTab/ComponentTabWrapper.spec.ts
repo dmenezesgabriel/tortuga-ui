@@ -65,20 +65,30 @@ describe("ComponentTabWrapper", () => {
   });
 
   it("should change tab on click", async () => {
+    // Arrange
+    const buttonFirstTab = wrapper
+      .findAll("button")
+      .filter((node) => node.text().match("FirstTab"))
+      .at(0);
+
+    // Assert
+    expect(buttonFirstTab?.classes()).toContain("active");
+
     // Assert
     expect(wrapper.text()).toContain("SecondTab");
 
     // Arrange
-    const button = wrapper
+    const buttonSecondTab = wrapper
       .findAll("button")
       .filter((node) => node.text().match("SecondTab"))
       .at(0);
 
     // Act
-    button?.trigger("click");
+    buttonSecondTab?.trigger("click");
     await nextTick();
 
     // Arrange
+    expect(buttonSecondTab?.classes()).toContain("active");
     const secondTab = wrapper.find("#secondTab");
 
     // Assert
