@@ -13,11 +13,10 @@ import { basicSetup } from "codemirror";
 
 export interface Props {
   text: string;
-  extensions: EditorStateConfig["extensions"];
+  extensions?: EditorStateConfig["extensions"];
 }
 const props = withDefaults(defineProps<Props>(), {
   text: "",
-  default: [basicSetup],
 });
 
 const emit = defineEmits(["change", "update", "focus", "blur", "ready"]);

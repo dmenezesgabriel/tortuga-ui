@@ -23,13 +23,12 @@ describe("ButtonCallToAction", async () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it("should emit click", async () => {
+  it("should emit click", () => {
     // Act
-    await wrapper.find("button").trigger("click");
+    wrapper.find("button").trigger("click");
 
     // Assert
-    expect(wrapper.emitted().click).toBeTruthy();
-    expect(wrapper.emitted().click[1]) instanceof Event;
+    expect(wrapper.emitted()).toHaveProperty("click");
   });
 
   it("should render", () => {

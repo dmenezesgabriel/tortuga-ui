@@ -6,13 +6,13 @@ const props = defineProps({
   currentTab: { type: String, required: true },
 });
 
-const emit = defineEmits(["onTabChange"]);
+const emit = defineEmits(["tab-click"]);
 
 const selectedTab = ref<string>("");
 
 const setSelectedTab = (tab: string) => {
   selectedTab.value = tab;
-  emit("onTabChange", tab);
+  emit("tab-click", tab);
 };
 
 onMounted(() => {
