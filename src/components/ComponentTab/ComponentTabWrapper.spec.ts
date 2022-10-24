@@ -30,6 +30,7 @@ describe("ComponentTabWrapper", () => {
   });
 
   it("is called", () => {
+    // Assert
     expect(wrapper.exists()).toBeTruthy();
   });
 
@@ -77,7 +78,10 @@ describe("ComponentTabWrapper", () => {
     button?.trigger("click");
     await nextTick();
 
+    // Arrange
     const secondTab = wrapper.find("#secondTab");
+
+    // Assert
     expect(secondTab.exists());
     expect(secondTab.text()).toContain("Second Component");
   });

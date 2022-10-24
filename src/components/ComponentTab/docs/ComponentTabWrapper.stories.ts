@@ -2,19 +2,27 @@ import ComponentTabWrapper from "@/components/ComponentTab/ComponentTabWrapper.v
 import TextContent from "@/components/TextContent/TextContent";
 import type { Story } from "@storybook/vue3";
 import { h } from "vue";
+import { action } from "@storybook/addon-actions";
 
 export default {
   title: "Components/Tab/ComponentTabWrapper",
   component: ComponentTabWrapper,
+  argTypes: {
+    onTabClick: {},
+  },
   decorators: [
     () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
 };
 
+const actionsData = {
+  onTabClick: action("tab-click"),
+};
+
 const Template = (args: any) => ({
   components: { ComponentTabWrapper },
   setup() {
-    return { args };
+    return { args, ...actionsData };
   },
   template: "<ComponentTabWrapper v-bind='args' />",
 });
