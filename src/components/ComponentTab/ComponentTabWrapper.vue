@@ -30,10 +30,7 @@ onMounted(() => {
         v-for="tab in Object.keys(props.tabs)"
         :key="tab"
         @click="setSelectedTab(tab)"
-        :class="[
-          'btn border-0 component-tabs__button',
-          { active: selectedTab === tab },
-        ]"
+        :class="['btn component-tabs__button', { active: selectedTab === tab }]"
       >
         {{ tab }}
       </button>
@@ -61,19 +58,19 @@ onMounted(() => {
     border-radius: 0px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-primary);
     cursor: pointer;
-    background: #f0f0f0;
+    background: var(--background-primary);
     margin-bottom: -1px;
     margin-right: -1px;
   }
 
   &__button:hover {
-    background: #e0e0e0;
+    background: var(--background-secondary);
   }
 
   &__button.active {
-    background: #e0e0e0;
+    background: var(--background-secondary);
   }
 
   &__tab {
@@ -86,20 +83,21 @@ onMounted(() => {
 [data-mode="dark"] .dark {
   .component-tabs {
     &__button {
-      border: 1px solid var(--bs-gray-600);
-      background: var(--bs-gray-700);
+      border: 1px solid var(--border-primary);
+      background: var(--background-primary);
+      color: var(--text-primary);
     }
 
     &__button:hover {
-      background: var(--bs-gray-500);
+      background: var(--background-secondary);
     }
 
     &__button.active {
-      background: var(--bs-gray-500);
+      background: var(--background-secondary);
     }
 
     &__tab {
-      border: 1px solid var(--bs-gray-600);
+      border: 1px solid var(--border-primary);
     }
   }
 }
