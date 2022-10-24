@@ -3,10 +3,21 @@ Move to functional component ? -->
 <script setup lang="ts">
 import { useSlots, ref, provide } from "vue";
 
+const emit = defineEmits(["tab-click"]);
+
 const slots = useSlots();
 // TODO
 // supress [warn] Slot "default" invoked outside of the render function
 const selectedTitle = ref(slots.default?.()[0].props?.title);
+
+const handleClick = (tabTitle: string): void => {
+  /**
+   * @param {string} tabTitle
+   * @returns {void}
+   */
+  selectedTitle.value = tabTitle;
+  emit("tab-click", tabTitle);
+};
 
 provide("selectedTitle", selectedTitle);
 </script>
@@ -21,7 +32,7 @@ provide("selectedTitle", selectedTitle);
             ? slotItem.props?.title === selectedTitle
             : index === 0,
         }"
-        @click="selectedTitle = slotItem.props?.title"
+        @click="handleClick(slotItem.props?.title)"
       >
         {{ slotItem.props?.title as string }}
       </li>
@@ -46,14 +57,15 @@ provide("selectedTitle", selectedTitle);
       text-align: center;
       padding: 10px 20px;
       margin-right: 10px;
-      background-color: var(--bs-gray-400);
+      background-color: var(--background-secondary);
       color: var(--bs-dark-alt);
       border-radius: 5px;
       cursor: pointer;
       transition: 0.4s all ease-out;
+      color: var(--text-primary);
     }
     li.selected {
-      background-color: var(--bs-primary);
+      background-color: var(--primary);
       color: white;
     }
   }
