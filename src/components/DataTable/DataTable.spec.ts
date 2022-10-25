@@ -78,4 +78,11 @@ describe("DataTable", () => {
       expect(tableHeader?.exists());
     }
   );
+
+  it.todo("should show table row count less or equal rows per page selected");
+  it.todo(
+    "should change number of table rows when rows per page selected change"
+  );
+  it.todo("should sort table when caret icon clicked");
+  it.todo("clicked page on pagination should contain class active");
 });
