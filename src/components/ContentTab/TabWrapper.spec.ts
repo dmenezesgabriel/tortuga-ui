@@ -2,14 +2,14 @@
  * @vitest-environment jsdom
  */
 import { describe, it, expect, beforeEach } from "vitest";
-import { mount, VueWrapper } from "@vue/test-utils";
+import { mount, type VueWrapper } from "@vue/test-utils";
 import TabsWrapper from "@/components/ContentTab/TabsWrapper.vue";
 import TabContent from "@/components/ContentTab/TabContent.vue";
 import { h, nextTick } from "vue";
 
 let wrapper: VueWrapper;
 
-describe("TabWrapper", async () => {
+describe("TabWrapper", () => {
   beforeEach(() => {
     // Arrange
     wrapper = mount(TabsWrapper as any, {
@@ -28,7 +28,7 @@ describe("TabWrapper", async () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it("Should render", () => {
+  it("should render", () => {
     // Assert
     expect(wrapper.find("div").exists()).toBeTruthy();
     expect(wrapper.text()).toContain("Tab 1");
@@ -36,7 +36,7 @@ describe("TabWrapper", async () => {
     expect(wrapper.text()).toContain("Tab 3");
   });
 
-  it.each([[1], [2], [3]])("Should render tab components", (tabNumber) => {
+  it.each([[1], [2], [3]])("should render tab components", (tabNumber) => {
     const tabWrapper = wrapper
       .findAll(".tab-content")
       .filter((node) => node.text().match(`Tab ${tabNumber} Content`))

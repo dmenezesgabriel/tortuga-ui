@@ -8,6 +8,13 @@ const props = defineProps({
     type: Array as PropType<Array<string | number | boolean>>,
     required: true,
   },
+  text: {
+    type: Object as PropType<Record<string, string>>,
+    required: false,
+    default: {
+      "rows-per-page": "Rows per page",
+    },
+  },
 });
 
 const sortedData = ref<any>(null);
@@ -105,7 +112,7 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
 <template>
   <!-- number of rows to show -->
   <div class="mb-1">
-    <label for="pageNumberSelector">Rows Per Page:</label>
+    <label for="pageNumberSelector">{{ props.text["rows-per-page"] }}:</label>
     <select
       id="pageNumberSelector"
       v-model="currentRowsPerPage"
@@ -133,14 +140,14 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
               <div class="d-flex flex-column justify-content-centerr mx-2">
                 <span class="sort-field">
                   <i
-                    class="bi bi-chevron-up"
+                    class="bi bi-caret-up-fill"
                     aria-label="Sort Icon"
                     @click="sortTable(field, true)"
                   ></i>
                 </span>
                 <span class="sort-field">
                   <i
-                    class="bi bi-chevron-down"
+                    class="bi bi-caret-down-fill"
                     aria-label="Sort Icon"
                     @click="sortTable(field, false)"
                   ></i>
@@ -183,6 +190,11 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
       <li class="page-item">
         <span class="page-link" @click="pageFoarwrd">
           <i class="bi bi-chevron-double-right"></i>
+        </span>
+      </li>
+      <li class="page-item">
+        <span class="page-link" @click="setPage(numberOfPages)">
+          {{ numberOfPages }}
         </span>
       </li>
     </ul>
