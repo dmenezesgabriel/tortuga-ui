@@ -1,32 +1,14 @@
-<!-- Colors.stories.mdx -->
-
-import variables from "@/assets/scss/variables.module.scss";
+import variables from "@/stories/design/design.module.scss";
 import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
 
 <Meta title="Design System/Colors" />
 
-import { colorGroups, colorVariants } from "./colors";
+import { colorGroups, colorVariants } from "./design";
 
-## Theme
-
-<ColorPalette>
-  <ColorItem
-    title="--bs-primary"
-    subtitle="Blue"
-    colors={{ SomeBlue: variables.primaryColor }}
-  />
-  <ColorItem
-    title="--bs-secondary"
-    subtitle="Orange"
-    colors={{ SomeOrange: variables.secondaryColor }}
-  />
-</ColorPalette>
-
-## Tokens
+# Tokens
 
 <ColorPalette>
   {colorGroups.map((colorName) => {
-    console.log(colorName);
     let colorVariantsObject = {};
     colorVariants.forEach((variantName) => {
       colorVariantsObject[`${colorName}-${variantName}`] =

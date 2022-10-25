@@ -35,3 +35,16 @@ export const colorVariants = [
   "800",
   "900",
 ];
+
+export const themeVariables = [
+  "primary",
+  "secondary",
+  "background-primary",
+  "background-secondary",
+  "background-disabled",
+  "border-primary",
+  "text-primary",
+  "text-secondary",
+  "navbar-background-primary",
+  "navbar-background-secondary",
+];

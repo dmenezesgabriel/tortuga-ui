@@ -1,0 +1,42 @@
+import variables from "@/stories/design/design.module.scss";
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+
+<Meta title="Design System/Themes" />
+
+import { themeVariables } from "./design";
+
+# Theme
+
+## Default Light
+
+<ColorPalette>
+  {themeVariables.map((variable) => {
+    const theme = "light";
+    let colorVariant = {};
+    colorVariant[`--${variable}`] = variables[`--${variable}-${theme}`];
+    return (
+      <ColorItem
+        key={`${variable}-${theme}`}
+        title={`--${variable}`}
+        colors={colorVariant}
+      />
+    );
+  })}
+</ColorPalette>
+
+## Default Dark
+
+<ColorPalette>
+  {themeVariables.map((variable) => {
+    const theme = "dark";
+    let colorVariant = {};
+    colorVariant[`--${variable}`] = variables[`--${variable}-${theme}`];
+    return (
+      <ColorItem
+        key={`${variable}-${theme}`}
+        title={`--${variable}`}
+        colors={colorVariant}
+      />
+    );
+  })}
+</ColorPalette>

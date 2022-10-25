@@ -1,0 +1,35 @@
+/*
+To export scss variables to javascript with vite its necessary to create a
+.modules.scss file.
+*/
+@import "../../assets/scss/variables";
+@import "../../assets/scss/tokens";
+@import "../../assets/scss/abstracts/mixins";
+
+:export {
+  primaryColor: $primary;
+  secondaryColor: $secondary;
+
+  // Export color map
+  @each $color-group, $value in $colorMap {
+    @each $color-variant, $color-hex in $value {
+      #{unquote($color-group)}-#{$color-variant}: getColor(
+        $color-group,
+        $color-variant
+      );
+    }
+  }
+
+  // export theme variables
+  @each $theme-name, $properties in $themes {
+    // define a css variable for each property
+    @each $name, $property in $properties {
+      --#{$name}-#{$theme-name}: #{$property};
+
+      @if ($name == "primary") {
+        --#{$name}-dark: #{darken($property, 10%)};
+        --#{$name}-darker: #{darken($property, 20%)};
+      }
+    }
+  }
+}
