@@ -4,6 +4,8 @@ import { ref } from "vue";
 
 // TODO
 // Break into smaller components
+// Text search feature
+// Go to page feature
 
 const props = defineProps({
   fields: { type: Array as PropType<Array<string>>, required: true },
