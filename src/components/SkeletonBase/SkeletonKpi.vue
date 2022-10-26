@@ -19,8 +19,7 @@ import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
 </template>
 
 <style lang="scss" scoped>
-@use "@/assets/scss/abstracts/mixins";
-
+@use "@/assets/scss/variables";
 .kpi {
   border: none;
   border-right: 3px solid var(--bs-secondary);
@@ -29,7 +28,12 @@ import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
 [data-mode="dark"] .dark {
   .kpi {
     border: none;
-    @include mixins.gradient;
+
+    background: linear-gradient(
+      to right,
+      rgba(variables.$dark-alt, 0.95),
+      rgba(variables.$primary, 0.95)
+    );
   }
 }
 </style>

@@ -12,5 +12,24 @@ import "bootstrap/js/dist/scrollspy";
 import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/toast";
 
+// Usage
 // Export all Vue components
+// Import { Component } from "vbc-ui";
 export * from "@/components";
+// Or
+import * as components from "@/components";
+// Import VbcComponents from "vbc-ui";
+// ...
+// createApp(App).use(VbcComponents).mount(#app);
+const componentsList: any = components;
+// Use as Plugin registering components globally
+// This makes imports sometimes unclear.
+const VBCComponents = {
+  install(Vue: any) {
+    Object.keys(componentsList).forEach((name) => {
+      Vue.component(name, componentsList[name]);
+    });
+  },
+};
+
+export { VBCComponents };

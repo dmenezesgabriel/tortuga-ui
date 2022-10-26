@@ -56,6 +56,16 @@ import "vbc-ui/dist/style.css";
 </template>
 ```
 
+Or use globally as Plugin
+
+```js
+// main.js
+import "vbc-ui/dist/style.css";
+import { VBCComponents } from "vbc-ui";
+
+createApp(App).use(VBCComponents).mount("#app");
+```
+
 ### NPM pack
 
 This will create a `.tgz` file that can be installed locally.
