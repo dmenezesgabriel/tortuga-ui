@@ -24,12 +24,19 @@ const Template = (args: any) => ({
   setup() {
     return { args, ...actionsData };
   },
-  template: "<KpiComponent v-bind='args' />",
+  template: `
+  <KpiComponent v-bind='args'>
+  <template #value>
+  100
+  </template>
+  <template #text>
+  Some KPI
+  </template>
+  </KpiComponent>
+  `,
 });
 
 export const Default: Story = Template.bind({});
 Default.args = {
-  text: "Kpi Measure",
-  value: "100",
-  tooltip: "This is aditional information about tooltip",
+  tooltipOptions: { title: "This is additional information about tooltip" },
 };
