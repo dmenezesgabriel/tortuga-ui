@@ -39,4 +39,5 @@ describe("MultiselectCheckbox", () => {
   it.todo("should emit unmounted");
   it.todo("should open dropdown");
   it.todo("should close dropdown");
+  it.todo("should filter dropdown on search");
 });
