@@ -7,8 +7,9 @@ const config: StorybookViteConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/addon-actions",
     "@storybook/addon-interactions",
-    "@storybook/addon-toolbar",
+    "@storybook/addon-toolbars",
     "@storybook/addon-a11y",
     "@storybook/addon-storysource",
     "@storybook/preset-scss",
@@ -32,11 +33,7 @@ const config: StorybookViteConfig = {
     }
     if (config.resolve && config.resolve.alias)
       config.resolve.alias["@"] = resolve(__dirname, "../src");
-    return mergeConfig(config, {
-      optimizeDeps: {
-        include: ["storybook-dark-mode"],
-      },
-    });
+    return mergeConfig(config, {});
   },
 };
 
