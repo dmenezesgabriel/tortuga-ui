@@ -25,8 +25,6 @@ describe("BsTooltip", () => {
   });
 
   it("should render", () => {
-    // Arrange
-
     // Assert
     expect(wrapper.find("span").exists()).toBeTruthy();
     expect(wrapper.attributes("aria-label")).toContain("tooltip");
