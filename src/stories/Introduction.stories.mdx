@@ -29,6 +29,52 @@ On a nice environment 🏖️:
 
 Welcome, and feel free to contribute!
 
+## Usage
+
+### Installation
+
+`npm install vbc-ui`
+
+### Importing
+
+```vue
+<script setup>
+/**
+ * App.vue
+ */
+
+// Import a component
+import { TextContent } from "vbc-ui";
+// Import general style sheet (containing customized bootstrap)
+import "vbc-ui/dist/style.css";
+</script>
+
+<template>
+  <main>
+    <div class="container border border-secondary">
+      <div class="row">
+        <div class="col-6 text-center">
+          <TextContent type="h2">Hello, World</TextContent>
+        </div>
+        <div class="col-6 text-center">
+          <TextContent type="h2">Hello, My Friend!</TextContent>
+        </div>
+      </div>
+    </div>
+  </main>
+</template>
+```
+
+Or use globally as Plugin
+
+```js
+// main.js
+import "vbc-ui/dist/style.css";
+import { VBCComponents } from "vbc-ui";
+
+createApp(App).use(VBCComponents).mount("#app");
+```
+
 ## Development
 
 ### NPM link
