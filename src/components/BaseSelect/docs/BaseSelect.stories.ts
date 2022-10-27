@@ -33,3 +33,13 @@ const Template = (args: any) => ({
 });
 
 export const Default: Story = Template.bind({});
+
+export const Multiple: Story = Template.bind({});
+Multiple.args = {
+  multiple: true,
+};
+
+export const Disabled: Story = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
