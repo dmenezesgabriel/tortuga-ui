@@ -19,3 +19,5 @@ export * from "@/components/Tree";
 export * from "@/components/TypeWriter";
 export * from "@/components/VizWrapper";
 export * from "@/components/Wave";
+export * from "@/components/BaseInput";
+export * from "@/components/BaseSelect";

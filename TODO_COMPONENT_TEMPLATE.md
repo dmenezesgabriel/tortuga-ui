@@ -11,3 +11,5 @@ updated_at: 2022-10-21
 - [ ] Unit tests ("src/components/component/component.spec.ts")
 - [ ] Interaction tests ("src/components/component/docs/component.stories.ts")
 - [ ] Documentation ("src/components/component/docs/component.stories.ts")
+- [ ] Export ("src/components/component/index.ts)
+- [ ] Export ("src/components/index.ts")
