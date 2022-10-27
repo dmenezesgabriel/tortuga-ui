@@ -101,6 +101,10 @@ export const DefaultValue: Story = Template.bind({});
 DefaultValue.args = {
   defaultValue: "Default Form Value",
 };
+export const Disabled: Story = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
 
 const StyledTemplate = (args: any) => ({
   components: { BaseInput },
@@ -192,6 +196,14 @@ export const BootstrapStyledFile: Story = Template.bind({});
 BootstrapStyledFile.args = {
   type: "file",
   class: "form-control",
+};
+
+export const BootstrapStyledDisabled: Story = Template.bind({});
+BootstrapStyledDisabled.args = {
+  type: "text",
+  class: "form-control",
+  placeholder: "Disabled",
+  disabled: true,
 };
 
 export const BootstrapStyledDefaultValue: Story = StyledTemplate.bind({});
