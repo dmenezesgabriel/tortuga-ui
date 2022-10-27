@@ -72,13 +72,14 @@ TypeDate.args = {
 };
 
 export const TypeTime: Story = Template.bind({});
-TypeDate.args = {
+TypeTime.args = {
   type: "time",
 };
 
 export const TypeRange: Story = Template.bind({});
 TypeRange.args = {
   type: "range",
+  className: "form-range",
 };
 
 export const TypeColor: Story = Template.bind({});
@@ -97,7 +98,7 @@ const StyledTemplate = (args: any) => ({
     return { args };
   },
   template: `
-    <BaseInput v-bind='args' type="text" class="form-control">
+    <BaseInput v-bind='args'>
       <template #label>
         <span class="form-label">This is a Label: </span>
       </template>
@@ -108,9 +109,73 @@ const StyledTemplate = (args: any) => ({
 export const BootstrapStyled: Story = StyledTemplate.bind({});
 BootstrapStyled.args = {
   type: "text",
+  class: "form-control",
+};
+
+export const BootstrapStyledNumber: Story = StyledTemplate.bind({});
+BootstrapStyledNumber.args = {
+  type: "number",
+  class: "form-control",
+};
+
+export const BootstrapStyledEmail: Story = StyledTemplate.bind({});
+BootstrapStyledEmail.args = {
+  type: "email",
+  class: "form-control",
+  placeholder: "email@example.com",
+};
+
+export const BootstrapStyledPassword: Story = StyledTemplate.bind({});
+BootstrapStyledPassword.args = {
+  type: "password",
+  class: "form-control",
+  placeholder: "password",
+};
+
+export const BootstrapStyledSearch: Story = StyledTemplate.bind({});
+BootstrapStyledSearch.args = {
+  type: "search",
+  class: "form-control",
+};
+
+export const BootstrapStyledUrl: Story = StyledTemplate.bind({});
+BootstrapStyledUrl.args = {
+  type: "url",
+  class: "form-control",
+};
+
+export const BootstrapStyledTel: Story = StyledTemplate.bind({});
+BootstrapStyledTel.args = {
+  type: "tel",
+  class: "form-control",
+};
+
+export const BootstrapStyledDate: Story = StyledTemplate.bind({});
+BootstrapStyledDate.args = {
+  type: "date",
+  class: "form-control",
+};
+
+export const BootstrapStyledTime: Story = StyledTemplate.bind({});
+BootstrapStyledTime.args = {
+  type: "time",
+  class: "form-control",
+};
+
+export const BootstrapStyledRange: Story = StyledTemplate.bind({});
+BootstrapStyledRange.args = {
+  type: "range",
+  class: "form-range",
+};
+
+export const BootstrapStyledColor: Story = StyledTemplate.bind({});
+BootstrapStyledColor.args = {
+  type: "color",
+  class: "form-control-color",
 };
 
 export const BootstrapStyledDefaultValue: Story = StyledTemplate.bind({});
 BootstrapStyledDefaultValue.args = {
   defaultValue: "Default Form Value",
+  class: "form-control",
 };
