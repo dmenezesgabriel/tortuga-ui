@@ -68,6 +68,10 @@
   $form-select-bg: getTheme("background-secondary");
   $form-select-indicator-color: getTheme("text-primary");
 
+  // Input
+  $input-color: getTheme("text-primary");
+  $input-bg: getTheme("background-secondary");
+
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
   @import "bootstrap/scss/mixins";
@@ -77,5 +81,5 @@
   @import "bootstrap/scss/tables";
   @import "bootstrap/scss/pagination";
   @import "bootstrap/scss/accordion";
-  @import "bootstrap/scss/forms/form-select";
+  @import "bootstrap/scss/forms";
 }
