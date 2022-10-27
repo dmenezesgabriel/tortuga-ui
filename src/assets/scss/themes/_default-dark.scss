@@ -71,6 +71,8 @@
   // Input
   $input-color: getTheme("text-primary");
   $input-bg: getTheme("background-secondary");
+  $form-file-button-color: getTheme("text-primary");
+  $form-file-button-bg: getTheme("background-secondary");
 
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";

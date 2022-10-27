@@ -183,13 +183,13 @@ BootstrapStyledTime.args = {
 export const BootstrapStyledRange: Story = StyledTemplate.bind({});
 BootstrapStyledRange.args = {
   type: "range",
-  class: "form-range",
+  class: "form-control form-range",
 };
 
 export const BootstrapStyledColor: Story = StyledTemplate.bind({});
 BootstrapStyledColor.args = {
   type: "color",
-  class: "form-control-color",
+  class: "form-control form-control-color",
 };
 
 export const BootstrapStyledFile: Story = Template.bind({});
