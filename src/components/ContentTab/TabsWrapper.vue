@@ -42,6 +42,9 @@ provide("selectedTitle", selectedTitle);
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Change styles to match https://getbootstrap.com/docs/5.2/components/card/#navigation
+// Use scss module
 .tabs-wrapper {
   max-width: 400;
   margin: 0 auto;

@@ -51,6 +51,9 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Change styles to match https://getbootstrap.com/docs/5.2/components/card/#navigation
+// Use scss module
 .component-tabs {
   &__button {
     padding: 6px 10px;

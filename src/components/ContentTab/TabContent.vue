@@ -17,6 +17,9 @@ const selectedTitle = inject("selectedTitle");
 </template>
 
 <style scoped>
+/* TODO
+Use css module
+*/
 .tab-content {
   padding: 20px;
   border-radius: 5px;

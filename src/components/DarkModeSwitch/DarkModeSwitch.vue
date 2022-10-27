@@ -75,6 +75,8 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Use css module
 .toggle {
   background-color: var(--bs-dark-alt);
   width: 30px;

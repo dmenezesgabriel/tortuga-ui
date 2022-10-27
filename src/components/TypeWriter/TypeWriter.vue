@@ -39,6 +39,8 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Use scss module
 .typing {
   position: relative;
 

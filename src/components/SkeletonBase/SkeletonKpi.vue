@@ -19,6 +19,8 @@ import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Use scss module
 @use "@/assets/scss/variables";
 .kpi {
   border: none;

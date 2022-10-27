@@ -35,6 +35,8 @@ const props = defineProps<Props>();
   </div>
 </template>
 <style lang="scss" scoped>
+// TODO
+// Use scss module
 @use "@/assets/scss/variables";
 
 .kpi {

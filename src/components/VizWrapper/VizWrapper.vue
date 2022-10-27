@@ -30,6 +30,8 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Use scss module
 .card-header {
   background-color: var(--bs-gray-200);
 }

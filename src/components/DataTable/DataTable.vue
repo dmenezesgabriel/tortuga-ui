@@ -208,6 +208,8 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
 </template>
 
 <style lang="scss" scoped>
+// TODO
+// Use scss module
 i {
   cursor: pointer;
 }
