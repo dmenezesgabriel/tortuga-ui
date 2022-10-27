@@ -92,6 +92,11 @@ TypeColor.args = {
   type: "color",
 };
 
+export const TypeFile: Story = Template.bind({});
+TypeFile.args = {
+  type: "file",
+};
+
 export const DefaultValue: Story = Template.bind({});
 DefaultValue.args = {
   defaultValue: "Default Form Value",
@@ -181,6 +186,12 @@ export const BootstrapStyledColor: Story = StyledTemplate.bind({});
 BootstrapStyledColor.args = {
   type: "color",
   class: "form-control-color",
+};
+
+export const BootstrapStyledFile: Story = Template.bind({});
+BootstrapStyledFile.args = {
+  type: "file",
+  class: "form-control",
 };
 
 export const BootstrapStyledDefaultValue: Story = StyledTemplate.bind({});
