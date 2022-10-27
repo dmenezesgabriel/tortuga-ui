@@ -34,6 +34,7 @@ const Template = (args: any) => ({
 export const Default: Story = Template.bind({});
 Default.args = {
   type: "text",
+  placeholder: "Text",
 };
 
 export const TypeNumber: Story = Template.bind({});
@@ -44,26 +45,31 @@ TypeNumber.args = {
 export const TypeEmail: Story = Template.bind({});
 TypeEmail.args = {
   type: "email",
+  placeholder: "example@example.com",
 };
 
 export const TypePassword: Story = Template.bind({});
 TypePassword.args = {
   type: "password",
+  placeholder: "password",
 };
 
 export const TypeSearch: Story = Template.bind({});
 TypeSearch.args = {
   type: "search",
+  placeholder: "search",
 };
 
 export const TypeUrl: Story = Template.bind({});
 TypeUrl.args = {
   type: "url",
+  placeholder: "www.example.com.br",
 };
 
 export const TypeTel: Story = Template.bind({});
-TypeUrl.args = {
+TypeTel.args = {
   type: "tel",
+  placeholder: "(ddd) 12345-1234",
 };
 
 export const TypeDate: Story = Template.bind({});
@@ -79,7 +85,6 @@ TypeTime.args = {
 export const TypeRange: Story = Template.bind({});
 TypeRange.args = {
   type: "range",
-  className: "form-range",
 };
 
 export const TypeColor: Story = Template.bind({});
@@ -110,6 +115,7 @@ export const BootstrapStyled: Story = StyledTemplate.bind({});
 BootstrapStyled.args = {
   type: "text",
   class: "form-control",
+  placeholder: "Text",
 };
 
 export const BootstrapStyledNumber: Story = StyledTemplate.bind({});
@@ -136,18 +142,21 @@ export const BootstrapStyledSearch: Story = StyledTemplate.bind({});
 BootstrapStyledSearch.args = {
   type: "search",
   class: "form-control",
+  placeholder: "search",
 };
 
 export const BootstrapStyledUrl: Story = StyledTemplate.bind({});
 BootstrapStyledUrl.args = {
   type: "url",
   class: "form-control",
+  placeholder: "www.example.com",
 };
 
 export const BootstrapStyledTel: Story = StyledTemplate.bind({});
 BootstrapStyledTel.args = {
   type: "tel",
   class: "form-control",
+  placeholder: "(ddd) 12345-1234",
 };
 
 export const BootstrapStyledDate: Story = StyledTemplate.bind({});
