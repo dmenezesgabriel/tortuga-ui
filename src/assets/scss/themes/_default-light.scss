@@ -38,10 +38,15 @@
   $accordion-icon-active-color: var.$dark-alt;
   $accordion-icon-width: var.$accordion-icon-width;
 
+  // Input
+  $input-color: getTheme("text-primary");
+  $input-bg: getTheme("background-secondary");
+
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
   @import "bootstrap/scss/mixins";
 
   @import "bootstrap/scss/pagination";
   @import "bootstrap/scss/accordion";
+  @import "bootstrap/scss/forms";
 }
