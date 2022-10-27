@@ -2,10 +2,7 @@
 import { Tooltip } from "bootstrap";
 import { onMounted, ref } from "vue";
 // TODO
-// Open the object property
-// How To:
-// https://getbootstrap.com/docs/5.2/components/tooltips/#options
-// export const props = makePropsConfigurable(
+// Use a render function and pass tag type as prop so it can be used as any element.
 
 export interface Props {
   options: Partial<Tooltip.Options>;
