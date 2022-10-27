@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useAttrs } from "vue";
 
-export interface Props {}
-
 const attrs = useAttrs();
 const emit = defineEmits(["change-value"]);
 </script>
