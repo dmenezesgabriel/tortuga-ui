@@ -43,3 +43,20 @@ export const Disabled: Story = Template.bind({});
 Disabled.args = {
   disabled: true,
 };
+
+export const BootstrapStyled: Story = Template.bind({});
+BootstrapStyled.args = {
+  class: "form-select",
+};
+
+export const BootstrapStyledMultiple: Story = Template.bind({});
+BootstrapStyledMultiple.args = {
+  multiple: true,
+  class: "form-select",
+};
+
+export const BootstrapStyledDisabled: Story = Template.bind({});
+BootstrapStyledDisabled.args = {
+  disabled: true,
+  class: "form-select",
+};
