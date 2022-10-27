@@ -40,7 +40,7 @@
 
   // Input
   $input-color: getTheme("text-primary");
-  $input-bg: getTheme("background-secondary");
+  $input-bg: getTheme("background-primary");
 
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
