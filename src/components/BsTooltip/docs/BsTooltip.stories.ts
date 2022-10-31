@@ -1,4 +1,4 @@
-import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
+import BsTooltip from "@/components/BsTooltip/BsTooltip";
 import type { Meta, Story } from "@storybook/vue3";
 
 export default {
