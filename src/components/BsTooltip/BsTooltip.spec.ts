@@ -26,10 +26,9 @@ describe("BsTooltip", () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
-  it("should render", async () => {
+  it("should render", () => {
     // Assert
-    await nextTick();
-    expect(wrapper.find("span").exists()).toBeTruthy();
+    expect(wrapper.find("div").exists()).toBeTruthy();
     expect(wrapper.attributes("aria-label")).toContain("tooltip");
     expect(wrapper.attributes("tabindex")).toContain(0);
   });

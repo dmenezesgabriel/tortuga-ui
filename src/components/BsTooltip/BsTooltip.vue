@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <span ref="tooltipElement" tabindex="0" aria-label="tooltip">
+  <div ref="tooltipElement" tabindex="0" aria-label="tooltip">
     <slot></slot>
-  </span>
+  </div>
 </template>
