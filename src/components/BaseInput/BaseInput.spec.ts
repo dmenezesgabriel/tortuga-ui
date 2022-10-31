@@ -11,7 +11,7 @@ let wrapper: VueWrapper;
 describe("BaseInput", async () => {
   beforeEach(() => {
     // Arrange
-    wrapper = shallowMount(BaseInput);
+    wrapper = shallowMount(BaseInput as any);
   });
 
   it("is called", () => {
@@ -26,7 +26,7 @@ describe("BaseInput", async () => {
 
   it("should emit update-value", async () => {
     // Arrange
-    wrapper = shallowMount(BaseInput, {
+    wrapper = shallowMount(BaseInput as any, {
       attrs: {
         type: "text",
       },
@@ -44,7 +44,7 @@ describe("BaseInput", async () => {
 
   it("should show label", () => {
     // Arrange
-    wrapper = shallowMount(BaseInput, {
+    wrapper = shallowMount(BaseInput as any, {
       slots: {
         label: "This is a label",
       },
