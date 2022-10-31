@@ -59,6 +59,9 @@ describe("BaseSelect", async () => {
       },
     });
 
+    // TODO
+    // Investigate attrs bug
+
     // expect(wrapper.attributes()).toEqual({
     //   multiple: true,
     // });

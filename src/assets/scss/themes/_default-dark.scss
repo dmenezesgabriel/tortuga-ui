@@ -84,4 +84,14 @@
   @import "bootstrap/scss/pagination";
   @import "bootstrap/scss/accordion";
   @import "bootstrap/scss/forms";
+
+  // Change calendar and time input icons colors
+  input {
+    color-scheme: dark;
+    background: getTheme("background-secondary");
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+  }
 }

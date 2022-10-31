@@ -1,4 +1,4 @@
-import BaseInput from "@/components/BaseInput/BaseInput.vue";
+import BaseInput from "@/components/BaseInput/BaseInput";
 import type { Meta, Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 
@@ -23,11 +23,8 @@ const Template = (args: any) => ({
     return { args };
   },
   template: `
-    <BaseInput v-bind='args'>
-      <template #label>
-        <span class="mx-2">This is a Label: </span>
-      </template>
-    </BaseInput>
+    <label>Some label: <label>
+    <BaseInput v-bind='args' />
   `,
 });
 
@@ -92,15 +89,49 @@ TypeColor.args = {
   type: "color",
 };
 
-export const TypeFile: Story = Template.bind({});
+const FileTemplate = (args: any) => ({
+  components: { BaseInput },
+  setup() {
+    return { args };
+  },
+  template: `
+    <BaseInput v-bind='args' />
+  `,
+});
+
+export const TypeFile: Story = FileTemplate.bind({});
 TypeFile.args = {
   type: "file",
 };
 
+const CheckboxRadioTemplate = (args: any) => ({
+  components: { BaseInput },
+  setup() {
+    return { args };
+  },
+  template: `
+    <BaseInput v-bind='args' />
+    <label class="mx-2">Some label<label>
+  `,
+});
+
+export const TypeCheckbox: Story = CheckboxRadioTemplate.bind({});
+TypeCheckbox.args = {
+  type: "checkbox",
+  value: "checkbox value",
+};
+
+export const TypeRadio: Story = CheckboxRadioTemplate.bind({});
+TypeRadio.args = {
+  type: "radio",
+  value: "radio value",
+};
+
 export const DefaultValue: Story = Template.bind({});
 DefaultValue.args = {
-  defaultValue: "Default Form Value",
+  value: "Default Form Value",
 };
+
 export const Disabled: Story = Template.bind({});
 Disabled.args = {
   disabled: true,
@@ -112,11 +143,8 @@ const StyledTemplate = (args: any) => ({
     return { args };
   },
   template: `
-    <BaseInput v-bind='args'>
-      <template #label>
-        <span class="form-label">This is a Label: </span>
-      </template>
-    </BaseInput>
+    <label class="form-label">Some label: </label>
+    <BaseInput v-bind='args' />
   `,
 });
 
@@ -192,13 +220,25 @@ BootstrapStyledColor.args = {
   class: "form-control form-control-color",
 };
 
-export const BootstrapStyledFile: Story = Template.bind({});
+const StyledFileTemplate = (args: any) => ({
+  components: { BaseInput },
+  setup() {
+    return { args };
+  },
+  template: `
+  <div class="form-check">
+    <BaseInput v-bind='args' />
+  </div>
+  `,
+});
+
+export const BootstrapStyledFile: Story = StyledFileTemplate.bind({});
 BootstrapStyledFile.args = {
   type: "file",
   class: "form-control",
 };
 
-export const BootstrapStyledDisabled: Story = Template.bind({});
+export const BootstrapStyledDisabled: Story = StyledTemplate.bind({});
 BootstrapStyledDisabled.args = {
   type: "text",
   class: "form-control",
@@ -208,6 +248,35 @@ BootstrapStyledDisabled.args = {
 
 export const BootstrapStyledDefaultValue: Story = StyledTemplate.bind({});
 BootstrapStyledDefaultValue.args = {
-  defaultValue: "Default Form Value",
+  value: "Default Form Value",
   class: "form-control",
+};
+
+const StyledRadioCheckboxTemplate = (args: any) => ({
+  components: { BaseInput },
+  setup() {
+    return { args };
+  },
+  template: `
+  <div class="form-check">
+    <BaseInput v-bind='args' />
+    <label class="form-check-label">Label</label>
+  </div>
+  `,
+});
+
+export const BootstrapStyleCheckbox: Story = StyledRadioCheckboxTemplate.bind(
+  {}
+);
+BootstrapStyleCheckbox.args = {
+  type: "checkbox",
+  value: "checkbox value",
+  class: "form-check-input",
+};
+
+export const BootstrapStyleRadio: Story = StyledRadioCheckboxTemplate.bind({});
+BootstrapStyleRadio.args = {
+  type: "radio",
+  value: "radio value",
+  class: "form-check-input",
 };

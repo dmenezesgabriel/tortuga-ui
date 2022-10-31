@@ -4,7 +4,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import type { VueWrapper } from "@vue/test-utils";
-import BaseInput from "@/components/BaseInput/BaseInput.vue";
+import BaseInput from "@/components/BaseInput/BaseInput";
 
 let wrapper: VueWrapper;
 
@@ -40,20 +40,5 @@ describe("BaseInput", async () => {
     expect((<HTMLInputElement>input.element).value).toBe("some value");
     expect(wrapper.emitted()).toHaveProperty("update-value");
     expect(wrapper.emitted("update-value")?.[0][0]).toBe("some value");
-  });
-
-  it("should show label", () => {
-    // Arrange
-    wrapper = shallowMount(BaseInput as any, {
-      slots: {
-        label: "This is a label",
-      },
-      attrs: {
-        type: "text",
-      },
-    });
-
-    // Assert
-    expect(wrapper.text()).toContain("This is a label");
   });
 });
