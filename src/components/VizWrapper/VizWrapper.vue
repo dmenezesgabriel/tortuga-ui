@@ -1,7 +1,7 @@
 <!-- TODO
 Move to functional component -->
 <script setup lang="ts">
-import BsTooltip from "@/components/BsTooltip/BsTooltip";
+import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 
 const props = defineProps({
   title: { type: String, required: true },

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BsTooltip from "@/components/BsTooltip/BsTooltip";
+import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
 import type { Tooltip } from "bootstrap";
 
 export interface Props {
