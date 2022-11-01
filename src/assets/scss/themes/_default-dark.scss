@@ -74,6 +74,12 @@
   $form-file-button-color: getTheme("text-primary");
   $form-file-button-bg: getTheme("background-secondary");
 
+  // Nav;
+  $nav-link-color: getTheme("text-primary");
+  $nav-link-hover-color: getTheme("secondary");
+  $nav-tabs-link-active-bg: getTheme("background-primary");
+  $nav-tabs-link-active-color: getTheme("text-primary");
+
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
   @import "bootstrap/scss/mixins";
@@ -84,6 +90,7 @@
   @import "bootstrap/scss/pagination";
   @import "bootstrap/scss/accordion";
   @import "bootstrap/scss/forms";
+  @import "bootstrap/scss/nav";
 
   // Change calendar and time input icons colors
   input {
