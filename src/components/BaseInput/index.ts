@@ -1,1 +1,1 @@
-export { default as BaseInput } from "@/components/BaseInput/BaseInput";
+export { default as BaseInput } from "@/components/BaseInput/BaseInput.vue";

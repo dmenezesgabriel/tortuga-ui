@@ -4,7 +4,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
 import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
-import { nextTick } from "vue";
 
 let wrapper: VueWrapper;
 
