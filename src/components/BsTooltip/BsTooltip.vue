@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
 import { onMounted, ref } from "vue";
+
+/**
+ * @see https://getbootstrap.com/docs/5.2/components/tooltips/
+ */
+
 // TODO
 // Open the object property
 // How To:

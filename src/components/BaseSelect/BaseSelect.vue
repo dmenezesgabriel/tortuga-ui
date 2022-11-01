@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useAttrs } from "vue";
 
+/**
+ * @see https://getbootstrap.com/docs/5.2/forms/select/
+ */
 const attrs = useAttrs();
 const emit = defineEmits(["change-value"]);
 

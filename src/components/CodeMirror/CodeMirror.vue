@@ -1,11 +1,12 @@
 <script setup lang="ts">
 /**
+ * @see https://codemirror.net/docs/guide/
  * WIP
  * Use as reference
  * https://github.com/surmon-china/vue-codemirror
  * read
- * https://codemirror.net/docs/guide/
  */
+
 import { onBeforeMount, onMounted, shallowRef, withDefaults } from "vue";
 import { EditorState, type EditorStateConfig } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";

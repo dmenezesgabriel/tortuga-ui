@@ -4,6 +4,10 @@ import useMarkdownRef from "@/composables/useMarkdownRef";
 import type { PropType } from "vue";
 import type { marked } from "marked";
 
+/**
+ * @see https://marked.js.org/
+ */
+
 const props = defineProps({
   markdown: { type: String, required: true },
   options: {

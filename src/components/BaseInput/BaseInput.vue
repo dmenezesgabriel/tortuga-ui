@@ -2,6 +2,8 @@
 import { ref, useAttrs } from "vue";
 
 /**
+ * @see https://getbootstrap.com/docs/5.2/forms/overview/
+ *
  * Default input type is "text", but it can also be passed later on
  * <BaseInput type="text"></BaseInput>
  */
