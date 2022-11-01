@@ -23,7 +23,7 @@ const Template = (args: any) => ({
 export const Default: Story = Template.bind({});
 Default.args = {
   type: "div",
-  class: "offcanvas-start border position-relative",
+  class: "offcanvas-start border",
   options: {
     backdrop: true,
     keyboard: true,
