@@ -62,19 +62,19 @@ describe("TabWrapper", () => {
   it("should change tab on click", async () => {
     // Arrange
     const buttonFirstTab = wrapper
-      .findAll("li")
+      .findAll("a")
       .filter((node) => node.text().match("Tab 1"))
       .at(0);
 
     // Assert
-    expect(buttonFirstTab?.classes()).toContain("selected");
+    expect(buttonFirstTab?.classes()).toContain("active");
 
     // Assert
     expect(wrapper.text()).toContain("Tab 2");
 
     // Arrange
     const buttonSecondTab = wrapper
-      .findAll("li")
+      .findAll("a")
       .filter((node) => node.text().match("Tab 2"))
       .at(0);
 
@@ -83,7 +83,7 @@ describe("TabWrapper", () => {
     await nextTick();
 
     // Assert
-    expect(buttonSecondTab?.classes()).toContain("selected");
+    expect(buttonSecondTab?.classes()).toContain("active");
 
     // Arrange
     const secondTab = wrapper
