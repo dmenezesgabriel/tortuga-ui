@@ -21,7 +21,7 @@ const props = defineProps<Props>();
             <slot name="text"></slot>
           </span>
           <span class="mx-2" v-if="props.tooltipOptions">
-            <BsTooltip :options="props.tooltipOptions">
+            <BsTooltip type="span" :options="props.tooltipOptions">
               <i
                 class="bi bi-info-circle"
                 role="img"

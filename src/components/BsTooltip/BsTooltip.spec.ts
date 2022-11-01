@@ -12,7 +12,7 @@ describe("BsTooltip", () => {
     // Arrange
     wrapper = shallowMount(BsTooltip as any, {
       props: {
-        type: "span",
+        type: "button",
         options: {
           title: "This is a tooltip",
         },
@@ -27,7 +27,7 @@ describe("BsTooltip", () => {
 
   it("should render", () => {
     // Assert
-    expect(wrapper.find("div").exists()).toBeTruthy();
+    expect(wrapper.find("button").exists()).toBeTruthy();
     expect(wrapper.attributes("aria-label")).toContain("tooltip");
     expect(wrapper.attributes("tabindex")).toContain(0);
   });

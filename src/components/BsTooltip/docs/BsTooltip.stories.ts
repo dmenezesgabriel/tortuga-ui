@@ -16,17 +16,21 @@ const Template = (args: any) => ({
   },
   template: `
     <BsTooltip v-bind='args'>
-        <button class="btn btn-primary text-white">Hover Me!</button>
+      Hover me!
     </BsTooltip>
   `,
 });
 
 export const Default: Story = Template.bind({});
 Default.args = {
+  type: "button",
+  class: "btn btn-primary",
   options: { title: "This is a Tooltip" },
 };
 
 export const BottomPlacement: Story = Template.bind({});
 BottomPlacement.args = {
+  type: "button",
+  class: "btn btn-primary",
   options: { title: "This is a Tooltip", placement: "bottom" },
 };

@@ -18,7 +18,11 @@ const props = defineProps({
   >
     <div class="card-header d-flex flex-row justify-content-between">
       <div class="card-title text-capitalize">{{ props.title }}</div>
-      <BsTooltip :options="{ title: props.tooltip }" v-if="props.tooltip">
+      <BsTooltip
+        type="span"
+        :options="{ title: props.tooltip }"
+        v-if="props.tooltip"
+      >
         <i class="bi bi-info-circle" role="img" aria-label="info icon"></i>
       </BsTooltip>
     </div>

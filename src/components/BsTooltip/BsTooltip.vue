@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
-import { onMounted, ref } from "vue";
+import { onBeforeMount, onMounted, ref, useAttrs } from "vue";
 
 /**
  * @see https://getbootstrap.com/docs/5.2/components/tooltips/
@@ -13,13 +13,19 @@ import { onMounted, ref } from "vue";
 // export const props = makePropsConfigurable(
 
 export interface Props {
+  type: string;
   options: Partial<Tooltip.Options>;
 }
 
 const props = defineProps<Props>();
+const attrs = useAttrs();
+const tooltipElement = ref<HTMLElement | undefined>();
+const tooltip = ref<any>();
+const htmlTag = ref<string>();
 
-const tooltipElement = ref<HTMLElement | null>(null);
-const tooltip = ref<any>(null);
+onBeforeMount(() => {
+  htmlTag.value = props.type;
+});
 
 onMounted(() => {
   if (tooltipElement.value) {
@@ -29,7 +35,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="tooltipElement" tabindex="0" aria-label="tooltip">
+  <component
+    v-bind="attrs"
+    :is="htmlTag"
+    ref="tooltipElement"
+    tabindex="0"
+    aria-label="tooltip"
+  >
     <slot></slot>
-  </div>
+  </component>
 </template>
