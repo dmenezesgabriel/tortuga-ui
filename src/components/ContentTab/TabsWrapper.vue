@@ -22,8 +22,8 @@ const handleClick = (tabTitle: string): void => {
 provide("selectedTitle", selectedTitle);
 </script>
 <template>
-  <div class="card text-center">
-    <div class="card-header">
+  <div class="card text-center border-0 shadow">
+    <div class="card-header border-0 pb-0">
       <ul class="nav nav-tabs card-header-tabs" v-if="$slots.default">
         <li
           class="nav-item"
