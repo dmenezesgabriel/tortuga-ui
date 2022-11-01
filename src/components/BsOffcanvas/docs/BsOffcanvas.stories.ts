@@ -12,18 +12,18 @@ const Template = (args: any) => ({
     return { args };
   },
   template: `
-    <BsOffcanvas v-bind='args'>
-      <div class="offcanvas-body">
-        <div>Hello, World!</div>
-      </div>
-    </BsOffcanvas>
+      <BsOffcanvas v-bind='args'>
+        <div class="offcanvas-body">
+          <div>Hello, World!</div>
+        </div>
+      </BsOffcanvas>
   `,
 });
 
 export const Default: Story = Template.bind({});
 Default.args = {
   type: "div",
-  class: "border",
+  class: "offcanvas-start border position-relative",
   options: {
     backdrop: true,
     keyboard: true,

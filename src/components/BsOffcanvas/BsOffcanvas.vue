@@ -31,6 +31,10 @@ const hide = () => offCanvas.value.hide();
 const toggle = () => offCanvas.value.toggle();
 const dispose = () => offCanvas.value.dispose();
 
+// Use a ref in the componet to call any of the methods from it's parent.
+// <BsOffcanvas ref="offcanvas"></BsOffcanvas>
+// ...
+// offcanvas.toggle()
 defineExpose({
   show,
   hide,

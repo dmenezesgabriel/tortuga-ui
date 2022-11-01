@@ -3,7 +3,7 @@ import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "Components/Text/CodeMirror",
+  title: "Components/Text/CodeMirror (WIP)",
   component: CodeMirror,
   parameters: {
     docs: { inlineStories: false, iframeHeight: 300 },
