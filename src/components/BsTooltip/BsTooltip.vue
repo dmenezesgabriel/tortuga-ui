@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
-import { onBeforeMount, onMounted, ref, useAttrs } from "vue";
+import { onBeforeMount, onMounted, onUnmounted, ref, useAttrs } from "vue";
 
 /**
  * @see https://getbootstrap.com/docs/5.2/components/tooltips/
@@ -23,6 +23,20 @@ const tooltipElement = ref<HTMLElement | undefined>();
 const tooltip = ref<any>();
 const htmlTag = ref<string>();
 
+// Bootstrap tooltip methods
+const dispose = () => tooltip.value.dispose();
+const disable = () => tooltip.value.disable();
+const enable = () => tooltip.value.enable();
+const hide = () => tooltip.value.hide();
+const show = () => tooltip.value.show();
+
+defineExpose({
+  disable,
+  enable,
+  hide,
+  show,
+});
+
 onBeforeMount(() => {
   htmlTag.value = props.type;
 });
@@ -31,6 +45,10 @@ onMounted(() => {
   if (tooltipElement.value) {
     tooltip.value = new Tooltip(tooltipElement.value, props.options);
   }
+});
+
+onUnmounted(() => {
+  dispose();
 });
 </script>
 
