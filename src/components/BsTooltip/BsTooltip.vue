@@ -13,7 +13,7 @@ import { onBeforeMount, onMounted, ref, useAttrs } from "vue";
 // export const props = makePropsConfigurable(
 
 export interface Props {
-  type: string;
+  type: string; // HTML tag ex: button, span, ...
   options: Partial<Tooltip.Options>;
 }
 
