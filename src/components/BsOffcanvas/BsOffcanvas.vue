@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Offcanvas } from "bootstrap";
-import { onBeforeMount, onMounted, ref, useAttrs } from "vue";
+import { onBeforeMount, onMounted, onUnmounted, ref, useAttrs } from "vue";
 
 /**
  * @see https://getbootstrap.com/docs/5.2/components/offCanvass/
@@ -20,13 +20,16 @@ export interface Props {
 
 const props = defineProps<Props>();
 const attrs = useAttrs();
+
 const offCanvasElement = ref<HTMLElement | undefined>();
 const offCanvas = ref<any>();
 const htmlTag = ref<string>();
 
+// Bootstrap Offcanvas methods
 const show = () => offCanvas.value.show();
 const hide = () => offCanvas.value.hide();
 const toggle = () => offCanvas.value.toggle();
+const dispose = () => offCanvas.value.dispose();
 
 defineExpose({
   show,
@@ -43,6 +46,11 @@ onMounted(() => {
     offCanvas.value = new Offcanvas(offCanvasElement.value, props.options);
   }
   if (props.show) show();
+  console.dir(offCanvas.value);
+});
+
+onUnmounted(() => {
+  dispose();
 });
 </script>
 

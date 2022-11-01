@@ -2,7 +2,7 @@ import BsOffcanvas from "@/components/BsOffcanvas/BsOffcanvas.vue";
 import type { Meta, Story } from "@storybook/vue3";
 
 export default {
-  title: "Components/Bootstrap/BsOffcanvas",
+  title: "Components/Bootstrap/BsOffcanvas (WIP)",
   component: BsOffcanvas,
 } as Meta;
 
@@ -23,7 +23,7 @@ const Template = (args: any) => ({
 export const Default: Story = Template.bind({});
 Default.args = {
   type: "div",
-  class: "h-100 border",
+  class: "border",
   options: {
     backdrop: true,
     keyboard: true,
