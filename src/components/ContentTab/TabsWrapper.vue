@@ -22,55 +22,30 @@ const handleClick = (tabTitle: string): void => {
 provide("selectedTitle", selectedTitle);
 </script>
 <template>
-  <div class="tabs-wrapper">
-    <ul class="tabs-wrapper__header" v-if="$slots.default">
-      <li
-        v-for="(slotItem, index) in $slots.default()"
-        :key="slotItem.props?.title"
-        :class="{
-          selected: selectedTitle
-            ? slotItem.props?.title === selectedTitle
-            : index === 0,
-        }"
-        @click="handleClick(slotItem.props?.title)"
-      >
-        {{ slotItem.props?.title as string }}
-      </li>
-    </ul>
-    <slot></slot>
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs" v-if="$slots.default">
+        <li
+          class="nav-item"
+          v-for="(slotItem, index) in $slots.default()"
+          :key="slotItem.props?.title"
+          @click="handleClick(slotItem.props?.title)"
+        >
+          <a
+            class="nav-link"
+            :class="{
+              active: selectedTitle
+                ? slotItem.props?.title === selectedTitle
+                : index === 0,
+            }"
+          >
+            {{ slotItem.props?.title as string }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <slot></slot>
+    </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-// TODO
-// Change styles to match https://getbootstrap.com/docs/5.2/components/card/#navigation
-// Use scss module
-.tabs-wrapper {
-  max-width: 400;
-  margin: 0 auto;
-
-  &__header {
-    margin-bottom: 10px;
-    list-style: none;
-    padding: 0;
-    display: flex;
-
-    li {
-      width: 100px;
-      text-align: center;
-      padding: 10px 20px;
-      margin-right: 10px;
-      background-color: var(--background-secondary);
-      color: var(--bs-dark-alt);
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.4s all ease-out;
-      color: var(--text-primary);
-    }
-    li.selected {
-      background-color: var(--primary);
-      color: white;
-    }
-  }
-}
-</style>

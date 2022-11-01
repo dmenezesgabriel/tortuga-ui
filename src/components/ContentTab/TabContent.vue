@@ -15,13 +15,3 @@ const selectedTitle = inject("selectedTitle");
     <slot></slot>
   </div>
 </template>
-
-<style scoped>
-/* TODO
-Use css module
-*/
-.tab-content {
-  padding: 20px;
-  border-radius: 5px;
-}
-</style>
