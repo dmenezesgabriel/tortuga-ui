@@ -280,3 +280,23 @@ BootstrapStyleRadio.args = {
   value: "radio value",
   class: "form-check-input",
 };
+
+const StyledSwitchTemplate = (args: any) => ({
+  components: { BaseInput },
+  setup() {
+    return { args };
+  },
+  template: `
+  <div class="form-check form-switch">
+    <BaseInput v-bind='args' />
+    <label class="form-check-label">Label</label>
+  </div>
+  `,
+});
+
+export const BootstrapStyledSwitch: Story = StyledSwitchTemplate.bind({});
+BootstrapStyledSwitch.args = {
+  type: "checkbox",
+  value: "checkbox value",
+  class: "form-check-input",
+};
