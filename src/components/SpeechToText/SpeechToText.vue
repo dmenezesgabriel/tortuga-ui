@@ -17,10 +17,12 @@ const Recognition =
 const sr = new Recognition();
 
 onMounted(() => {
+  // Setup Speech Recognition
   sr.continuous = true;
   sr.interimResults = true;
   props.lang ? (sr.lang = props.lang) : null;
 
+  // Events listeners
   sr.onstart = () => {
     emit("start");
     isRecording.value = true;
