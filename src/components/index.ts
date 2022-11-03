@@ -1,4 +1,6 @@
 export * from "@/components/BsTooltip";
+export * from "@/components/BsDropdown";
+export * from "@/components/BsOffcanvas";
 export * from "@/components/ButtonCallToAction";
 export * from "@/components/Chart";
 export * from "@/components/CodeMirror";
