@@ -10,10 +10,10 @@
 - [ ] accordion
 - [ ] carousel
 - [ ] collapse?
-- [ ] tab
-- [ ] modal
+- [ ] scrollspy?
+- [ ] tab?
+
 - [ ] popover
-- [ ] scrollspy
 - [ ] toast
 
 - [ ] pagination
