@@ -13,8 +13,5 @@
 - [ ] scrollspy?
 - [ ] tab?
 
-- [ ] popover
-- [ ] toast
-
 - [ ] pagination
 - [ ] progress

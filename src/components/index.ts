@@ -4,6 +4,7 @@ export * from "@/components/BsDropdown";
 export * from "@/components/BsOffcanvas";
 export * from "@/components/BsModal";
 export * from "@/components/BsPopover";
+export * from "@/components/BsToast";
 export * from "@/components/BsTooltip";
 export * from "@/components/ButtonCallToAction";
 export * from "@/components/Chart";
