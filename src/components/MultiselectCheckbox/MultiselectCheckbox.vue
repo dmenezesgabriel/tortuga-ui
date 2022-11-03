@@ -208,7 +208,7 @@ onUnmounted(() => {
 
 <template>
   <div class="card p-1 border-0">
-    <div class="card-header border-0 p-1 d-flex">
+    <div class="card-header border-0 p-1 d-flex bg-transparent">
       <div class="card-title text-capitalize mb-0 me-auto">
         {{ title as string }}
       </div>
