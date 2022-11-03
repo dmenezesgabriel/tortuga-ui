@@ -1,3 +1,4 @@
+export * from "@/components/BsAlert";
 export * from "@/components/BsTooltip";
 export * from "@/components/BsDropdown";
 export * from "@/components/BsOffcanvas";

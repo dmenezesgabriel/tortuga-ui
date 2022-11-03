@@ -3,7 +3,7 @@ import { onBeforeMount, onMounted, onUnmounted, ref } from "vue";
 const useBootstrapLifeCycle = (
   bootstrapClass: any, //TODO correct typing
   htmlElementTag: string,
-  options: any // TODO correct typing
+  options?: any // TODO correct typing
 ) => {
   /**
    * Composable to reuse Bootstrap javascript classes with vue correctly.
