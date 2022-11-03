@@ -8,10 +8,7 @@
 ## Bootstrap integration
 
 - [ ] accordion
-- [ ] alerts
-- [ ] button
 - [ ] carousel
-- [ ] close button?
 - [ ] collapse?
 - [ ] tab
 - [ ] modal
