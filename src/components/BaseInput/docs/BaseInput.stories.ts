@@ -23,7 +23,7 @@ const Template = (args: any) => ({
     return { args };
   },
   template: `
-    <label>Some label: <label>
+    <label>Some label: </label>
     <BaseInput v-bind='args' />
   `,
 });
