@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Alert } from "bootstrap";
-import { useAttrs } from "vue";
+import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/alerts/
@@ -13,10 +13,9 @@ export interface Props {
 const props = defineProps<Props>();
 const attrs = useAttrs();
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
-  Alert,
-  props.type
-);
+const tag = computed(() => props.type);
+
+const { classInstance, domElement } = useBootstrapLifeCycle(Alert);
 
 // Bootstrap alert methods
 const close = () => classInstance.value.close();
@@ -30,7 +29,7 @@ defineExpose({
   <component
     class="alert"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="alert"

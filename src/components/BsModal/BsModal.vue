@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Modal } from "bootstrap";
-import { useAttrs } from "vue";
+import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/modal/
@@ -14,9 +14,10 @@ export interface Props {
 const props = defineProps<Props>();
 const attrs = useAttrs();
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const tag = computed(() => props.type);
+
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Modal,
-  props.type,
   props.options
 );
 
@@ -36,7 +37,7 @@ defineExpose({
   <component
     class="modal"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="modal"

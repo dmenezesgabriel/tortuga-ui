@@ -1,8 +1,7 @@
-import { onBeforeMount, onMounted, onUnmounted, ref } from "vue";
+import { onBeforeMount, onMounted, onUnmounted, ref, toRaw } from "vue";
 
 const useBootstrapLifeCycle = (
   bootstrapClass: any, //TODO correct typing
-  htmlElementTag: string,
   options?: any // TODO correct typing
 ) => {
   /**
@@ -10,13 +9,8 @@ const useBootstrapLifeCycle = (
    */
   const domElement = ref<HTMLElement | undefined>();
   const classInstance = ref<any>();
-  const htmlTag = ref<string>();
 
   const dispose = () => classInstance.value.dispose();
-
-  onBeforeMount(() => {
-    htmlTag.value = htmlElementTag;
-  });
 
   onMounted(() => {
     if (domElement.value) {
@@ -28,7 +22,7 @@ const useBootstrapLifeCycle = (
     dispose();
   });
 
-  return { classInstance, domElement, htmlTag };
+  return { classInstance, domElement };
 };
 
 export default useBootstrapLifeCycle;

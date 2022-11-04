@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Toast } from "bootstrap";
-import { onMounted, useAttrs } from "vue";
+import { computed, onMounted, useAttrs } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/toasts/
@@ -14,14 +14,14 @@ export interface Props {
 const props = defineProps<Props>();
 const attrs = useAttrs();
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Toast,
-  props.type,
   props.options
 );
 // Bootstrap toast methods
 const hide = () => classInstance.value.hide();
 const show = () => classInstance.value.show();
+const tag = computed(() => props.type);
 
 defineExpose({
   hide,
@@ -36,7 +36,7 @@ onMounted(() => {
 <template>
   <component
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="toast"

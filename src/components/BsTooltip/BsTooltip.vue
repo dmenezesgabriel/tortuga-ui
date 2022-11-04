@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
-import { useAttrs } from "vue";
+import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/tooltips/
@@ -13,10 +13,10 @@ export interface Props {
 
 const props = defineProps<Props>();
 const attrs = useAttrs();
+const tag = computed(() => props.type);
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Tooltip,
-  props.type,
   props.options
 );
 // Bootstrap tooltip methods
@@ -36,7 +36,7 @@ defineExpose({
 <template>
   <component
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="tooltip"

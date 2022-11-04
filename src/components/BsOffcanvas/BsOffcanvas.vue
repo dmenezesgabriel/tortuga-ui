@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Offcanvas } from "bootstrap";
-import { onMounted, useAttrs } from "vue";
+import { onMounted, useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/classInstances/
@@ -14,10 +14,10 @@ export interface Props {
 
 const props = defineProps<Props>();
 const attrs = useAttrs();
+const tag = computed(() => props.type);
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Offcanvas,
-  props.type,
   props.options
 );
 
@@ -42,7 +42,7 @@ onMounted(() => {
   <component
     class="offcanvas"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="classInstance"

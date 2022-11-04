@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Dropdown } from "bootstrap";
-import { useAttrs } from "vue";
+import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/dropdowns/
@@ -13,10 +13,10 @@ export interface Props {
 
 const props = defineProps<Props>();
 const attrs = useAttrs();
+const tag = computed(() => props.type);
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Dropdown,
-  props.type,
   props.options
 );
 
@@ -36,7 +36,7 @@ defineExpose({
   <component
     class="dropdown"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="dropdown"

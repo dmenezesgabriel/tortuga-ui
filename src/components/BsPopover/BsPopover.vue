@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Popover } from "bootstrap";
-import { useAttrs } from "vue";
+import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/popovers/
@@ -13,10 +13,10 @@ export interface Props {
 
 const props = defineProps<Props>();
 const attrs = useAttrs();
+const tag = computed(() => props.type);
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
+const { classInstance, domElement } = useBootstrapLifeCycle(
   Popover,
-  props.type,
   props.options
 );
 
@@ -38,7 +38,7 @@ defineExpose({
   <component
     class="btn"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="popover"

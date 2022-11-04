@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Button } from "bootstrap";
-import { useAttrs } from "vue";
+import { computed, useAttrs } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/buttons/
@@ -13,10 +13,9 @@ export interface Props {
 const props = defineProps<Props>();
 const attrs = useAttrs();
 
-const { classInstance, domElement, htmlTag } = useBootstrapLifeCycle(
-  Button,
-  props.type
-);
+const tag = computed(() => props.type);
+
+const { classInstance, domElement } = useBootstrapLifeCycle(Button);
 
 // Bootstrap button methods
 const toggle = () => classInstance.value.toggle();
@@ -27,15 +26,15 @@ defineExpose({
 </script>
 
 <template>
-  <component
+  <div
     class="btn"
     v-bind="attrs"
-    :is="htmlTag"
+    :is="tag"
     ref="domElement"
     tabindex="0"
     aria-label="button"
     role="button"
   >
     <slot></slot>
-  </component>
+  </div>
 </template>
