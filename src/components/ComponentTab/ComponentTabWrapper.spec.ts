@@ -52,7 +52,7 @@ describe("ComponentTabWrapper", () => {
 
   it("should emit tab click", () => {
     // Act
-    wrapper.find("button").trigger("click");
+    wrapper.find("a").trigger("click");
 
     // Assert
     expect(wrapper.emitted()).toHaveProperty("tab-click");
@@ -67,7 +67,7 @@ describe("ComponentTabWrapper", () => {
   it("should change tab on click", async () => {
     // Arrange
     const buttonFirstTab = wrapper
-      .findAll("button")
+      .findAll("a")
       .filter((node) => node.text().match("FirstTab"))
       .at(0);
 
@@ -79,7 +79,7 @@ describe("ComponentTabWrapper", () => {
 
     // Arrange
     const buttonSecondTab = wrapper
-      .findAll("button")
+      .findAll("a")
       .filter((node) => node.text().match("SecondTab"))
       .at(0);
 
