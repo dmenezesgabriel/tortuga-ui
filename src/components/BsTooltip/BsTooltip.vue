@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Tooltip } from "bootstrap";
 import { useAttrs } from "vue";
-import useBootstrapLifeCycle from "@/composables/useBootstrapLifeCycle";
+import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
 /**
  * @see https://getbootstrap.com/docs/5.2/components/tooltips/
  */

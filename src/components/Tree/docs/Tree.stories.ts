@@ -1,4 +1,4 @@
-import Tree from "@/components/Tree/Tree.vue";
+import Tree from "~/components/Tree/Tree.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {

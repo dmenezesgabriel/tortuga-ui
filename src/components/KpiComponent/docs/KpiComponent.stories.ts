@@ -1,4 +1,4 @@
-import KpiComponent from "@/components/KpiComponent/KpiComponent.vue";
+import KpiComponent from "~/components/KpiComponent/KpiComponent.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

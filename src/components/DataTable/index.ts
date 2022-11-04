@@ -1,1 +1,1 @@
-export { default as DataTable } from "@/components/DataTable/DataTable.vue";
+export { default as DataTable } from "~/components/DataTable/DataTable.vue";

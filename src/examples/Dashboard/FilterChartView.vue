@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, onBeforeMount } from "vue";
-import { BarChart } from "@/components/Chart/BaseChart";
-import MultiselectCheckbox from "@/components/MultiselectCheckbox/MultiselectCheckbox.vue";
-import type { IOption } from "@/types/IFilter";
+import { BarChart } from "~/components/Chart/BaseChart";
+import MultiselectCheckbox from "~/components/MultiselectCheckbox/MultiselectCheckbox.vue";
+import type { IOption } from "~/types/IFilter";
 
 const data = [
   { x: "January", y: 65 },

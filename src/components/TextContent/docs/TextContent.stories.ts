@@ -1,4 +1,4 @@
-import TextContent from "@/components/TextContent/TextContent";
+import TextContent from "~/components/TextContent/TextContent";
 import type { Story, Meta } from "@storybook/vue3";
 
 export default {

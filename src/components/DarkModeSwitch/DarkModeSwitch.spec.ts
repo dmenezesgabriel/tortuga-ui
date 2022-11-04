@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch.vue";
+import DarkModeSwitch from "~/components/DarkModeSwitch/DarkModeSwitch.vue";
 
 let wrapper: VueWrapper;
 

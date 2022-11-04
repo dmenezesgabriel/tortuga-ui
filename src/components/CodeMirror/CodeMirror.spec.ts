@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, VueWrapper } from "@vue/test-utils";
-import CodeMirror from "@/components/CodeMirror/CodeMirror.vue";
+import CodeMirror from "~/components/CodeMirror/CodeMirror.vue";
 
 /**
  * Workaround fro "TypeError: textRange(...).getClientRects is not a function"

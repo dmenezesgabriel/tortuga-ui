@@ -7,7 +7,7 @@ type Props = {
 };
 
 const SkeletonBase = (props: Props) => {
-  const style = () => import("@/components/SkeletonBase/skeleton-base.scss");
+  const style = () => import("~/components/SkeletonBase/skeleton-base.scss");
   return h("span", {
     class: "skeleton-loader-base",
     style: {

@@ -1,4 +1,4 @@
-import BsPopover from "@/components/BsPopover/BsPopover.vue";
+import BsPopover from "~/components/BsPopover/BsPopover.vue";
 import type { Meta, Story } from "@storybook/vue3";
 
 export default {

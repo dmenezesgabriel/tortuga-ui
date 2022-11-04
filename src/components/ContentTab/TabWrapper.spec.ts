@@ -3,8 +3,8 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { mount, type VueWrapper } from "@vue/test-utils";
-import TabsWrapper from "@/components/ContentTab/TabsWrapper.vue";
-import TabContent from "@/components/ContentTab/TabContent.vue";
+import TabsWrapper from "~/components/ContentTab/TabsWrapper.vue";
+import TabContent from "~/components/ContentTab/TabContent.vue";
 import { h, nextTick } from "vue";
 
 let wrapper: VueWrapper;

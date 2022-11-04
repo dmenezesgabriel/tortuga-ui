@@ -1,4 +1,4 @@
-import DarkModeSwitch from "@/components/DarkModeSwitch/DarkModeSwitch.vue";
+import DarkModeSwitch from "~/components/DarkModeSwitch/DarkModeSwitch.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

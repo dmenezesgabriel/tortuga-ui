@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import { BaseChart } from "@/components/Chart/BaseChart";
+import { BaseChart } from "~/components/Chart/BaseChart";
 
 let wrapper: VueWrapper;
 

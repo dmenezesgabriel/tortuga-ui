@@ -1,4 +1,4 @@
-import BsModal from "@/components/BsModal/BsModal.vue";
+import BsModal from "~/components/BsModal/BsModal.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { ref } from "vue";
 

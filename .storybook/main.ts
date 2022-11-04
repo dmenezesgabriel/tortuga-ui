@@ -32,7 +32,7 @@ const config: StorybookViteConfig = {
       config.base = "./";
     }
     if (config.resolve && config.resolve.alias)
-      config.resolve.alias["@"] = resolve(__dirname, "../src");
+      config.resolve.alias["~"] = resolve(__dirname, "../src");
     return mergeConfig(config, {});
   },
 };

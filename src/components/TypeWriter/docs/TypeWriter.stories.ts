@@ -1,4 +1,4 @@
-import TypeWriter from "@/components/TypeWriter/TypeWriter.vue";
+import TypeWriter from "~/components/TypeWriter/TypeWriter.vue";
 import type { Story, Meta } from "@storybook/vue3";
 
 export default {

@@ -1,1 +1,1 @@
-export { default as BsAlert } from "@/components/BsAlert/BsAlert.vue";
+export { default as BsAlert } from "~/components/BsAlert/BsAlert.vue";

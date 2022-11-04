@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import Wave from "@/components/Wave/Wave";
+import Wave from "~/components/Wave/Wave";
 
 let wrapper: VueWrapper;
 

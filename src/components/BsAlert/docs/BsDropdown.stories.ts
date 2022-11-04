@@ -1,4 +1,4 @@
-import BsAlert from "@/components/BsAlert/BsAlert.vue";
+import BsAlert from "~/components/BsAlert/BsAlert.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { ref } from "vue";
 

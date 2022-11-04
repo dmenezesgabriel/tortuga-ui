@@ -1,4 +1,4 @@
-import TagInput from "@/components/TagInput/TagInput.vue";
+import TagInput from "~/components/TagInput/TagInput.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

@@ -1,1 +1,1 @@
-export { default as BsPopover } from "@/components/BsPopover/BsPopover.vue";
+export { default as BsPopover } from "~/components/BsPopover/BsPopover.vue";

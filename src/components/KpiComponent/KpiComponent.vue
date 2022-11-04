@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BsTooltip from "@/components/BsTooltip/BsTooltip.vue";
+import BsTooltip from "~/components/BsTooltip/BsTooltip.vue";
 import type { Tooltip } from "bootstrap";
 
 export interface Props {
@@ -37,7 +37,7 @@ const props = defineProps<Props>();
 <style lang="scss" scoped>
 // TODO
 // Use scss module
-@use "@/assets/scss/variables";
+@use "~/assets/scss/variables";
 
 .kpi {
   border: none;

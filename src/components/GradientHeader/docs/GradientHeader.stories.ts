@@ -1,4 +1,4 @@
-import GradientHeader from "@/components/GradientHeader/GradientHeader.vue";
+import GradientHeader from "~/components/GradientHeader/GradientHeader.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {

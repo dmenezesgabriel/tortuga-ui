@@ -6,7 +6,7 @@ export interface Props {
 
 // @vue/component
 const ScrollCue = (props: Props) => {
-  const style = () => import("@/components/ScrollCue/scroll-cue.scss");
+  const style = () => import("~/components/ScrollCue/scroll-cue.scss");
   const arrow = h(
     "div",
     { class: "arrow" },

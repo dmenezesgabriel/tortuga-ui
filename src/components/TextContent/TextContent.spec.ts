@@ -3,7 +3,7 @@
  */
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
-import TextContent from "@/components/TextContent/TextContent";
+import TextContent from "~/components/TextContent/TextContent";
 
 describe("TextContent", () => {
   it("Should render", () => {

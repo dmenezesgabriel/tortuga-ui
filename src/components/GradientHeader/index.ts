@@ -1,1 +1,1 @@
-export { default as GradientHeader } from "@/components/GradientHeader/GradientHeader.vue";
+export { default as GradientHeader } from "~/components/GradientHeader/GradientHeader.vue";

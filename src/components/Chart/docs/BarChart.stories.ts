@@ -1,4 +1,4 @@
-import { BarChart } from "@/components/Chart/BaseChart";
+import { BarChart } from "~/components/Chart/BaseChart";
 import type { Story, Meta } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

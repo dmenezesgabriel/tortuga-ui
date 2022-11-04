@@ -1,4 +1,4 @@
-import SimpleDashboard from "@/examples/Dashboard/FilterChartView.vue";
+import SimpleDashboard from "~/examples/Dashboard/FilterChartView.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {

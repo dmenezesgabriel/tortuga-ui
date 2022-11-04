@@ -1,1 +1,1 @@
-export { default as BsDropdown } from "@/components/BsDropdown/BsDropdown.vue";
+export { default as BsDropdown } from "~/components/BsDropdown/BsDropdown.vue";

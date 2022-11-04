@@ -1,4 +1,4 @@
-import SkeletonTable from "@/components/SkeletonBase/SkeletonTable";
+import SkeletonTable from "~/components/SkeletonBase/SkeletonTable";
 import type { Meta, Story } from "@storybook/vue3";
 
 export default {

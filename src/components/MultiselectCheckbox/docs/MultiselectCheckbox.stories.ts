@@ -1,4 +1,4 @@
-import MultiselectCheckbox from "@/components/MultiselectCheckbox/MultiselectCheckbox.vue";
+import MultiselectCheckbox from "~/components/MultiselectCheckbox/MultiselectCheckbox.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

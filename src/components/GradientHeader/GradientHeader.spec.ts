@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import GradientHeader from "@/components/GradientHeader/GradientHeader.vue";
+import GradientHeader from "~/components/GradientHeader/GradientHeader.vue";
 
 let wrapper: VueWrapper;
 

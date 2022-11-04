@@ -1,4 +1,4 @@
-import BsButton from "@/components/BsButton/BsButton.vue";
+import BsButton from "~/components/BsButton/BsButton.vue";
 import type { Meta, Story } from "@storybook/vue3";
 
 export default {

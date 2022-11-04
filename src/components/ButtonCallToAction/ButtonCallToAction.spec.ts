@@ -4,7 +4,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import type { VueWrapper } from "@vue/test-utils";
-import ButtonCallToAction from "@/components/ButtonCallToAction/ButtonCallToAction";
+import ButtonCallToAction from "~/components/ButtonCallToAction/ButtonCallToAction";
 
 let wrapper: VueWrapper;
 

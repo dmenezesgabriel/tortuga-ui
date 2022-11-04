@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type { IOption } from "@/types/IFilter";
-import { getAttributeValues } from "@/utils/data";
+import type { IOption } from "~/types/IFilter";
+import { getAttributeValues } from "~/utils/data";
 import { computed, ref, onMounted, onUnmounted, watch } from "vue";
 import type { PropType } from "vue";
-import { useDebouncedRef } from "@/composables/useDebouncedRef";
-import vClickOutside from "@/directives/ClickOutside/clickOutside";
+import { useDebouncedRef } from "~/composables/useDebouncedRef";
+import vClickOutside from "~/directives/ClickOutside/clickOutside";
 
 const props = defineProps({
   id: { type: String, required: true },

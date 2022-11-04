@@ -1,4 +1,4 @@
-import ButtonCallToAction from "@/components/ButtonCallToAction/ButtonCallToAction";
+import ButtonCallToAction from "~/components/ButtonCallToAction/ButtonCallToAction";
 import type { Meta, Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

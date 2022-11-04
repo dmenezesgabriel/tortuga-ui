@@ -1,6 +1,6 @@
 import { shallowMount, VueWrapper } from "@vue/test-utils";
 import { describe, it, expect, beforeEach } from "vitest";
-import DataTable from "@/components/DataTable/DataTable.vue";
+import DataTable from "~/components/DataTable/DataTable.vue";
 
 let wrapper: VueWrapper;
 

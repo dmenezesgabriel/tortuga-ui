@@ -1,4 +1,4 @@
-import BsDropdown from "@/components/BsDropdown/BsDropdown.vue";
+import BsDropdown from "~/components/BsDropdown/BsDropdown.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { ref } from "vue";
 

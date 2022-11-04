@@ -1,5 +1,5 @@
-import ComponentTabWrapper from "@/components/ComponentTab/ComponentTabWrapper.vue";
-import TextContent from "@/components/TextContent/TextContent";
+import ComponentTabWrapper from "~/components/ComponentTab/ComponentTabWrapper.vue";
+import TextContent from "~/components/TextContent/TextContent";
 import type { Story } from "@storybook/vue3";
 import { h } from "vue";
 import { action } from "@storybook/addon-actions";

@@ -1,4 +1,4 @@
-import BsToast from "@/components/BsToast/BsToast.vue";
+import BsToast from "~/components/BsToast/BsToast.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { ref } from "vue";
 

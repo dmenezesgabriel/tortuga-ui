@@ -23,7 +23,7 @@
 <style lang="scss" scoped>
 // TODO
 // Use scss module
-@use "@/assets/scss/variables";
+@use "~/assets/scss/variables";
 .gradient {
   background: linear-gradient(
     to right,

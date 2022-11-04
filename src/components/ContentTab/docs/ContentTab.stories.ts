@@ -1,6 +1,6 @@
 import type { Story } from "@storybook/vue3";
-import TabsWrapper from "@/components/ContentTab/TabsWrapper.vue";
-import TabContent from "@/components/ContentTab/TabContent.vue";
+import TabsWrapper from "~/components/ContentTab/TabsWrapper.vue";
+import TabContent from "~/components/ContentTab/TabContent.vue";
 import { action } from "@storybook/addon-actions";
 
 export default {

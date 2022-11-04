@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
+import SkeletonBase from "~/components/SkeletonBase/SkeletonBase";
 </script>
 <template>
   <div class="card h-100 w-100 shadow kpi">
@@ -21,7 +21,7 @@ import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
 <style lang="scss" scoped>
 // TODO
 // Use scss module
-@use "@/assets/scss/variables";
+@use "~/assets/scss/variables";
 .kpi {
   border: none;
   border-right: 3px solid var(--bs-secondary);

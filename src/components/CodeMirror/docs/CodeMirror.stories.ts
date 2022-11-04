@@ -1,4 +1,4 @@
-import CodeMirror from "@/components/CodeMirror/CodeMirror.vue";
+import CodeMirror from "~/components/CodeMirror/CodeMirror.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

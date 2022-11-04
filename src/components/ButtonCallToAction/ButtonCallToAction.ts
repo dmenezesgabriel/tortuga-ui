@@ -10,7 +10,7 @@ const ButtonCallToAction = (
   { emit, slots }: { emit: SetupContext["emit"]; slots: SetupContext["slots"] }
 ) => {
   const style = () =>
-    import("@/components/ButtonCallToAction/btn-call-to-action.scss");
+    import("~/components/ButtonCallToAction/btn-call-to-action.scss");
 
   const buttonIcon = h("i", { class: "bi bi-arrow-right" });
   const buttonIconWrapper = h(

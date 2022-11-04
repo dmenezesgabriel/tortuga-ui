@@ -1,4 +1,4 @@
-import Wave from "@/components/Wave/Wave";
+import Wave from "~/components/Wave/Wave";
 import type { Story } from "@storybook/vue3";
 
 export default {

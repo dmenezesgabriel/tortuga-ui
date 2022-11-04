@@ -1,1 +1,1 @@
-export { default as TagInput } from "@/components/TagInput/TagInput.vue";
+export { default as TagInput } from "~/components/TagInput/TagInput.vue";

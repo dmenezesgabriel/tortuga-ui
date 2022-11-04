@@ -4,7 +4,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import type { VueWrapper } from "@vue/test-utils";
-import BaseInput from "@/components/BaseInput/BaseInput.vue";
+import BaseInput from "~/components/BaseInput/BaseInput.vue";
 
 let wrapper: VueWrapper;
 

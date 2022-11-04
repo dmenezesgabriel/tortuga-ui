@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import MultiselectCheckbox from "@/components/MultiselectCheckbox/MultiselectCheckbox.vue";
+import MultiselectCheckbox from "~/components/MultiselectCheckbox/MultiselectCheckbox.vue";
 
 let wrapper: VueWrapper;
 

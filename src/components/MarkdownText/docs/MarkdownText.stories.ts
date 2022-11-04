@@ -1,4 +1,4 @@
-import MarkdownText from "@/components/MarkdownText/MarkdownText.vue";
+import MarkdownText from "~/components/MarkdownText/MarkdownText.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {

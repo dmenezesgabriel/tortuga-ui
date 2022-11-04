@@ -11,7 +11,7 @@ const directions: any = {
 
 // @vue/component
 const Wave = (props: any) => {
-  const style = () => import("@/components/Wave/wave.scss");
+  const style = () => import("~/components/Wave/wave.scss");
   return h(
     "svg",
     {

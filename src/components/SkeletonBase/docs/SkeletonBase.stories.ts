@@ -1,4 +1,4 @@
-import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
+import SkeletonBase from "~/components/SkeletonBase/SkeletonBase";
 import type { Story } from "@storybook/vue3";
 
 export default {

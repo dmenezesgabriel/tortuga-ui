@@ -1,4 +1,4 @@
-import VizWrapper from "@/components/VizWrapper/VizWrapper.vue";
+import VizWrapper from "~/components/VizWrapper/VizWrapper.vue";
 import type { Story, Meta } from "@storybook/vue3";
 
 export default {

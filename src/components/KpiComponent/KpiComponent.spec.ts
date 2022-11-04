@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import KpiComponent from "@/components/KpiComponent/KpiComponent.vue";
+import KpiComponent from "~/components/KpiComponent/KpiComponent.vue";
 
 let wrapper: VueWrapper;
 

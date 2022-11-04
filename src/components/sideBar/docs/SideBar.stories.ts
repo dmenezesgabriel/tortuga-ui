@@ -1,8 +1,8 @@
 import type { Story } from "@storybook/vue3";
-import SideBar from "@/components/SideBar/SideBar.vue";
-import SideBarNav from "@/components/SideBar/SideBarNav.vue";
-import SideBarNavItem from "@/components/SideBar/SideBarNavItem.vue";
-import SideBarNavLink from "@/components/SideBar/SideBarNavLink.vue";
+import SideBar from "~/components/SideBar/SideBar.vue";
+import SideBarNav from "~/components/SideBar/SideBarNav.vue";
+import SideBarNavItem from "~/components/SideBar/SideBarNavItem.vue";
+import SideBarNavLink from "~/components/SideBar/SideBarNavLink.vue";
 
 export default {
   title: "Components/SideBar/SideBar",

@@ -1,4 +1,4 @@
-import ScrollCue from "@/components/ScrollCue/ScrollCue";
+import ScrollCue from "~/components/ScrollCue/ScrollCue";
 import type { Story, Meta } from "@storybook/vue3";
 
 export default {

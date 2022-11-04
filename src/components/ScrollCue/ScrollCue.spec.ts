@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import ScrollCue from "@/components/ScrollCue/ScrollCue";
+import ScrollCue from "~/components/ScrollCue/ScrollCue";
 
 let wrapper: VueWrapper;
 

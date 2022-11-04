@@ -4,7 +4,7 @@
 import { h, nextTick } from "vue";
 import { describe, it, expect, beforeEach } from "vitest";
 import { mount, VueWrapper } from "@vue/test-utils";
-import ComponentTabWrapper from "@/components/ComponentTab/ComponentTabWrapper.vue";
+import ComponentTabWrapper from "~/components/ComponentTab/ComponentTabWrapper.vue";
 
 let wrapper: VueWrapper;
 

@@ -1,5 +1,5 @@
 import { h } from "vue";
-import SkeletonBase from "@/components/SkeletonBase/SkeletonBase";
+import SkeletonBase from "~/components/SkeletonBase/SkeletonBase";
 
 interface Props {
   colNumber: number;

@@ -1,1 +1,1 @@
-export { default as Tree } from "@/components/Tree/Tree.vue";
+export { default as Tree } from "~/components/Tree/Tree.vue";

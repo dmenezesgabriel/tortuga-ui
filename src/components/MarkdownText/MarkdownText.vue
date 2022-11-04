@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from "@vue/reactivity";
-import useMarkdownRef from "@/composables/useMarkdownRef";
+import useMarkdownRef from "~/composables/useMarkdownRef";
 import type { PropType } from "vue";
 import type { marked } from "marked";
 

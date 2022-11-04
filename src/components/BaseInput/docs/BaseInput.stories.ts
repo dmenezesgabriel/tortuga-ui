@@ -1,4 +1,4 @@
-import BaseInput from "@/components/BaseInput/BaseInput.vue";
+import BaseInput from "~/components/BaseInput/BaseInput.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

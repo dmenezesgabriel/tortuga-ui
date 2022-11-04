@@ -1,4 +1,4 @@
-import "@/assets/scss/index.scss";
+import "~/assets/scss/index.scss";
 import "bootstrap/js/dist/alert";
 import "bootstrap/js/dist/base-component";
 import "bootstrap/js/dist/button";
@@ -15,9 +15,9 @@ import "bootstrap/js/dist/toast";
 // Usage
 // Export all Vue components
 // Import { Component } from "vbc-ui";
-export * from "@/components";
+export * from "~/components";
 // Or
-import * as components from "@/components";
+import * as components from "~/components";
 // Import VbcComponents from "vbc-ui";
 // ...
 // createApp(App).use(VbcComponents).mount(#app);

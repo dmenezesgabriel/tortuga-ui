@@ -3,7 +3,7 @@
  */
 import { describe, it, expect, beforeEach } from "vitest";
 import { shallowMount, type VueWrapper } from "@vue/test-utils";
-import MarkdownText from "@/components/MarkdownText/MarkdownText.vue";
+import MarkdownText from "~/components/MarkdownText/MarkdownText.vue";
 
 let wrapper: VueWrapper;
 

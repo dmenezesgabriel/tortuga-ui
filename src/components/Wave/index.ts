@@ -1,1 +1,1 @@
-export { default as Wave } from "@/components/Wave/Wave";
+export { default as Wave } from "~/components/Wave/Wave";

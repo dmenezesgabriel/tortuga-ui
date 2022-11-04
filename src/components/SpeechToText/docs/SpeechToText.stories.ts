@@ -1,4 +1,4 @@
-import SpeechToText from "@/components/SpeechToText/SpeechToText.vue";
+import SpeechToText from "~/components/SpeechToText/SpeechToText.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { actions } from "@storybook/addon-actions";
 

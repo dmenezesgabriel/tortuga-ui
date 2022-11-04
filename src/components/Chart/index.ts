@@ -3,4 +3,4 @@ export {
   LineChart,
   DoughnutChart,
   PieChart,
-} from "@/components/Chart/BaseChart";
+} from "~/components/Chart/BaseChart";

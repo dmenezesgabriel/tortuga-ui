@@ -1,4 +1,4 @@
-import DataTable from "@/components/DataTable/DataTable.vue";
+import DataTable from "~/components/DataTable/DataTable.vue";
 import type { Story, Meta } from "@storybook/vue3";
 
 export default {

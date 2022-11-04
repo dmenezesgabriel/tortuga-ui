@@ -1,4 +1,4 @@
-import BaseSelect from "@/components/BaseSelect/BaseSelect.vue";
+import BaseSelect from "~/components/BaseSelect/BaseSelect.vue";
 import type { Meta, Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 

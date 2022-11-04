@@ -1,5 +1,5 @@
 import { ref, customRef } from "vue";
-import { debounce } from "@/utils/debouce";
+import { debounce } from "~/utils/debouce";
 
 export const useDebouncedRef = (
   initialValue: any,
