@@ -26,6 +26,7 @@
     "test:storybook": "test-storybook"
   },
   "dependencies": {
+    "@codemirror/lang-markdown": "^6.0.4",
     "@popperjs/core": "^2.11.5",
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.8.3",
