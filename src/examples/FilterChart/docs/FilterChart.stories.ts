@@ -1,21 +1,21 @@
-import SimpleDashboard from "~/examples/Dashboard/FilterChartView.vue";
+import FilterChart from "~/examples/FilterChart/FilterChartView.vue";
 import type { Story } from "@storybook/vue3";
 
 export default {
-  title: "Examples/Dashboards/FilterChart",
-  component: SimpleDashboard,
+  title: "Examples/FilterChart/FilterChart",
+  component: FilterChart,
   decorators: [
     () => ({ template: "<div style='padding: 3em'><story /></div>" }),
   ],
 };
 
 const Template = (args: any) => ({
-  components: { SimpleDashboard },
+  components: { FilterChart },
   setup() {
     return { args };
   },
   template: `
-    <SimpleDashboard v-bind='args' />
+    <FilterChart v-bind='args' />
   `,
 });
 
