@@ -5,6 +5,10 @@ import { Compartment } from "@codemirror/state";
 import { markdown } from "@codemirror/lang-markdown";
 import { basicSetup } from "codemirror";
 
+/**
+ * @see https://codemirror.net/examples/config/
+ */
+
 const languageConf = new Compartment();
 
 const text = ref<string>(`
