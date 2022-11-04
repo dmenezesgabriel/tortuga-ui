@@ -74,11 +74,37 @@
   $form-file-button-color: getTheme("text-primary");
   $form-file-button-bg: getTheme("background-secondary");
 
-  // Nav;
+  // Nav
   $nav-link-color: getTheme("text-primary");
   $nav-link-hover-color: getTheme("secondary");
   $nav-tabs-link-active-bg: getTheme("background-primary");
   $nav-tabs-link-active-color: getTheme("text-primary");
+
+  // Dropdown
+  $dropdown-link-color: getTheme("text-primary");
+  $dropdown-bg: getTheme("background-secondary");
+  $dropdown-link-hover-color: getTheme("text-primary");
+  $dropdown-link-hover-bg: getTheme("background-primary");
+
+  // Modal
+  $modal-content-bg: getTheme("background-primary");
+
+  // Buttons
+  $btn-close-color: getTheme("text-primary");
+
+  // Popover
+  $popover-bg: getTheme("background-secondary");
+  $popover-border-color: getTheme("text-primary");
+  $popover-body-color: getTheme("text-primary");
+  $popover-arrow-outer-color: getTheme("text-primary");
+  $popover-arrow-color: getTheme("text-primary");
+
+  // Toast
+  $toast-color: getTheme("text-primary");
+  $toast-background-color: getTheme("background-secondary");
+  $toast-border-color: getTheme("text-primary");
+  $toast-header-background-color: getTheme("background-secondary");
+  $toast-header-border-color: getTheme("background-secondary");
 
   @import "bootstrap/scss/variables";
   @import "bootstrap/scss/maps";
@@ -91,6 +117,11 @@
   @import "bootstrap/scss/accordion";
   @import "bootstrap/scss/forms";
   @import "bootstrap/scss/nav";
+  @import "bootstrap/scss/dropdown";
+  @import "bootstrap/scss/modal";
+  @import "bootstrap/scss/close";
+  @import "bootstrap/scss/popover";
+  @import "bootstrap/scss/toasts";
 
   // Change calendar and time input icons colors
   input {
