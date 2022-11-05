@@ -160,6 +160,12 @@ const apply = (): void => {
   });
 };
 
+watch(search, (newValue): void => {
+  if (newValue.length > 0 && allSelected.value) {
+    checkedValues.value = [];
+  }
+});
+
 watch(checkedValues, (): void => {
   /**
    * All options must be checked to "All" option be checked too
