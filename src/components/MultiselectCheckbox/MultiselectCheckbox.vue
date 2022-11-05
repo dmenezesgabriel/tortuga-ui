@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * TODO
+ * pulse apply button
+ */
 import type { IOption } from "~/types/IFilter";
 import { getAttributeValues } from "~/utils/data";
 import { computed, ref, onMounted, onUnmounted, watch } from "vue";
