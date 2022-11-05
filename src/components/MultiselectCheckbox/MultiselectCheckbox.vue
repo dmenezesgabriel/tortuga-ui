@@ -21,6 +21,7 @@ const props = defineProps({
       "select-option": "Select an Option",
       empty: "Empty",
       apply: "Apply",
+      search: "Search",
     },
   },
   isOriginalState: { type: Boolean, required: false, default: true },
@@ -239,7 +240,11 @@ onUnmounted(() => {
           <div class="checkbox-select__dropdown w-100 shadow">
             <div class="search">
               <div class="search__input-group">
-                <input type="text" placeholder="search..." v-model="search" />
+                <input
+                  type="text"
+                  :placeholder="props.text['search']"
+                  v-model="search"
+                />
                 <span class="input-border"></span>
               </div>
             </div>
