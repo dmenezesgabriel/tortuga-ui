@@ -2,6 +2,8 @@
 import { Dropdown } from "bootstrap";
 import { useAttrs, computed } from "vue";
 import useBootstrapLifeCycle from "~/composables/useBootstrapLifeCycle";
+import vClickOutside from "~/directives/ClickOutside/clickOutside";
+
 /**
  * @see https://getbootstrap.com/docs/5.2/components/dropdowns/
  */
@@ -40,6 +42,7 @@ defineExpose({
     ref="domElement"
     tabindex="0"
     aria-label="dropdown"
+    v-click-outside="hide"
   >
     <slot></slot>
   </component>

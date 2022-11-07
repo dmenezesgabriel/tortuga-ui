@@ -7,7 +7,7 @@ const useBootstrapLifeCycle = (
   /**
    * Composable to reuse Bootstrap javascript classes with vue correctly.
    */
-  const domElement = ref<HTMLElement | undefined>();
+  const domElement = ref<any>();
   const classInstance = ref<any>();
 
   const dispose = () => classInstance.value.dispose();
