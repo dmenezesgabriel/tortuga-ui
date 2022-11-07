@@ -13,15 +13,12 @@ export const getAttributeValues = (data: any, columnName: string): any[] => {
   return result;
 };
 
-export const getUniqueAttributeValues = (
-  data: any,
-  columnName: string
-): any[] => {
+export const getUniqueAttributeValues = (data: any, columnName: string) => {
   /**
    * Make options for multiselect dropdown from array of objects
    * @param {} data
    * @param {string} columnName
    * @returns {Set}
    */
-  return [...new Set(getAttributeValues(data, columnName))];
+  return Array.from(new Set(getAttributeValues(data, columnName)));
 };
