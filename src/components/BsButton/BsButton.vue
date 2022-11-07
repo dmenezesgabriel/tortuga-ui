@@ -26,7 +26,7 @@ defineExpose({
 </script>
 
 <template>
-  <div
+  <component
     class="btn"
     v-bind="attrs"
     :is="tag"
@@ -36,5 +36,5 @@ defineExpose({
     role="button"
   >
     <slot></slot>
-  </div>
+  </component>
 </template>
