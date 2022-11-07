@@ -6,19 +6,22 @@ const emit = defineEmits(["mode-change"]);
 
 const isDark = ref<Boolean>();
 
+//TODO
+// Separate contexts and responsabilities, modes should be dark or light,
+// Themes can have light or dark mode, but are different than modes.
+
 const setIsDark = (value: Boolean) => {
   if (value === true) {
     isDark.value = true;
+    document.documentElement.removeAttribute("data-mode");
     document.documentElement.setAttribute("data-mode", "dark");
-    //TODO
-    // Separate contexts and responsabilities, modes should be dark or light,
-    // Themes can have light or dark mode, but are different than modes.
     document.body.classList.remove("light");
     document.body.classList.add("dark");
     localStorage.setItem("preferredDarkMode", "true");
   } else {
     isDark.value = false;
     document.documentElement.removeAttribute("data-mode");
+    document.documentElement.setAttribute("data-mode", "light");
     document.body.classList.remove("dark");
     document.body.classList.add("light");
     localStorage.setItem("preferredDarkMode", "false");
