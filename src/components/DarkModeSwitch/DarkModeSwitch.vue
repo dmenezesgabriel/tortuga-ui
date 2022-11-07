@@ -58,18 +58,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="mx-auto my-3">
-    <div
-      ref="switchRef"
-      class="d-flex flex-column text-center justify-content-center rounded-circle text-white toggle"
-      @click="toggleMode"
-    >
-      <div id="darkModeToggle" v-if="!isDark">
-        <i class="bi bi-moon toggle-mode"></i>
-      </div>
-      <div id="lightModeToggle" v-else>
-        <i class="bi bi-brightness-high toggle-mode"></i>
-      </div>
+  <div
+    ref="switchRef"
+    class="d-flex flex-column text-center justify-content-center rounded-circle text-white toggle"
+    @click="toggleMode"
+  >
+    <div id="darkModeToggle" v-if="!isDark">
+      <i class="bi bi-moon toggle-mode"></i>
+    </div>
+    <div id="lightModeToggle" v-else>
+      <i class="bi bi-brightness-high toggle-mode"></i>
     </div>
   </div>
 </template>
