@@ -1,5 +1,5 @@
 <template>
-  <header class="gradient bg-primary">
+  <header class="bg-gradient-primary">
     <div class="container-fluid mb-3 p-3">
       <div class="row">
         <div class="col">
@@ -19,16 +19,3 @@
     </div>
   </header>
 </template>
-
-<style lang="scss" scoped>
-// TODO
-// Use scss module
-@use "~/assets/scss/variables";
-.gradient {
-  background: linear-gradient(
-    to right,
-    rgba(variables.$dark-alt, 0.95),
-    rgba(variables.$primary, 0.95)
-  );
-}
-</style>
