@@ -1,0 +1,17 @@
+@use "~/assets/scss/variables";
+
+.bg-gradient-primary {
+  background: linear-gradient(
+    to right,
+    rgba(variables.$dark-alt, 0.95),
+    rgba(variables.$primary, 0.95)
+  );
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(
+    to right,
+    rgba(variables.$dark-alt, 0.95),
+    rgba(variables.$secondary, 0.95)
+  );
+}

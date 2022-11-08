@@ -6,7 +6,7 @@ export default {
   component: Wave,
   decorators: [
     () => ({
-      template: "<div style='background: blue;'><story /></div>",
+      template: "<div class='bg-gradient-primary'><story /></div>",
     }),
   ],
 };
