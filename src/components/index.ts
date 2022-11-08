@@ -29,3 +29,4 @@ export * from "~/components/Wave";
 export * from "~/components/BaseInput";
 export * from "~/components/BaseSelect";
 export * from "~/components/SpeechToText";
+export * from "~/components/NavItems";

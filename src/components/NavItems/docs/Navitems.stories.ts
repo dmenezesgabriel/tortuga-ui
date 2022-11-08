@@ -1,10 +1,10 @@
-import Navbar from "~/components/Navbar/Navbar.vue";
+import NavItems from "~/components/NavItems/NavItems.vue";
 import type { Story } from "@storybook/vue3";
 import { action } from "@storybook/addon-actions";
 
 export default {
-  title: "Components/Navbar/Navbar",
-  component: Navbar,
+  title: "Components/NavItems/NavItems",
+  component: NavItems,
   argTypes: {
     onNavClick: {},
   },
@@ -20,18 +20,18 @@ const actionsData = {
 };
 
 const Template = (args: any) => ({
-  components: { Navbar },
+  components: { NavItems },
   setup() {
     return { args };
   },
   template: `
-  <Navbar v-bind='args' />
+  <NavItems v-bind='args' />
   `,
 });
 
 export const Default: Story = Template.bind({});
 Default.args = {
-  name: "Navbar",
+  name: "NavItems",
   node: [
     { name: "Home" },
     {
@@ -43,20 +43,7 @@ Default.args = {
 
 export const Vertical: Story = Template.bind({});
 Vertical.args = {
-  name: "Navbar",
-  node: [
-    { name: "Home" },
-    {
-      name: "Sub menu",
-      node: [{ name: "item 1" }, { name: "item 2" }],
-    },
-  ],
-  orient: "vertical",
-};
-
-export const StyledLinks: Story = Template.bind({});
-StyledLinks.args = {
-  name: "Navbar",
+  name: "NavItems",
   node: [
     { name: "Home" },
     {

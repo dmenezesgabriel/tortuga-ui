@@ -45,7 +45,7 @@ const flexDirection = computed(() => {
   <!-- First Node -->
   <template v-if="hasChildren && props.depth === 0">
     <ul class="nav list-unstyled" :class="flexDirection">
-      <Navbar
+      <NavItems
         v-for="children in props.node"
         :key="children.name"
         :name="children.name"
@@ -66,7 +66,7 @@ const flexDirection = computed(() => {
         {{ props.name }}
       </a>
       <ul class="dropdown-menu" :class="flexDirection">
-        <Navbar
+        <NavItems
           v-for="children in props.node"
           :key="children.name"
           :name="children.name"
