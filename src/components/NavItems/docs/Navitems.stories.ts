@@ -33,10 +33,13 @@ export const Default: Story = Template.bind({});
 Default.args = {
   name: "NavItems",
   node: [
-    { name: "Home" },
+    { name: "Home", to: "/" },
     {
       name: "Sub menu",
-      node: [{ name: "item 1" }, { name: "item 2" }],
+      node: [
+        { name: "item 1", to: "item-1" },
+        { name: "item 2", to: "item-2" },
+      ],
     },
   ],
 };
@@ -45,10 +48,13 @@ export const Vertical: Story = Template.bind({});
 Vertical.args = {
   name: "NavItems",
   node: [
-    { name: "Home" },
+    { name: "Home", to: "/" },
     {
       name: "Sub menu",
-      node: [{ name: "item 1" }, { name: "item 2" }],
+      node: [
+        { name: "item 1", to: "item-1" },
+        { name: "item 2", to: "item-2" },
+      ],
     },
   ],
   orient: "vertical",

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, useAttrs } from "vue";
+import { computed, ref, provide, inject } from "vue";
 import type { PropType } from "vue";
 import BsDropdown from "~/components/BsDropdown/BsDropdown.vue";
 
@@ -8,6 +8,7 @@ export interface TreeNode {
   node?: Array<TreeNode>;
   depth?: Number;
   to?: String;
+  class?: String;
 }
 
 const props = defineProps({
@@ -22,6 +23,8 @@ const props = defineProps({
       return ["vertical", "horizontal"].includes(value);
     },
   },
+  to: { type: String, required: false },
+  class: { type: String, required: false },
 });
 
 const emit = defineEmits(["nav-click"]);
@@ -39,10 +42,30 @@ const flexDirection = computed(() => {
   } as Record<string, string>;
   return props.depth === 0 ? classes[props.orient] : "";
 });
+
+const active = ref<any>();
+const setActive = (value: string) => {
+  active.value = value;
+};
+
+let activeLink: any;
+provide("activeLink", { active, setActive });
+if (props.depth > 0) {
+  activeLink = inject("activeLink");
+}
+
+const handleClick = () => {
+  emit("nav-click", props);
+  activeLink.setActive(props.name);
+  console.log(activeLink.active.value);
+};
+
+const handleNavClick = (node: TreeNode) => {
+  emit("nav-click", node);
+};
 </script>
 
 <template>
-  <!-- First Node -->
   <template v-if="hasChildren && props.depth === 0">
     <ul class="nav list-unstyled" :class="flexDirection">
       <NavItems
@@ -50,13 +73,20 @@ const flexDirection = computed(() => {
         :key="children.name"
         :name="children.name"
         :node="children.node"
+        :to="children.to"
         :depth="props.depth + 1"
+        @nav-click="handleNavClick"
       />
     </ul>
   </template>
   <!-- Node with child -->
   <template v-else-if="hasChildren && props.depth > 0">
-    <BsDropdown class="nav-item" ref="dropdown" type="li">
+    <BsDropdown
+      class="nav-item"
+      ref="dropdown"
+      type="li"
+      @nav-click="handleNavClick"
+    >
       <a
         role="button"
         v-if="props.depth > 0"
@@ -72,6 +102,8 @@ const flexDirection = computed(() => {
           :name="children.name"
           :node="children.node"
           :depth="props.depth + 1"
+          :to="children.to"
+          @nav-click="handleNavClick"
         />
       </ul>
     </BsDropdown>
@@ -79,7 +111,12 @@ const flexDirection = computed(() => {
   <!-- End node -->
   <template v-else>
     <li class="nav-item">
-      <a class="nav-link" role="button" @click="$emit('nav-click', props)">
+      <a
+        class="nav-link"
+        role="button"
+        @click="handleClick"
+        :class="{ active: props.name === activeLink.active.value }"
+      >
         {{ props.name }}
       </a>
     </li>
