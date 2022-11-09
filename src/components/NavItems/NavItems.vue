@@ -8,7 +8,8 @@ export interface TreeNode {
   node?: Array<TreeNode>;
   depth?: Number;
   to?: String;
-  class?: String;
+  activeLinkName?: String;
+  mode?: String;
 }
 
 const props = defineProps({
@@ -25,16 +26,18 @@ const props = defineProps({
   },
   to: { type: String, required: false },
   class: { type: String, required: false },
+  activeLinkName: { type: String, required: false },
 });
 
 const emit = defineEmits(["nav-click"]);
-
 const dropdown = ref<any>();
 
+// Check if node should be collapsible
 const hasChildren = computed(() => {
   return props.node && props.node.length > 0;
 });
 
+// Vertical or horizonal orientation
 const flexDirection = computed(() => {
   const classes = {
     horizontal: "d-flex flex-row",
@@ -43,7 +46,8 @@ const flexDirection = computed(() => {
   return props.depth === 0 ? classes[props.orient] : "";
 });
 
-const active = ref<any>();
+// Deal with active link class
+const active = ref<string>(props.activeLinkName || "");
 const setActive = (value: string) => {
   active.value = value;
 };
@@ -54,20 +58,27 @@ if (props.depth > 0) {
   activeLink = inject("activeLink");
 }
 
-const handleClick = () => {
+// Emit clicked link
+const handleClick = (event: Event) => {
+  event.preventDefault();
+
   emit("nav-click", props);
   activeLink.setActive(props.name);
-  console.log(activeLink.active.value);
 };
 
 const handleNavClick = (node: TreeNode) => {
   emit("nav-click", node);
 };
+
+const handleDropdownClick = (event: Event) => {
+  handleClick(event);
+  dropdown.value.toggle();
+};
 </script>
 
 <template>
   <template v-if="hasChildren && props.depth === 0">
-    <ul class="nav list-unstyled" :class="flexDirection">
+    <ul class="nav bg-dark" :class="flexDirection">
       <NavItems
         v-for="children in props.node"
         :key="children.name"
@@ -91,7 +102,8 @@ const handleNavClick = (node: TreeNode) => {
         role="button"
         v-if="props.depth > 0"
         class="nav-link dropdown-toggle"
-        @click="dropdown.toggle()"
+        :class="{ 'active fw-bold': props.name === activeLink.active.value }"
+        @click="handleDropdownClick"
       >
         {{ props.name }}
       </a>
@@ -114,11 +126,32 @@ const handleNavClick = (node: TreeNode) => {
       <a
         class="nav-link"
         role="button"
-        @click="handleClick"
-        :class="{ active: props.name === activeLink.active.value }"
+        @click="(event) => handleClick(event)"
+        href="#"
+        :class="{ 'active fw-bold': props.name === activeLink.active.value }"
       >
         {{ props.name }}
       </a>
     </li>
   </template>
 </template>
+
+<style lang="scss" scoped>
+@import "bootstrap/scss/functions";
+
+// Nav
+$nav-link-color: var(--bs-white);
+$nav-link-hover-color: var(--secondary);
+$nav-tabs-link-active-bg: var(--background-primary);
+// Dropdown
+$dropdown-link-color: var(--text-primary);
+$dropdown-bg: var(--navbar-background-primary);
+$dropdown-link-hover-color: var(--text-primary);
+$dropdown-link-hover-bg: var(--background-primary);
+
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/dropdown";
+</style>

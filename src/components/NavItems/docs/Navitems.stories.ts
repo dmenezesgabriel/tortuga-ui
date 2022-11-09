@@ -19,19 +19,24 @@ const actionsData = {
   onNavClick: action("nav-click"),
 };
 
-const Template = (args: any) => ({
+const HorizontalTemplate = (args: any) => ({
   components: { NavItems },
   setup() {
     return { args };
   },
   template: `
-  <NavItems v-bind='args' />
+  <div class="navbar bg-dark">
+    <div class="container-fluid">
+        <NavItems v-bind='args' />
+    </div>
+  </div>
   `,
 });
 
-export const Default: Story = Template.bind({});
+export const Default: Story = HorizontalTemplate.bind({});
 Default.args = {
   name: "NavItems",
+  activeLinkName: "Home",
   node: [
     { name: "Home", to: "/" },
     {
@@ -44,9 +49,22 @@ Default.args = {
   ],
 };
 
-export const Vertical: Story = Template.bind({});
+const VerticalTemplate = (args: any) => ({
+  components: { NavItems },
+  setup() {
+    return { args };
+  },
+  template: `
+  <div class="navbar">
+    <NavItems v-bind='args' />
+  </div>
+  `,
+});
+
+export const Vertical: Story = VerticalTemplate.bind({});
 Vertical.args = {
   name: "NavItems",
+  activeLinkName: "Home",
   node: [
     { name: "Home", to: "/" },
     {
