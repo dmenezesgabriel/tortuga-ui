@@ -46,6 +46,7 @@ Default.args = {
         { name: "item 2", to: "item-2" },
       ],
     },
+    { name: "item 3", to: "item-3", isDisabled: true },
   ],
 };
 
@@ -74,6 +75,7 @@ Vertical.args = {
         { name: "item 2", to: "item-2" },
       ],
     },
+    { name: "item 3", to: "item-3", isDisabled: true },
   ],
   orient: "vertical",
 };

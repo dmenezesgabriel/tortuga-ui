@@ -10,6 +10,7 @@ export interface TreeNode {
   to?: String;
   activeLinkName?: String;
   mode?: String;
+  isDisabled?: Boolean;
 }
 
 const props = defineProps({
@@ -27,6 +28,7 @@ const props = defineProps({
   to: { type: String, required: false },
   class: { type: String, required: false },
   activeLinkName: { type: String, required: false },
+  isDisabled: { type: Boolean, required: false },
 });
 
 const emit = defineEmits(["nav-click"]);
@@ -86,6 +88,7 @@ const handleDropdownClick = (event: Event) => {
         :node="children.node"
         :to="children.to"
         :depth="props.depth + 1"
+        :isDisabled="children.isDisabled"
         @nav-click="handleNavClick"
       />
     </ul>
@@ -102,7 +105,10 @@ const handleDropdownClick = (event: Event) => {
         role="button"
         v-if="props.depth > 0"
         class="nav-link dropdown-toggle"
-        :class="{ 'active fw-bold': props.name === activeLink.active.value }"
+        :class="{
+          'active fw-bold': props.name === activeLink.active.value,
+          disabled: props.isDisabled,
+        }"
         @click="handleDropdownClick"
       >
         {{ props.name }}
@@ -115,6 +121,7 @@ const handleDropdownClick = (event: Event) => {
           :node="children.node"
           :depth="props.depth + 1"
           :to="children.to"
+          :isDisabled="children.isDisabled"
           @nav-click="handleNavClick"
         />
       </ul>
@@ -128,7 +135,10 @@ const handleDropdownClick = (event: Event) => {
         role="button"
         @click="(event) => handleClick(event)"
         href="#"
-        :class="{ 'active fw-bold': props.name === activeLink.active.value }"
+        :class="{
+          'active fw-bold': props.name === activeLink.active.value,
+          disabled: props.isDisabled,
+        }"
       >
         {{ props.name }}
       </a>
