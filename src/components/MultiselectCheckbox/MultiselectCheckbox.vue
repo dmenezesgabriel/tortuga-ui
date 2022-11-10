@@ -28,7 +28,6 @@ const props = defineProps({
       search: "Search",
     },
   },
-  isOriginalState: { type: Boolean, required: false, default: true },
 });
 
 const emit = defineEmits(["mounted", "apply", "revert", "unmounted"]);
@@ -183,16 +182,9 @@ watch(checkedValues, (): void => {
   }
 });
 
-watch(
-  () => props.isOriginalState,
-  (newValue, oldValue) => {
-    /**
-     * Revert filter to original state
-     * @returns {void}
-     */
-    if (newValue == true) revertFilter();
-  }
-);
+defineExpose({
+  revertFilter,
+});
 
 onMounted(() => {
   if (props.options.some((opt) => opt.exclude === true)) {

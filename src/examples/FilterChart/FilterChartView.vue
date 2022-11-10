@@ -36,6 +36,7 @@ const options = computed(() => {
 });
 
 const filter = ref();
+const filterData = ref();
 const filteredData = ref();
 
 const chartData = computed(() => {
@@ -54,12 +55,6 @@ const applyFilters = ({ options }: { options: IOption[] }) => {
     .filter((o) => o.available === true)
     .map((o) => o.name);
 
-  if (options.every((o) => o.available === true)) {
-    filter.value.isOriginalState = true;
-  } else {
-    filter.value.isOriginalState = false;
-  }
-
   filteredData.value = data.filter((d) => available.includes(d.x));
 };
 
@@ -71,7 +66,7 @@ onBeforeMount(() => {
     exclude: false,
   }));
 
-  filter.value = {
+  filterData.value = {
     id: "months",
     title: "Months",
     options: options,
@@ -86,13 +81,14 @@ onBeforeMount(() => {
       <div class="row">
         <div class="col-6">
           <MultiselectCheckbox
-            v-bind="filter"
+            v-bind="filterData"
             @apply="applyFilters"
             @revert="applyFilters"
+            ref="filter"
           />
           <button
             class="btn btn-primary text-white float-end m-3"
-            @click="filter.isOriginalState = true"
+            @click="filter.revertFilter()"
           >
             Reset Filter
           </button>
