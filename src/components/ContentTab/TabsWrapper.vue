@@ -38,6 +38,8 @@ provide("selectedTitle", selectedTitle);
                 ? slotItem.props?.title === selectedTitle
                 : index === 0,
             }"
+            @click="(event) => event.preventDefault()"
+            href="#"
           >
             {{ slotItem.props?.title as string }}
           </a>

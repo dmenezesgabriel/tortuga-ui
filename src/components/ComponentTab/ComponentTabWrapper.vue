@@ -28,7 +28,13 @@ onMounted(() => {
           <a
             class="nav-link"
             :class="[{ active: selectedTab === tab }]"
-            @click="setSelectedTab(tab)"
+            @click="
+              (event) => {
+                event.preventDefault();
+                setSelectedTab(tab);
+              }
+            "
+            href="#"
           >
             {{ tab }}
           </a>
