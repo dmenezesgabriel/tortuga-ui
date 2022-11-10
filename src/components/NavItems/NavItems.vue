@@ -162,7 +162,8 @@ const handleDropdownClick = (event: Event) => {
 @import "bootstrap/scss/functions";
 
 // Nav
-$nav-link-color: var(--bs-white);
+// Do something better than this !important
+$nav-link-color: var(--bs-white) !important;
 $nav-link-hover-color: var(--secondary);
 $nav-tabs-link-active-bg: var(--background-primary);
 // Dropdown

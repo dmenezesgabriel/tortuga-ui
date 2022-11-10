@@ -66,10 +66,10 @@ onMounted(() => {
     class="d-flex flex-column text-center justify-content-center rounded-circle text-white toggle"
     @click="toggleMode"
   >
-    <div id="darkModeToggle" v-if="!isDark">
+    <div id="darkModeToggle" v-if="!isDark" type="button" role="button">
       <i class="bi bi-moon toggle-mode"></i>
     </div>
-    <div id="lightModeToggle" v-else>
+    <div id="lightModeToggle" v-else type="button" role="button">
       <i class="bi bi-brightness-high toggle-mode"></i>
     </div>
   </div>

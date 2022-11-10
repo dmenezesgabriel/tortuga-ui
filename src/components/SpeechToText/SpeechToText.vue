@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app">
+  <div type="button" role="button">
     <div v-if="!isRecording" @click="sr.start()"><i class="bi bi-mic"></i></div>
     <div v-else @click="sr.stop()"><i class="bi bi-mic-mute"></i></div>
   </div>

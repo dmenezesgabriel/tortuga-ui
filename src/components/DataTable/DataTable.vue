@@ -179,7 +179,12 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
   >
     <ul class="pagination">
       <li class="page-item">
-        <span class="page-link" @click="pageBackarwrd">
+        <span
+          class="page-link"
+          @click="pageBackarwrd"
+          type="button"
+          role="button"
+        >
           <i class="bi bi-chevron-double-left"></i>
         </span>
       </li>
@@ -188,17 +193,29 @@ const paginate = (array: Array<any>, pageSize: number, pageNumber: number) => {
           class="page-link"
           :class="{ active: currentPage == page }"
           @click="setPage(page)"
+          type="button"
+          role="button"
         >
           {{ page as number }}
         </span>
       </li>
       <li class="page-item">
-        <span class="page-link" @click="pageFoarwrd">
+        <span
+          class="page-link"
+          @click="pageFoarwrd"
+          type="button"
+          role="button"
+        >
           <i class="bi bi-chevron-double-right"></i>
         </span>
       </li>
       <li class="page-item">
-        <span class="page-link" @click="setPage(numberOfPages)">
+        <span
+          class="page-link"
+          @click="setPage(numberOfPages)"
+          type="button"
+          role="button"
+        >
           {{ numberOfPages }}
         </span>
       </li>
