@@ -25,7 +25,7 @@ const HorizontalTemplate = (args: any) => ({
     return { args };
   },
   template: `
-  <div class="navbar bg-dark">
+  <div class="navbar bg-dark p-3">
     <div class="container-fluid">
         <NavItems v-bind='args' />
     </div>
@@ -46,7 +46,7 @@ Default.args = {
         { name: "item 2", to: "item-2" },
       ],
     },
-    { name: "item 3", to: "item-3", isDisabled: true },
+    { name: "item 3", to: "item-3", isDisabled: true, badge: "new" },
   ],
 };
 
@@ -75,7 +75,7 @@ Vertical.args = {
         { name: "item 2", to: "item-2" },
       ],
     },
-    { name: "item 3", to: "item-3", isDisabled: true },
+    { name: "item 3", to: "item-3", isDisabled: true, badge: "new" },
   ],
   orient: "vertical",
 };

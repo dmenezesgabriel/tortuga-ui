@@ -11,6 +11,7 @@ export interface TreeNode {
   activeLinkName?: String;
   mode?: String;
   isDisabled?: Boolean;
+  badge?: String;
 }
 
 const props = defineProps({
@@ -29,6 +30,7 @@ const props = defineProps({
   class: { type: String, required: false },
   activeLinkName: { type: String, required: false },
   isDisabled: { type: Boolean, required: false },
+  badge: { type: String, required: false },
 });
 
 const emit = defineEmits(["nav-click"]);
@@ -79,6 +81,7 @@ const handleDropdownClick = (event: Event) => {
 </script>
 
 <template>
+  <!-- First node -->
   <template v-if="hasChildren && props.depth === 0">
     <ul class="nav bg-dark" :class="flexDirection">
       <NavItems
@@ -89,6 +92,7 @@ const handleDropdownClick = (event: Event) => {
         :to="children.to"
         :depth="props.depth + 1"
         :isDisabled="children.isDisabled"
+        :badge="children.badge"
         @nav-click="handleNavClick"
       />
     </ul>
@@ -122,6 +126,7 @@ const handleDropdownClick = (event: Event) => {
           :depth="props.depth + 1"
           :to="children.to"
           :isDisabled="children.isDisabled"
+          :badge="children.badge"
           @nav-click="handleNavClick"
         />
       </ul>
@@ -131,7 +136,7 @@ const handleDropdownClick = (event: Event) => {
   <template v-else>
     <li class="nav-item">
       <a
-        class="nav-link"
+        class="nav-link position-relative"
         role="button"
         @click="(event) => handleClick(event)"
         href="#"
@@ -141,6 +146,13 @@ const handleDropdownClick = (event: Event) => {
         }"
       >
         {{ props.name }}
+        <span
+          v-if="props.badge"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+        >
+          {{ props.badge }}
+          <span class="visually-hidden">acessibility</span>
+        </span>
       </a>
     </li>
   </template>
