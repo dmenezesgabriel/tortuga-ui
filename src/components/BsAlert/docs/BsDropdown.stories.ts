@@ -26,6 +26,9 @@ const Template = (args: any) => ({
         @click="alert.close()"
       >
       </button>
+      <template #details>
+      Details here
+      </template>
     </BsAlert>
   `,
 });

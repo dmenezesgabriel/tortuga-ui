@@ -35,6 +35,12 @@ defineExpose({
     aria-label="alert"
     role="alert"
   >
-    <slot></slot>
+    <details v-if="$slots.details">
+      <summary>
+        <slot></slot>
+      </summary>
+      <slot name="details"></slot>
+    </details>
+    <slot v-else></slot>
   </component>
 </template>
