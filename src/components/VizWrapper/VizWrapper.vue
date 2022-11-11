@@ -20,9 +20,7 @@ const props = withDefaults(defineProps<Props>(), { isLoaded: true });
     aria-label="chart wrapper"
     tabindex="0"
   >
-    <div
-      class="card-header bg-gradient-primary d-flex flex-row justify-content-between"
-    >
+    <div class="card-header border-0 d-flex flex-row justify-content-between">
       <div class="card-title text-capitalize">{{ props.title }}</div>
       <BsTooltip
         type="span"
@@ -40,6 +38,7 @@ const props = withDefaults(defineProps<Props>(), { isLoaded: true });
 </template>
 
 <style lang="scss" scoped>
+@use "~/assets/scss/abstracts/gradients";
 // TODO
 // Use scss module
 .card-header {
@@ -63,6 +62,9 @@ i {
   }
   i {
     color: var(--bs-white);
+  }
+  .card-header {
+    @include gradients.bg-gradient-primary;
   }
 }
 </style>

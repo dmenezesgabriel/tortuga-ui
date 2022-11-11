@@ -34,3 +34,10 @@ BottomPlacement.args = {
   class: "btn btn-primary",
   options: { title: "This is a Tooltip", placement: "bottom" },
 };
+
+export const HTML: Story = Template.bind({});
+HTML.args = {
+  type: "button",
+  class: "btn btn-primary",
+  options: { title: "This is a <u>Tooltip<u>", html: true },
+};

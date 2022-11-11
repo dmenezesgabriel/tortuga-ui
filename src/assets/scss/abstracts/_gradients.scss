@@ -1,6 +1,6 @@
 @use "~/assets/scss/variables";
 
-.bg-gradient-primary {
+@mixin bg-gradient-primary {
   background: linear-gradient(
     to right,
     rgba(variables.$dark-alt, 0.95),
@@ -8,10 +8,18 @@
   );
 }
 
-.bg-gradient-secondary {
+@mixin bg-gradient-secondary {
   background: linear-gradient(
     to right,
     rgba(variables.$dark-alt, 0.95),
     rgba(variables.$secondary, 0.95)
   );
+}
+
+.bg-gradient-primary {
+  @include bg-gradient-primary;
+}
+
+.bg-gradient-secondary {
+  @include bg-gradient-secondary;
 }
