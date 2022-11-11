@@ -166,6 +166,7 @@ const apply = (): void => {
 
 const handleKeyboardInput = (event: any) => {
   if (event.code === "Enter") apply();
+  else if (event.code === "Escape") closeMenu();
 };
 
 watch(search, (newValue): void => {
