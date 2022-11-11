@@ -27,10 +27,6 @@ defineExpose({
   hide,
   show,
 });
-
-onMounted(() => {
-  console.log(classInstance.value);
-});
 </script>
 
 <template>

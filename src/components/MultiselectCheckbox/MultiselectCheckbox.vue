@@ -164,6 +164,10 @@ const apply = (): void => {
   });
 };
 
+const handleKeyboardInput = (event: any) => {
+  if (event.code === "Enter") apply();
+};
+
 watch(search, (newValue): void => {
   if (newValue.length > 0 && allSelected.value) {
     checkedValues.value = [];
@@ -232,7 +236,10 @@ onUnmounted(() => {
             <i class="bi bi-chevron-down"></i>
           </span>
         </button>
-        <div class="checkbox-select__dropdown-wrapper">
+        <div
+          class="checkbox-select__dropdown-wrapper"
+          @keydown="handleKeyboardInput"
+        >
           <div class="checkbox-select__dropdown w-100 shadow">
             <div class="search">
               <div class="search__input-group">

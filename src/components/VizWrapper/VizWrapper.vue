@@ -1,18 +1,22 @@
 <!-- TODO
 Move to functional component -->
 <script setup lang="ts">
+import { withDefaults } from "vue";
+import type { Tooltip } from "bootstrap";
 import BsTooltip from "~/components/BsTooltip/BsTooltip.vue";
 
-const props = defineProps({
-  title: { type: String, required: true },
-  tooltip: { type: String, required: false },
-  isLoaded: { type: Boolean, default: true },
-});
+export interface Props {
+  title: String;
+  tooltipOptions?: Partial<Tooltip.Options>;
+  isLoaded?: boolean;
+}
+
+const props = withDefaults(defineProps<Props>(), { isLoaded: true });
 </script>
 
 <template>
   <div
-    class="card p-0 border-0 h-100 shadow rounded"
+    class="card p-0 border-0 h-100 shadow rounded wrapper"
     aria-label="chart wrapper"
     tabindex="0"
   >
@@ -20,8 +24,8 @@ const props = defineProps({
       <div class="card-title text-capitalize">{{ props.title }}</div>
       <BsTooltip
         type="span"
-        :options="{ title: props.tooltip }"
-        v-if="props.tooltip"
+        :options="props.tooltipOptions"
+        v-if="props.tooltipOptions"
       >
         <i class="bi bi-info-circle" role="img" aria-label="info icon"></i>
       </BsTooltip>
@@ -52,6 +56,9 @@ i {
 
 // Dark mode
 [data-mode="dark"] .dark {
+  .wrapper {
+    background: var(--background-primary);
+  }
   i {
     color: var(--bs-white);
   }

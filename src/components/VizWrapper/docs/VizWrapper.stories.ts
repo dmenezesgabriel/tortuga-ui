@@ -31,5 +31,5 @@ const Template = (args: any) => ({
 export const Default: Story = Template.bind({});
 Default.args = {
   title: "Visualization title",
-  tooltip: "This Visualization has a detailed description.",
+  tooltipOptions: { title: "This Visualization has a detailed description." },
 };
