@@ -141,7 +141,8 @@ const handleDropdownClick = (event: Event) => {
         @click="(event) => handleClick(event)"
         href="#"
         :class="{
-          'active fw-bold': props.name === activeLink.active.value,
+          'active fw-bold text-secondary':
+            props.name === activeLink.active.value,
           disabled: props.isDisabled,
         }"
       >
