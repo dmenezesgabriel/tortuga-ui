@@ -110,7 +110,8 @@ const handleDropdownClick = (event: Event) => {
         v-if="props.depth > 0"
         class="nav-link dropdown-toggle"
         :class="{
-          'active fw-bold': props.name === activeLink.active.value,
+          'active fw-bold text-secondary':
+            props.name === activeLink.active.value,
           disabled: props.isDisabled,
         }"
         @click="handleDropdownClick"

@@ -20,7 +20,9 @@ const props = withDefaults(defineProps<Props>(), { isLoaded: true });
     aria-label="chart wrapper"
     tabindex="0"
   >
-    <div class="card-header d-flex flex-row justify-content-between">
+    <div
+      class="card-header bg-gradient-primary d-flex flex-row justify-content-between"
+    >
       <div class="card-title text-capitalize">{{ props.title }}</div>
       <BsTooltip
         type="span"
